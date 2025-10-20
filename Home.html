@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      }
+      .search-bar {
+        background-color: #f5f5f5;
+        border-radius: 50px;
+        height: 40px;
+        flex: 1;
+      }
+
+      .search-bar input::placeholder {
+        color: #888;
+        font-size: 0.95rem;
+      }
+
+      .search-bar:focus-within {
+        outline: 2px solid #ddd;
+      }
+
+      /* Hero Section => Slider */
+      .carousel-item img {
+        height: 90vh;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff !important;
+        z-index: 10;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      .hero-content h1 {
+        font-weight: 900;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-content h1 span {
+        display: block;
+      }
+
+      .hero-content .btn {
+        background-color: #7b2cbf;
+        color: #fff;
+        border: none;
+        padding: 12px 28px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 0;
+        transition: 0.3s;
+        cursor: pointer;
+        pointer-events: all;
+      }
+
+      .hero-content .btn:hover {
+        background-color: #5a189a;
+        color: #fff;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+        filter: invert(100%);
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        cursor: pointer;
+      }
+
+      .carousel-indicators [data-bs-target] {
+        background-color: #fff;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .carousel-inner {
+        transition: transform 10s ease-in-out !important;
+      }
+
+      .hero-content h1,
+      .hero-content span,
+      .hero-content .btn {
+        color: #fff !important;
+      }
+
+      /* ------------------------ */
+      /*hassan S*/
+      .featured-products {
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-wrapper {
+        overflow: hidden;
+        width: 100%;
+      }
+      .carousel-track {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.5s ease;
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex: 0 0 calc(25% - 15px);
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .product-card img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .product-card h5 {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+      }
+      .product-card p {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .add-btn {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .add-btn:hover {
+        background-color: #444;
+      }
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        font-size: 1.8rem;
+        padding: 8px 14px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .carousel-btn.left {
+        left: 10px;
+      }
+      .carousel-btn.right {
+        right: 10px;
+      }
+      .carousel-btn:hover {
+        background: #000;
+        color: #fff;
+      }
+      @media (max-width: 992px) {
+        .product-card {
+          flex: 0 0 calc(50% - 10px);
+        }
+      }
+      @media (max-width: 576px) {
+        .product-card {
+          flex: 0 0 100%;
+        }
+        .carousel-btn {
+          top: 45%;
+        }
+      }
+      /*hassan E*/
+      .overlay-img {
+        max-width: 300px;
+        width: 100%;
+      }
+      .new-arrivals h2 {
+        font-weight: bold;
+      }
+
+      .card .hover-img {
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
+
+      .card:hover .hover-img {
+        opacity: 1;
+      }
+
+      .card:hover .main-img {
+        opacity: 0;
+      }
+
+      .card img {
+        object-fit: cover;
+      }
+
+      .shoes-section h2 {
+        font-weight: bold;
+      }
+
+      .bags-section h2 {
+        font-weight: bold;
+      }
+
+      .bg-black {
+        background-color: #000;
+      }
+
+      .product-card {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 370px;
+      }
+
+      .product-img-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .main-img,
+      .hover-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease;
+        border-bottom: 1px solid #eee;
+      }
+
+      .hover-img {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .product-overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        background: rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        transition: all 0.5s ease;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .product-img-container:hover .main-img {
+        opacity: 0;
+      }
+
+      .product-img-container:hover .hover-img {
+        opacity: 1;
+      }
+
+      .product-img-container:hover .product-overlay {
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .btn-cart {
+        background-color: #8a2be2;
+        color: aliceblue;
+        border: 2px solid #8a2be2;
+        border-radius: 17px;
+        transition: all 1s;
+      }
+      .btn-cart:hover {
+        transform: translateY(-2px);
+
+        border: 2px solid #8a2be2;
+        color: #8a2be2;
+      }
+      /* *******shoes section------- */
+      .shoe-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 300px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .shoe-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .shoe-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .shoe-label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: #892be298;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px 10px;
+        border-radius: 4px;
+      }
+      /* ************bag section********** */
+      .bag-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 250px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .bag-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .bag-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .bag-label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: #892be298;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 4px 10px;
+        border-radius: 4px;
+      }
+
+      /*****--Footer style----*****/
+      footer {
+        color: white;
+      }
+
+      footer h5,
+      footer p,
+      footer li,
+      footer a {
+        color: white;
+      }
+
+      footer li:hover {
+        text-decoration: underline;
+      }
+      form button:hover {
+        background-color: white;
+        color: #8a2be2;
+      }
+
+      .go-btn {
+        background-color: #8a2be2;
+        color: white;
+        border-radius: 50px;
+        transition: all 1s;
+      }
+
+      .go-btn:hover {
+        background-color: white;
+        color: #8a2be2;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
+    >
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img
+          src="./assets/images/Luvina-logo-navbar.svg"
+          alt="Logo"
+          width="150"
+          class="me-2 transition-all"
+          id="navLogo"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <i class="bi bi-list fs-2 text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-lg-4">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold text-dark" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#">Shoes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#">Bags</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <form class="d-flex align-items-center gap-3">
+          <div
+            class="search-bar d-flex align-items-center px-3 border rounded-pill"
+          >
+            <i class="bi bi-search me-2 text-muted"></i>
+            <input
+              type="search"
+              class="form-control border-0 bg-transparent shadow-none"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </div>
+
+          <a href="#" class="icon-btn position-relative">
+            <i class="bi bi-person fs-4"></i>
+          </a>
+
+          <a href="#" class="icon-btn position-relative">
+            <i class="bi bi-cart3 fs-4"></i>
+          </a>
+        </form>
+      </div>
+    </nav>
+    <!-- Hero section => Slider -->
+    <section id="hero" style="position: relative; overflow: hidden">
+      <div
+        id="heroCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/hero-one.jpg" alt="Slide 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/hero-two.jpg" alt="Slide 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/hero-three.jpg" alt="Slide 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/hero-four.jpg" alt="Slide 4" />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="hero-content">
+        <h1>
+          <span>Own the look</span>
+          <span>Carry the vibe!</span>
+        </h1>
+        <button class="btn">Browse all products</button>
+      </div>
+    </section>
+
+    <!-- --------- -->
+    <!--Hassan Start Featured Products Carousel-->
+    <section class="featured-products py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Featured Products</h2>
+
+        <div
+          id="featuredCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/1.jpg"
+                      class="card-img-top"
+                      alt="Product 1"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">
+                        Luvina Classic Heel
+                      </p>
+                      <p class="fw-bold mb-2">800 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/4.avif"
+                      class="card-img-top"
+                      alt="Product 2"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Luvina Sandal</p>
+                      <p class="fw-bold mb-2">750 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/5.avif"
+                      class="card-img-top"
+                      alt="Product 3"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Luvina Flat Shoe</p>
+                      <p class="fw-bold mb-2">690 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 d-none d-lg-block">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/shose6.jpg"
+                      class="card-img-top"
+                      alt="Product 4"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">
+                        Luvina Street Sneaker
+                      </p>
+                      <p class="fw-bold mb-2">850 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/bag-buttter.avif"
+                      class="card-img-top"
+                      alt="Product 5"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Butter Handbag</p>
+                      <p class="fw-bold mb-2">920 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/bags-handbag.png"
+                      class="card-img-top"
+                      alt="Product 6"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Classic Handbag</p>
+                      <p class="fw-bold mb-2">990 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/bags-shoulder.png"
+                      class="card-img-top"
+                      alt="Product 7"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Shoulder Bag</p>
+                      <p class="fw-bold mb-2">780 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 d-none d-lg-block">
+                  <div class="card text-center border-0 shadow-sm product-card">
+                    <img
+                      src="./assets/images/bags-crossbody.png"
+                      class="card-img-top"
+                      alt="Product 8"
+                    />
+                    <div class="card-body">
+                      <p class="text-secondary small mb-1">Crossbody Bag</p>
+                      <p class="fw-bold mb-2">720 EGP</p>
+                      <button class="btn btn-cart w-100 btn-sm">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#featuredCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#featuredCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Hassan End Featured Products Carousel-->
+    <section class="new-arrivals py-5">
+      <div class="container">
+        <h2 class="mb-4 fw-bold">New Arrivals</h2>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-0 shadow-sm product-card">
+              <div class="position-relative product-img-container">
+                <img
+                  src="./assets/images/1.jpg"
+                  class="main-img"
+                  alt="Product 1"
+                />
+                <img
+                  src="./assets/images/4.avif"
+                  class="hover-img position-absolute top-0 start-0"
+                  alt="Product 1 Hover"
+                />
+
+                <!-- overlay for sizes -->
+                <div
+                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
+                  <div>
+                    <span class="badge bg-light text-dark mx-1">36</span>
+                    <span class="badge bg-light text-dark mx-1">37</span>
+                    <span class="badge bg-light text-dark mx-1">38</span>
+                    <span class="badge bg-light text-dark mx-1">39</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body py-3">
+                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
+                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
+                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-0 shadow-sm product-card">
+              <div class="position-relative product-img-container">
+                <img
+                  src="./assets/images/5.avif"
+                  class="main-img"
+                  alt="Product 1"
+                />
+                <img
+                  src="./assets/images/7.avif"
+                  class="hover-img position-absolute top-0 start-0"
+                  alt="Product 1 Hover"
+                />
+
+                <!-- overlay for sizes -->
+                <div
+                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
+                  <div>
+                    <span class="badge bg-light text-dark mx-1">36</span>
+                    <span class="badge bg-light text-dark mx-1">37</span>
+                    <span class="badge bg-light text-dark mx-1">38</span>
+                    <span class="badge bg-light text-dark mx-1">39</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body py-3">
+                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
+                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
+                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-0 shadow-sm product-card">
+              <div class="position-relative product-img-container">
+                <img
+                  src="./assets/images/bag-buttter.avif"
+                  class="main-img"
+                  alt="Product 1"
+                />
+                <img
+                  src="./assets/images/butter3.avif"
+                  class="hover-img position-absolute top-0 start-0"
+                  alt="Product 1 Hover"
+                />
+
+                <!-- overlay for sizes -->
+                <div
+                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
+                  <div>
+                    <span class="badge bg-light text-dark mx-1">36</span>
+                    <span class="badge bg-light text-dark mx-1">37</span>
+                    <span class="badge bg-light text-dark mx-1">38</span>
+                    <span class="badge bg-light text-dark mx-1">39</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body py-3">
+                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
+                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
+                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-0 shadow-sm product-card">
+              <div class="position-relative product-img-container">
+                <img
+                  src="./assets/images/shose6.jpg"
+                  class="main-img"
+                  alt="Product 1"
+                />
+                <img
+                  src="./assets/images/shose88.webp"
+                  class="hover-img position-absolute top-0 start-0"
+                  alt="Product 1 Hover"
+                />
+
+                <!-- overlay for sizes -->
+                <div
+                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
+                >
+                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
+                  <div>
+                    <span class="badge bg-light text-dark mx-1">36</span>
+                    <span class="badge bg-light text-dark mx-1">37</span>
+                    <span class="badge bg-light text-dark mx-1">38</span>
+                    <span class="badge bg-light text-dark mx-1">39</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body py-3">
+                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
+                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
+                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===shoes section== --------------------------------------------------------------->
+    <section class="shoes-section py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center fw-bold">Shoes</h2>
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-12 col-lg-6">
+            <div class="shoe-card">
+              <img
+                src="./assets/images/shoes-sneakers.png"
+                alt="Sneakers"
+                class="shoe-img"
+              />
+              <span class="shoe-label">Sneakers</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-12 col-lg-6">
+            <div class="shoe-card">
+              <img
+                src="./assets/images/shoes-heels.png"
+                alt="Heels"
+                class="shoe-img"
+              />
+              <span class="shoe-label">Heels</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-12 col-lg-6">
+            <div class="shoe-card">
+              <img
+                src="./assets/images/shoes-flat.png"
+                alt="Flats"
+                class="shoe-img"
+              />
+              <span class="shoe-label">Flats</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-12 col-lg-6">
+            <div class="shoe-card">
+              <img
+                src="./assets/images/shoes-sandals.png"
+                alt="Sandals"
+                class="shoe-img"
+              />
+              <span class="shoe-label">Sandals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- bags section--------- -->
+    <section class="bags-section py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center fw-bold">Bags</h2>
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="bag-card">
+              <img
+                src="./assets/images/bags-beach.png"
+                alt="Beach Bag"
+                class="bag-img"
+              />
+              <span class="bag-label">Beach Bag</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="bag-card">
+              <img
+                src="./assets/images/bags-shoulder.png"
+                alt="Shoulder Bag"
+                class="bag-img"
+              />
+              <span class="bag-label">Shoulder Bag</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="bag-card">
+              <img
+                src="./assets/images/bags-handbag.png"
+                alt="Hand Bag"
+                class="bag-img"
+              />
+              <span class="bag-label">Hand Bag</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="bag-card">
+              <img
+                src="./assets/images/bags-crossbody.png"
+                alt="Crossbody Bags"
+                class="bag-img"
+              />
+              <span class="bag-label">Crossbody Bags</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- -->
+    <footer class="bg-black text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Logo & tagline -->
+          <div class="col-md-3 mb-4">
+            <img
+              src="./assets/images/luvina-logo-footer.svg"
+              alt="Logo"
+              width="200"
+            />
+            <p class="mt-2">Where every step meets style</p>
+            <p class="small mt-3">
+              &copy; 2020 LUVINA &nbsp;&nbsp;|&nbsp;&nbsp; Terms
+              &nbsp;&nbsp;|&nbsp;&nbsp; Conditions
+            </p>
+          </div>
+
+          <!-- Column 2: Shoes -->
+          <div class="col-md-2 mb-4">
+            <h5>Shoes</h5>
+            <ul class="list-unstyled mt-3">
+              <li>Heels</li>
+              <li>Sneakers</li>
+              <li>Flats</li>
+              <li>Sandals</li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Bags -->
+          <div class="col-md-2 mb-4">
+            <h5>Bags</h5>
+            <ul class="list-unstyled mt-3">
+              <li>Handbags</li>
+              <li>Shoulder bags</li>
+              <li>Crossbody bags</li>
+              <li>Back bags</li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter -->
+          <div class="col-md-5 mb-4">
+            <h5>Sign up & Save</h5>
+            <p class="mt-3">
+              Subscribe to get special offers, free giveaways, and
+              once-in-a-lifetime deals.
+            </p>
+            <form class="d-flex mt-3 gap-2">
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                placeholder="Enter your name"
+              />
+
+              <button class="btn go-btn">Go</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Home Page.JS"></script>
+    <script>
+      window.onload = function () {
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+          window.location.href = "pages/Login-Customer.html";
+        }
+
+        history.pushState(null, "", location.href);
+        window.onpopstate = function () {
+          history.pushState(null, "", location.href);
+        };
+      };
+
+      function logoutUser() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "pages/Login-Customer.html";
+      }
+    </script>
+  </body>
+</html>
