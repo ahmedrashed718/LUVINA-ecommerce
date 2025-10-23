@@ -117,8 +117,7 @@
       }
 
       /* ------------------------ */
-      /*hassan S*/
-      .featured-products {
+      /hassan S/ .featured-products {
         position: relative;
         overflow: hidden;
       }
@@ -137,16 +136,16 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         flex: 0 0 calc(25% - 15px);
         text-align: center;
-        padding: 15px;
+        padding: 2px;
         transition: transform 0.3s ease;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
       .product-card img {
-        width: 100%;
-        border-radius: 10px;
+        height: 250px;
         object-fit: cover;
+        border-radius: 8px;
       }
       .product-card h5 {
         margin-top: 10px;
@@ -181,15 +180,23 @@
         cursor: pointer;
         z-index: 10;
       }
-      .carousel-btn.left {
-        left: 10px;
-      }
-      .carousel-btn.right {
-        right: 10px;
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
       }
       .carousel-btn:hover {
         background: #000;
         color: #fff;
+      }
+      .discount-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #dc3545;
+        color: white;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        border-radius: 5px;
       }
       @media (max-width: 992px) {
         .product-card {
@@ -204,6 +211,7 @@
           top: 45%;
         }
       }
+
       /*hassan E*/
       .overlay-img {
         max-width: 300px;
@@ -372,38 +380,6 @@
         padding: 4px 10px;
         border-radius: 4px;
       }
-
-      /*****--Footer style----*****/
-      footer {
-        color: white;
-      }
-
-      footer h5,
-      footer p,
-      footer li,
-      footer a {
-        color: white;
-      }
-
-      footer li:hover {
-        text-decoration: underline;
-      }
-      form button:hover {
-        background-color: white;
-        color: #8a2be2;
-      }
-
-      .go-btn {
-        background-color: #8a2be2;
-        color: white;
-        border-radius: 50px;
-        transition: all 1s;
-      }
-
-      .go-btn:hover {
-        background-color: white;
-        color: #8a2be2;
-      }
     </style>
   </head>
   <body>
@@ -433,7 +409,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-lg-4">
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-dark" href="#">Home</a>
+            <a class="nav-link active-link fw-semibold text-dark" href="#"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link fw-medium text-dark" href="#">New Arrivals</a>
@@ -445,7 +423,11 @@
             <a class="nav-link fw-medium text-dark" href="#">Bags</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium text-dark" href="#">Contact Us</a>
+            <a
+              class="nav-link fw-medium text-dark"
+              href="./pages/contactUs.html"
+              >Contact Us</a
+            >
           </li>
         </ul>
 
@@ -462,11 +444,11 @@
             />
           </div>
 
-          <a href="#" class="icon-btn position-relative">
+          <a href="./pages/ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
           </a>
 
-          <a href="#" class="icon-btn position-relative">
+          <a href="./pages/contactUs.html" class="icon-btn position-relative">
             <i class="bi bi-cart3 fs-4"></i>
           </a>
         </form>
@@ -550,7 +532,7 @@
     <!--Hassan Start Featured Products Carousel-->
     <section class="featured-products py-5">
       <div class="container">
-        <h2 class="text-center mb-4 fw-bold">Featured Products</h2>
+        <h2 class="text-center mb-4 fw-bold">Featured Products Promotion</h2>
 
         <div
           id="featuredCarousel"
@@ -572,7 +554,13 @@
                       <p class="text-secondary small mb-1">
                         Luvina Classic Heel
                       </p>
-                      <p class="fw-bold mb-2">800 EGP</p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >800 EGP</span
+                        >
+                        <span class="fw-bold text-danger">600 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -588,7 +576,13 @@
                     />
                     <div class="card-body">
                       <p class="text-secondary small mb-1">Luvina Sandal</p>
-                      <p class="fw-bold mb-2">750 EGP</p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >750 EGP</span
+                        >
+                        <span class="fw-bold text-danger">563 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -604,7 +598,13 @@
                     />
                     <div class="card-body">
                       <p class="text-secondary small mb-1">Luvina Flat Shoe</p>
-                      <p class="fw-bold mb-2">690 EGP</p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >690 EGP</span
+                        >
+                        <span class="fw-bold text-danger">518 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -622,7 +622,13 @@
                       <p class="text-secondary small mb-1">
                         Luvina Street Sneaker
                       </p>
-                      <p class="fw-bold mb-2">850 EGP</p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >850 EGP</span
+                        >
+                        <span class="fw-bold text-danger">638 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -644,7 +650,15 @@
                     />
                     <div class="card-body">
                       <p class="text-secondary small mb-1">Butter Handbag</p>
-                      <p class="fw-bold mb-2">920 EGP</p>
+                      <div
+                        class="d-flex justify-content-center align-items-center gap-2 mb-2"
+                      >
+                        <span
+                          class="text-decoration-line-through text-muted small"
+                          >920 EGP</span
+                        >
+                        <span class="fw-bold text-danger">690 EGP</span>
+                      </div>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -654,13 +668,21 @@
                 <div class="col-12 col-md-4 col-lg-3">
                   <div class="card text-center border-0 shadow-sm product-card">
                     <img
-                      src="./assets/images/bags-handbag.png"
+                      src="./assets/images/bag44.jpg"
                       class="card-img-top"
                       alt="Product 6"
                     />
                     <div class="card-body">
-                      <p class="text-secondary small mb-1">Classic Handbag</p>
-                      <p class="fw-bold mb-2">990 EGP</p>
+                      <p class="text-secondary small mb-1">
+                        Elegant Modern bag
+                      </p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >400 EGP</span
+                        >
+                        <span class="fw-bold text-danger">300 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -670,13 +692,21 @@
                 <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
                   <div class="card text-center border-0 shadow-sm product-card">
                     <img
-                      src="./assets/images/bags-shoulder.png"
+                      src="./assets/images/12.avif"
                       class="card-img-top"
                       alt="Product 7"
                     />
                     <div class="card-body">
-                      <p class="text-secondary small mb-1">Shoulder Bag</p>
-                      <p class="fw-bold mb-2">780 EGP</p>
+                      <p class="text-secondary small mb-1">
+                        Saint Laurent Elite
+                      </p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >1600 EGP</span
+                        >
+                        <span class="fw-bold text-danger">1200 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -686,13 +716,21 @@
                 <div class="col-12 col-lg-3 d-none d-lg-block">
                   <div class="card text-center border-0 shadow-sm product-card">
                     <img
-                      src="./assets/images/bags-crossbody.png"
+                      src="./assets/images/bag2.jpg"
                       class="card-img-top"
                       alt="Product 8"
                     />
                     <div class="card-body">
-                      <p class="text-secondary small mb-1">Crossbody Bag</p>
-                      <p class="fw-bold mb-2">720 EGP</p>
+                      <p class="text-secondary small mb-1">
+                        Saint Laurent Porgandy
+                      </p>
+                      <p class="mb-2">
+                        <span
+                          class="text-decoration-line-through text-muted small me-2"
+                          >1400 EGP</span
+                        >
+                        <span class="fw-bold text-danger">1050 EGP</span>
+                      </p>
                       <button class="btn btn-cart w-100 btn-sm">
                         Add to Cart
                       </button>
@@ -724,6 +762,7 @@
       </div>
     </section>
     <!--Hassan End Featured Products Carousel-->
+
     <section class="new-arrivals py-5">
       <div class="container">
         <h2 class="mb-4 fw-bold">New Arrivals</h2>
