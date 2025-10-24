@@ -268,3 +268,143 @@ body {
       .search-bar:focus-within {
         outline: 2px solid #ddd;
       }
+/* Professional "See More" Button */
+.see-more-pro-btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding: 14px 48px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background:#8a2be2 ;
+  color: #fff  !important;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  
+
+}
+
+.see-more-pro-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover Effect - light flash animation */
+.see-more-pro-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background:#8a2be2 ;
+  transform: skewX(-25deg);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.see-more-pro-btn:hover::before {
+  left: 125%;
+}
+
+.see-more-pro-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg,#8a2be2 
+, #555);
+}
+/* card-------------------*/
+
+    /* 🌸 Product Card */
+      .luv-card {
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: all 0.3s ease;
+        border: none;
+        position: relative;
+      }
+
+      .luv-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .luv-card__imgbox {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .luv-card__img--main,
+      .luv-card__img--hover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .luv-card__img--hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+     .luv-card__imgbox:hover .luv-card__img--main {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.luv-card__imgbox:hover .luv-card__img--hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+      .luv-card__body {
+        padding: 16px 10px 20px;
+      }
+
+      .luv-card__title {
+        font-weight: 400;
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      .luv-card__price {
+        color: #000;
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      /* 🌸 Add to Cart Button */
+      .luv-card__btn {
+        background-color: #8a2be2;
+        color: #fff;
+        border: none;
+        border-radius: 40px;
+        padding: 10px 0;
+        width: 85%;
+        transition: all 0.3s ease;
+        font-weight: 400;
+      }
+
+      .luv-card__btn:hover {
+        background-color: #fff;
+        color: #8a2be2;
+        border: 1.5px solid #8a2be2;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 992px) {
+        .luv-card {
+          margin-bottom: 20px;
+        }
+      }
