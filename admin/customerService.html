@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin customer service</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="customerService.css">
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column" id="sidebar">
+      <div class="logo">
+        <img
+          src="../assets/images/Luvina-logooo.svg"
+          alt="Logo"
+          width="170"
+        />
+        <p class="text-center text-secondary">admin panel</p>
+      </div>
+      <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
+      <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
+      <a href="./customers.html"><i class="bi bi-people"></i> Sellers</a>
+      <a href="./customer service.html" class="active"><i class="bi bi-chat-left-text"></i> Customer service</a>
+
+      <button class="logout-btn mt-auto"><i class="bi bi-box-arrow-right text-white"></i> Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+      <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <!-- Customer Service Section -->
+      <div id="service" class="container-fluid py-3 mx-0 bg-white">
+        <div class="d-flex justify-content-between">
+          <h2 class="head">Customer Service Management</h2>
+          <div class="col-md-4 search">
+            <input type="text" class="form-control w-75" placeholder="Search here...">
+          </div>
+          <button class="btn create create-ticket">Create New Ticket</button>
+        </div>
+      </div>
+
+      <!-- Tickets Table -->
+      <div id="ticketsTable" class="table-responsive my-5 shadow rounded table align-middle text-center mx-auto w-75">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Ticket ID</th>
+              <th>Customer Name</th>
+              <th>Status</th>
+              <th>Subject</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="ticketsBody">
+            <!-- Tickets will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Create Ticket Form -->
+      <div id="createTicketForm" class="my-5 shadow rounded bg-white p-4 w-75 mx-auto" style="display: none;">
+        <h4 class="mb-4 fw-bold">Create New Ticket</h4>
+        <form id="ticketForm">
+          <div class="mb-3">
+            <label class="form-label">Customer Name</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Alice Johnson" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="customerEmail" placeholder="alice.j@example.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Issue Category</label>
+            <select class="form-select" id="issueCategory">
+              <option>Order Inquiry</option>
+              <option>Product Defect</option>
+              <option>Billing Issue</option>
+              <option>Shipping Delay</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-control" id="ticketSubject" placeholder="Enter a brief subject">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" id="ticketDescription" rows="4" placeholder="Describe the issue in detail"></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end gap-3">
+            <button type="button" id="cancelForm" class="btn btn-light border">Cancel</button>
+            <button type="submit" class="btn btn-primary px-4">Submit Ticket</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="customerService.js"></script>
+    <script src="mainAdmin.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

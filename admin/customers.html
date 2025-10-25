@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Customers</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column" id="sidebar">
+      <div class="logo">
+        <img
+          src="../assets/images/Luvina-logooo.svg"
+          alt="Logo"
+          width="170"
+        />
+        <p class="text-center text-secondary">admin panel</p>
+      </div>
+
+      <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
+      <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
+      <a href="./customers.html" class="active"><i class="bi bi-people"></i> Sellers</a>
+      <a href="./customer service.html"><i class="bi bi-chat-left-text"></i> Customer service</a>
+
+      <button class="logout-btn mt-auto" id="logoutBtn">
+        <i class="bi bi-box-arrow-right text-white"></i> Logout
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+      <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <!-- Header -->
+      <div id="service" class="container-fluid py-3 bg-white shadow-sm rounded-3">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <h2 class="head">sellers</h2>
+        <div class="col-md-4 search">
+            <input type="text" class="form-control w-75" placeholder="Search here...">
+          </div>
+          
+          <button class="btn create" id="addCustomerBtn">
+            Add New Seller
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Customer Table -->
+      <div id="customerTable" class="container-fluid mt-4">
+        <div class="table-responsive rounded-3 shadow-sm bg-white p-3">
+          <table class="table align-middle mb-0" id="customersTable">
+            <thead class="table-light">
+              <tr>
+                <th>Customer name</th>
+                <th>Email address</th>
+                <th>Registration date</th>
+                <th>Total spent</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="customersBody">
+              <!-- Dynamic Content -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+          <!-- Customer Form -->
+          <div
+            id="customerForm"
+            class="container-fluid  mt-4"
+            style="display: none;"
+          >
+            <div class="card border-0 shadow-sm p-4 rounded-4">
+              <form id="formCustomer">
+                <input type="hidden" id="customerId" />
+
+                <!-- Customer Name -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Customer Name*</label>
+                  <input
+                    type="text"
+                    id="customerName"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a valid name.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Email*</label>
+                  <input
+                    type="email"
+                    id="customerEmail"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Enter a valid email address.</div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Password*</label>
+                  <input
+                    type="password"
+                    id="customerPassword"
+                    class="form-control"
+                    minlength="6"
+                    required
+                  />
+                  <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    class="form-control"
+                    pattern="^(\+201|01)[0-2,5]{1}[0-9]{8}$"
+                    placeholder="+2010xxxxxxxx"
+                  />
+                  <div class="invalid-feedback">Enter a valid Egyptian phone number.</div>
+                </div>
+
+                <!-- Profile Image Upload -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Profile Image*</label>
+                  <input
+                    type="file"
+                    id="customerImage"
+                    class="form-control"
+                    accept="image/*"
+                    required
+                  />
+                  <div class="mt-2">
+                    <img
+                      id="imagePreview"
+                      src=""
+                      alt=""
+                      class="rounded-circle border"
+                      width="80"
+                      height="80"
+                      style="display: none;"
+                    />
+                  </div>
+                  <div class="invalid-feedback">Please upload an image.</div>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Shipping Address*</label>
+                  <textarea
+                    id="customerAddress"
+                    class="form-control"
+                    rows="3"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Address cannot be empty.</div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end gap-3 mt-4 flex-wrap">
+                  <button type="button" id="cancelForm" class="btn btn-outline-secondary px-4">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary px-5">Confirm</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+    
+
+    <!-- JS -->
+    <script src="./customer.js"></script>
+    <script src="./mainAdmin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+

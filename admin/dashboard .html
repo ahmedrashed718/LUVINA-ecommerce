@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="admin.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+   
+        <!-- Sidebar -->
+        <div class="sidebar d-flex flex-column" id="sidebar">
+          <div class="logo text-center my-3">
+            <img
+              src="../assets/images/Luvina-logooo.svg"
+              alt="Logo"
+              width="170"
+            />
+            <p class="text-secondary mb-0">admin panel</p>
+          </div>
+
+          <a href="./dashboard.html" class="active"
+            ><i class="bi bi-speedometer2"></i> Dashboard</a
+          >
+          <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
+          <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
+          <a href="./customers.html"><i class="bi bi-people"></i> Sellers</a>
+          <a href="./customer service.html"
+            ><i class="bi bi-chat-left-text"></i> Customer service</a
+          >
+
+          <button class="logout-btn mt-auto">
+            <i class="bi bi-box-arrow-right text-white"></i> Logout
+          </button>
+        </div>
+
+        <!-- Main Content -->
+           <div class="main-content bg-grey" id="main-content">
+           
+            <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+          <!-- Dashboard Content -->
+          <div id="dashboard" class="content bg-grey">
+            <!-- Header Section -->
+            <div class="bg-white shadow-sm p-3 mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="head mb-0">Dashboard</h2>
+                <div class="search">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search here..."
+                  />
+                </div>
+                
+              </div>
+
+            </div>
+
+            <!-- Cards Section -->
+            <div class="bg-white shadow-sm p-4 mb-4 mx-4 rounded-3">
+              <div class="mb-4">
+                <h4 class="fw-bold mb-1">This Week's Sales</h4>
+                <p class="text-muted mb-0">Sales summary and performance overview</p>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-3 ">
+                  <div class="card orders p-3 text-center border-0 shadow-sm">
+                    <i class="bi bi-bag fs-3 text-danger"></i>
+                    <p class="mt-2 mb-0 text-muted">Total Orders</p>
+                    <div class="fw-bold fs-5">1,250</div>
+                  </div>
+                </div>
+                <div class="col-md-3 ">
+                  <div class="card sales p-3 text-center border-0 shadow-sm">
+                    <i class="bi bi-wallet-fill fs-3 text-warning"></i>
+                    <p class="mt-2 mb-0 text-muted">Total Sales</p>
+                    <div class="fw-bold fs-5">$32,450</div>
+                  </div>
+                </div>
+                <div class="col-md-3 ">
+                  <div class="card products p-3 text-center border-0 shadow-sm">
+                    <i class="bi bi-box-seam fs-3 text-success"></i>
+                    <p class="mt-2 mb-0 text-muted">Total Products</p>
+                    <div class="fw-bold fs-5">342</div>
+                  </div>
+                </div>
+                <div class="col-md-3 ">
+                  <div class="card profit p-3 text-center border-0 shadow-sm">
+                    <i class="bi bi-currency-dollar fs-3 text-primary"></i>
+                    <p class="mt-2 mb-0 text-muted">Total Profits</p>
+                    <div class="fw-bold fs-5">1,120</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart & Employees -->
+            <div class="row g-4 px-3 pb-5">
+              <!-- Chart -->
+              <div class="col-md-8">
+                <div class="card p-4 shadow-sm border-0">
+                  <h5 class="fw-bold mb-3">Sales Overview (Curved Chart)</h5>
+                  <canvas id="salesChart"></canvas>
+                </div>
+              </div>
+
+              <!-- Employees -->
+              <div class="col-md-4">
+                <div class="card p-4 shadow-sm border-0">
+                  <h5 class="fw-bold mb-3">Top Employees</h5>
+                  <div class="employees-list">
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/65.jpg"
+                        class="rounded-circle me-3"
+                        width="50"
+                        height="50"
+                        alt="Employee"
+                      />
+                      <div>
+                        <h6 class="mb-0">Aya Ahmed</h6>
+                        <small class="text-muted">Sales Manager</small>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/54.jpg"
+                        class="rounded-circle me-3"
+                        width="50"
+                        height="50"
+                        alt="Employee"
+                      />
+                      <div>
+                        <h6 class="mb-0">Omar Hassan</h6>
+                        <small class="text-muted">Customer Support</small>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/48.jpg"
+                        class="rounded-circle me-3"
+                        width="50"
+                        height="50"
+                        alt="Employee"
+                      />
+                      <div>
+                        <h6 class="mb-0">Sara Ali</h6>
+                        <small class="text-muted">Marketing</small>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/33.jpg"
+                        class="rounded-circle me-3"
+                        width="50"
+                        height="50"
+                        alt="Employee"
+                      />
+                      <div>
+                        <h6 class="mb-0">Khaled Nabil</h6>
+                        <small class="text-muted">Delivery Lead</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Chart & Employees -->
+          </div>
+        </div>
+   
+    <!-- JS -->
+    <script src="./mainAdmin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  </body>
+</html>
