@@ -447,7 +447,7 @@
         </ul>
 
         <form class="d-flex align-items-center gap-3">
-          <div
+          <!-- <div
             class="search-bar d-flex align-items-center px-3 border rounded-pill"
           >
             <i class="bi bi-search me-2 text-muted"></i>
@@ -457,7 +457,7 @@
               placeholder="Search..."
               aria-label="Search"
             />
-          </div>
+          </div> -->
 
           <a href="./pages/ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
@@ -539,7 +539,9 @@
           <span>Own the look</span>
           <span>Carry the vibe!</span>
         </h1>
-        <button class="btn">Browse all products</button>
+        <a href="./pages/new-arrival.html">
+          <button class="btn">Browse all products</button>
+        </a>
       </div>
     </section>
 
@@ -559,202 +561,19 @@
             <div class="carousel-item active">
               <div
                 class="row g-4 justify-content-center"
-                id="Featured_Products"
+                id="Featured_Products_Slide1"
               >
-                <div class="col-12 col-md-4 col-lg-3">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/1.jpg"
-                      class="card-img-top"
-                      alt="Product 1"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">
-                        Luvina Classic Heel
-                      </p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >800 EGP</span
-                        >
-                        <span class="fw-bold text-danger">600 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/4.avif"
-                      class="card-img-top"
-                      alt="Product 2"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">Luvina Sandal</p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >750 EGP</span
-                        >
-                        <span class="fw-bold text-danger">563 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/5.avif"
-                      class="card-img-top"
-                      alt="Product 3"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">Luvina Flat Shoe</p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >690 EGP</span
-                        >
-                        <span class="fw-bold text-danger">518 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 d-none d-lg-block">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/shose6.jpg"
-                      class="card-img-top"
-                      alt="Product 4"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">
-                        Luvina Street Sneaker
-                      </p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >850 EGP</span
-                        >
-                        <span class="fw-bold text-danger">638 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                <!-- المنتجات الأولى (من JSON) هتضاف هنا -->
               </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-12 col-md-4 col-lg-3">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/bag-buttter.avif"
-                      class="card-img-top"
-                      alt="Product 5"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">Butter Handbag</p>
-                      <div
-                        class="d-flex justify-content-center align-items-center gap-2 mb-2"
-                      >
-                        <span
-                          class="text-decoration-line-through text-muted small"
-                          >920 EGP</span
-                        >
-                        <span class="fw-bold text-danger">690 EGP</span>
-                      </div>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/bag44.jpg"
-                      class="card-img-top"
-                      alt="Product 6"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">
-                        Elegant Modern bag
-                      </p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >400 EGP</span
-                        >
-                        <span class="fw-bold text-danger">300 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/12.avif"
-                      class="card-img-top"
-                      alt="Product 7"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">
-                        Saint Laurent Elite
-                      </p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >1600 EGP</span
-                        >
-                        <span class="fw-bold text-danger">1200 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 d-none d-lg-block">
-                  <div class="card text-center border-0 shadow-sm product-card">
-                    <img
-                      src="./assets/images/bag2.jpg"
-                      class="card-img-top"
-                      alt="Product 8"
-                    />
-                    <div class="card-body">
-                      <p class="text-secondary small mb-1">
-                        Saint Laurent Porgandy
-                      </p>
-                      <p class="mb-2">
-                        <span
-                          class="text-decoration-line-through text-muted small me-2"
-                          >1400 EGP</span
-                        >
-                        <span class="fw-bold text-danger">1050 EGP</span>
-                      </p>
-                      <button class="btn btn-cart w-100 btn-sm">
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div
+                class="row g-4 justify-content-center"
+                id="Featured_Products_Slide2"
+              >
+                <!-- المنتجات التالية (من JSON) هتضاف هنا -->
               </div>
             </div>
           </div>
@@ -779,165 +598,18 @@
         </div>
       </div>
     </section>
+
     <!--Hassan End Featured Products Carousel-->
 
     <section class="new-arrivals py-5">
       <div class="container">
         <h2 class="mb-4 fw-bold">New Arrivals</h2>
 
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-0 shadow-sm product-card">
-              <div class="position-relative product-img-container">
-                <img
-                  src="./assets/images/1.jpg"
-                  class="main-img"
-                  alt="Product 1"
-                />
-                <img
-                  src="./assets/images/4.avif"
-                  class="hover-img position-absolute top-0 start-0"
-                  alt="Product 1 Hover"
-                />
-
-                <!-- overlay for sizes -->
-                <div
-                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
-                  <div>
-                    <span class="badge bg-light text-dark mx-1">36</span>
-                    <span class="badge bg-light text-dark mx-1">37</span>
-                    <span class="badge bg-light text-dark mx-1">38</span>
-                    <span class="badge bg-light text-dark mx-1">39</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-body py-3">
-                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
-                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
-                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-0 shadow-sm product-card">
-              <div class="position-relative product-img-container">
-                <img
-                  src="./assets/images/5.avif"
-                  class="main-img"
-                  alt="Product 1"
-                />
-                <img
-                  src="./assets/images/7.avif"
-                  class="hover-img position-absolute top-0 start-0"
-                  alt="Product 1 Hover"
-                />
-
-                <!-- overlay for sizes -->
-                <div
-                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
-                  <div>
-                    <span class="badge bg-light text-dark mx-1">36</span>
-                    <span class="badge bg-light text-dark mx-1">37</span>
-                    <span class="badge bg-light text-dark mx-1">38</span>
-                    <span class="badge bg-light text-dark mx-1">39</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-body py-3">
-                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
-                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
-                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-0 shadow-sm product-card">
-              <div class="position-relative product-img-container">
-                <img
-                  src="./assets/images/bag-buttter.avif"
-                  class="main-img"
-                  alt="Product 1"
-                />
-                <img
-                  src="./assets/images/butter3.avif"
-                  class="hover-img position-absolute top-0 start-0"
-                  alt="Product 1 Hover"
-                />
-
-                <!-- overlay for sizes -->
-                <div
-                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
-                  <div>
-                    <span class="badge bg-light text-dark mx-1">36</span>
-                    <span class="badge bg-light text-dark mx-1">37</span>
-                    <span class="badge bg-light text-dark mx-1">38</span>
-                    <span class="badge bg-light text-dark mx-1">39</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-body py-3">
-                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
-                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
-                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-0 shadow-sm product-card">
-              <div class="position-relative product-img-container">
-                <img
-                  src="./assets/images/shose6.jpg"
-                  class="main-img"
-                  alt="Product 1"
-                />
-                <img
-                  src="./assets/images/shose88.webp"
-                  class="hover-img position-absolute top-0 start-0"
-                  alt="Product 1 Hover"
-                />
-
-                <!-- overlay for sizes -->
-                <div
-                  class="product-overlay d-flex flex-column justify-content-center align-items-center"
-                >
-                  <p class="text-white fw-bold mb-1">Available Sizes:</p>
-                  <div>
-                    <span class="badge bg-light text-dark mx-1">36</span>
-                    <span class="badge bg-light text-dark mx-1">37</span>
-                    <span class="badge bg-light text-dark mx-1">38</span>
-                    <span class="badge bg-light text-dark mx-1">39</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-body py-3">
-                <p class="text-secondary mb-1 small">The Darcy 01-740</p>
-                <p class="fw-bold mb-2" style="color: #222">800 EGP</p>
-                <button class="btn btn-cart w-100 btn-sm">Add to Cart</button>
-              </div>
-            </div>
-          </div>
+        <div class="row g-4" id="new-arrivals-con">
+          <!-- الكروت هتضاف هنا من JS -->
         </div>
       </div>
+
       <div class="text-center mt-5">
         <a href="./pages/new-arrival.html" class="see-more-pro-btn">
           <span>See More</span>
@@ -1050,7 +722,7 @@
                 alt="Crossbody Bags"
                 class="bag-img"
               />
-              <span class="bag-label">Crossbody Bags</span>
+              <span class="bag-label">Crossbody Bag</span>
             </div>
           </div>
         </div>
@@ -1120,23 +792,21 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/Home Page.JS"></script>
+
     <script>
-      window.onload = function () {
-        if (localStorage.getItem("isLoggedIn") !== "true") {
-          window.location.href = "pages/Login-Customer.html";
-        }
+      document.addEventListener("DOMContentLoaded", () => {
+        const shoeCards = document.querySelectorAll(".shoe-card");
 
-        history.pushState(null, "", location.href);
-        window.onpopstate = function () {
-          history.pushState(null, "", location.href);
-        };
-      };
-
-      function logoutUser() {
-        localStorage.removeItem("isLoggedIn");
-        window.location.href = "pages/Login-Customer.html";
-      }
+        shoeCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const label = card.querySelector(".shoe-label").textContent.trim();
+            localStorage.setItem("selectedShoeCategory", label);
+            window.location.href = "./pages/shoesProduct.html";
+          });
+        });
+      });
     </script>
+
+    <script src="./js/home.js"></script>
   </body>
 </html>

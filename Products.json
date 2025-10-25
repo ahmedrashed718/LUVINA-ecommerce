@@ -2,34 +2,21 @@
   {
     "id": 1,
     "Category": "Shoes",
-    "subCategory": "Flats",
+    "subCategory": "Flats",  
     "name": "Mamba Loafer",
     "description": "Suede flat moccasin that is easily slipped on and off the foot without any laces , perfectly designed as a shoe to relax and loaf around in.",
     "rating": 4.7,
     "price": 100,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/1A.png",
-      "../assets/products/1B.png",
-      "../assets/products/1C.png"
-    ]
+    "images": ["../assets/products/1A.png", "../assets/products/1B.png", "../assets/products/1C.png"]
   },
   {
     "id": 2,
     "Category": "Shoes",
-    "subCategory": "Heels",
+    "subCategory": "Heels",  
     "name": "The Caren Pump",
     "description": "Stiletto High Heel leather Pumps, Pointed Toe , Heel measures around cm",
     "rating": 3.8,
@@ -37,54 +24,28 @@
     "oldPrice": 240,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/2A.png",
-      "../assets/products/2B.png",
-      "../assets/products/2C.png"
-    ]
+    "images": ["../assets/products/2A.png", "../assets/products/2B.png", "../assets/products/2C.png"]
   },
   {
     "id": 3,
     "Category": "Shoes",
-    "subCategory": "Heels",
+    "subCategory": "Heels",  
     "name": "The Dorra Pump",
     "description": "Chunky Heel Leather Pumps, Pointed Toe , Block Heel measures around cm",
     "rating": 4.2,
     "price": 300,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/3A.png",
-      "../assets/products/3B.png",
-      "../assets/products/3C.png"
-    ]
+    "images": ["../assets/products/3A.png", "../assets/products/3B.png", "../assets/products/3C.png"]
   },
   {
     "id": 4,
     "Category": "Shoes",
-    "subCategory": "Heels",
+    "subCategory": "Heels",  
     "name": "Carolina Pump",
     "description": "Stiletto mid Heel leather Pumps, Pointed Toe , Heel measures around cm",
     "rating": 4.9,
@@ -92,54 +53,28 @@
     "oldPrice": 480,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/4A.png",
-      "../assets/products/4B.png",
-      "../assets/products/4C.png"
-    ]
+    "images": ["../assets/products/4A.png", "../assets/products/4B.png", "../assets/products/4C.png"]
   },
   {
     "id": 5,
     "Category": "Shoes",
-    "subCategory": "Sandals",
+    "subCategory": "Sandals",  
     "name": "Allen Heel",
     "description": "pointed heeled slingback shoes with fur leather in stone , Stiletto heel measures around 9 cm",
     "rating": 3.5,
     "price": 500,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/5A.png",
-      "../assets/products/5B.png",
-      "../assets/products/5C.png"
-    ]
+    "images": ["../assets/products/5A.png", "../assets/products/5B.png", "../assets/products/5C.png"]
   },
   {
     "id": 6,
     "Category": "Shoes",
-    "subCategory": "Sandals",
+    "subCategory": "Sandals",  
     "name": "Lorra Court Pump",
     "description": "These court shoes are a work of art. Featuring a pointed toe and a slingback you'll be prepared for any event, from glamorous nights out to productive days in the office , Cow Print, Heel measures around 9 cm",
     "rating": 4.1,
@@ -147,54 +82,28 @@
     "oldPrice": 720,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/6A.png",
-      "../assets/products/6B.png",
-      "../assets/products/6C.png"
-    ]
+    "images": ["../assets/products/6A.png", "../assets/products/6B.png", "../assets/products/6C.png"]
   },
   {
     "id": 7,
     "Category": "Shoes",
-    "subCategory": "Flats",
+    "subCategory": "Flats",  
     "name": "Mary Ballet Flats",
     "description": "Leather Round Toe Ballet Flats with Adjustable Strap",
     "rating": 4.4,
     "price": 700,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/7A.png",
-      "../assets/products/7B.png",
-      "../assets/products/7C.png"
-    ]
+    "images": ["../assets/products/7A.png", "../assets/products/7B.png", "../assets/products/7C.png"]
   },
   {
     "id": 8,
     "Category": "Shoes",
-    "subCategory": "Heels",
+    "subCategory": "Heels",  
     "name": "Eva Pump",
     "description": "The Fresh pump features a fashionable high stiletto heel and a classic pointy toe that is sure to impress. The perfect wardrobe essential, Heel measures around 8 cm",
     "rating": 3.9,
@@ -202,54 +111,28 @@
     "oldPrice": 960,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/8A.png",
-      "../assets/products/8B.png",
-      "../assets/products/8C.png"
-    ]
+    "images": ["../assets/products/8A.png", "../assets/products/8B.png", "../assets/products/8C.png"]
   },
   {
     "id": 9,
     "Category": "Shoes",
-    "subCategory": "Heels",
+    "subCategory": "Heels",  
     "name": "Teema Pump",
     "description": "Stiletto Heel Suede Pumps, Pointed Toe , Heel measures around 8 cm",
     "rating": 4.6,
     "price": 900,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/9A.png",
-      "../assets/products/9B.png",
-      "../assets/products/9C.png"
-    ]
+    "images": ["../assets/products/9A.png", "../assets/products/9B.png", "../assets/products/9C.png"]
   },
   {
     "id": 10,
     "Category": "Shoes",
-    "subCategory": "Sneakers",
+    "subCategory": "Sneakers",    
     "name": "Lace Sneaker",
     "description": "Beige, Blue, White Leather With Lace Sneaker",
     "rating": 3.7,
@@ -257,22 +140,9 @@
     "oldPrice": 1200,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/10A.png",
-      "../assets/products/10B.png",
-      "../assets/products/10C.png"
-    ]
+    "images": ["../assets/products/10A.png", "../assets/products/10B.png", "../assets/products/10C.png"]
   },
   {
     "id": 11,
@@ -284,22 +154,9 @@
     "price": 1100,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/11A.png",
-      "../assets/products/11B.png",
-      "../assets/products/11C.png"
-    ]
+    "images": ["../assets/products/11A.png", "../assets/products/11B.png", "../assets/products/11C.png"]
   },
   {
     "id": 12,
@@ -312,22 +169,9 @@
     "oldPrice": 1440,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/12A.png",
-      "../assets/products/12B.png",
-      "../assets/products/12C.png"
-    ]
+    "images": ["../assets/products/12A.png", "../assets/products/12B.png", "../assets/products/12C.png"]
   },
   {
     "id": 13,
@@ -339,22 +183,9 @@
     "price": 1300,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/13A.png",
-      "../assets/products/13B.png",
-      "../assets/products/13C.png"
-    ]
+    "images": ["../assets/products/13A.png", "../assets/products/13B.png", "../assets/products/13C.png"]
   },
   {
     "id": 14,
@@ -367,22 +198,9 @@
     "oldPrice": 1680,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/14A.png",
-      "../assets/products/14B.png",
-      "../assets/products/14C.png"
-    ]
+    "images": ["../assets/products/14A.png", "../assets/products/14B.png", "../assets/products/14C.png"]
   },
   {
     "id": 15,
@@ -394,22 +212,9 @@
     "price": 1500,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/15A.png",
-      "../assets/products/15B.png",
-      "../assets/products/15C.png"
-    ]
+    "images": ["../assets/products/15A.png", "../assets/products/15B.png", "../assets/products/15C.png"]
   },
   {
     "id": 16,
@@ -422,22 +227,9 @@
     "oldPrice": 1920,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/16A.png",
-      "../assets/products/16B.png",
-      "../assets/products/16C.png"
-    ]
+    "images": ["../assets/products/16A.png", "../assets/products/16B.png", "../assets/products/16C.png"]
   },
   {
     "id": 17,
@@ -449,22 +241,9 @@
     "price": 1700,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/17A.png",
-      "../assets/products/17B.png",
-      "../assets/products/17C.png"
-    ]
+    "images": ["../assets/products/17A.png", "../assets/products/17B.png", "../assets/products/17C.png"]
   },
   {
     "id": 18,
@@ -477,22 +256,9 @@
     "oldPrice": 2160,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/18A.png",
-      "../assets/products/18B.png",
-      "../assets/products/18C.png"
-    ]
+    "images": ["../assets/products/18A.png", "../assets/products/18B.png", "../assets/products/18C.png"]
   },
   {
     "id": 19,
@@ -504,22 +270,9 @@
     "price": 1900,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/19A.png",
-      "../assets/products/19B.png",
-      "../assets/products/19C.png"
-    ]
+    "images": ["../assets/products/19A.png", "../assets/products/19B.png", "../assets/products/19C.png"]
   },
   {
     "id": 20,
@@ -532,22 +285,9 @@
     "oldPrice": 2400,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
     "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/20A.png",
-      "../assets/products/20B.png",
-      "../assets/products/20C.png"
-    ]
+    "images": ["../assets/products/20A.png", "../assets/products/20B.png", "../assets/products/20C.png"]
   },
   {
     "id": 21,
@@ -559,21 +299,9 @@
     "price": 2542,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/Bagcross (1).png",
-      "../assets/products/Bagcross (2).png"
-    ]
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": ["../assets/products/Bagcross (1).jpg","../assets/products/Bagcross (2).jpg"]
   },
   {
     "id": 22,
@@ -585,21 +313,9 @@
     "price": 2391,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
-    "images": [
-      "../assets/products/Bagcross (3).png",
-      "../assets/products/Bagcross (4).png"
-    ],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": ["../assets/products/Bagcross (3).jpg","../assets/products/Bagcross (4).jpg"],
     "oldPrice": 2869
   },
   {
@@ -612,20 +328,11 @@
     "price": 1885,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (5).png",
-      "../assets/products/Bagcross (6).png"
+      "../assets/products/Bagcross (5).jpg",
+      "../assets/products/Bagcross (6).jpg"
     ]
   },
   {
@@ -638,20 +345,11 @@
     "price": 1750,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+     "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (7).png",
-      "../assets/products/Bagcross (8).png"
+      "../assets/products/Bagcross (7).jpg",
+      "../assets/products/Bagcross (8).jpg"
     ],
     "oldPrice": 2100
   },
@@ -665,20 +363,11 @@
     "price": 643,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (9).png",
-      "../assets/products/Bagcross (10).png"
+      "../assets/products/Bagcross (9).jpg",
+      "../assets/products/Bagcross (10).jpg"
     ]
   },
   {
@@ -691,20 +380,11 @@
     "price": 2388,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (11).png",
-      "../assets/products/Bagcross (12).png"
+      "../assets/products/Bagcross (11).jpg",
+      "../assets/products/Bagcross (12).jpg"
     ],
     "oldPrice": 2866
   },
@@ -718,20 +398,11 @@
     "price": 2982,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (13).png",
-      "../assets/products/Bagcross (14).png"
+      "../assets/products/Bagcross (13).jpg",
+      "../assets/products/Bagcross (14).jpg"
     ]
   },
   {
@@ -744,20 +415,11 @@
     "price": 2443,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (15).png",
-      "../assets/products/Bagcross (16).png"
+      "../assets/products/Bagcross (15).jpg",
+      "../assets/products/Bagcross (16).jpg"
     ],
     "oldPrice": 2932
   },
@@ -771,20 +433,11 @@
     "price": 1680,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (17).png",
-      "../assets/products/Bagcross (18).png"
+      "../assets/products/Bagcross (17).jpg",
+      "../assets/products/Bagcross (18).jpg"
     ]
   },
   {
@@ -797,20 +450,11 @@
     "price": 2841,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (19).png",
-      "../assets/products/Bagcross (20).png"
+      "../assets/products/Bagcross (19).jpg",
+      "../assets/products/Bagcross (20).jpg"
     ],
     "oldPrice": 3409
   },
@@ -824,20 +468,11 @@
     "price": 2632,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (21).png",
-      "../assets/products/Bagcross (22).png"
+      "../assets/products/Bagcross (21).jpg",
+      "../assets/products/Bagcross (22).jpg"
     ]
   },
   {
@@ -850,20 +485,11 @@
     "price": 1920,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (23).png",
-      "../assets/products/Bagcross (24).png"
+      "../assets/products/Bagcross (23).jpg",
+      "../assets/products/Bagcross (24).jpg"
     ],
     "oldPrice": 2304
   },
@@ -877,20 +503,11 @@
     "price": 2419,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (25).png",
-      "../assets/products/Bagcross (26).png"
+      "../assets/products/Bagcross (25).jpg",
+      "../assets/products/Bagcross (26).jpg"
     ]
   },
   {
@@ -903,20 +520,11 @@
     "price": 1217,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (27).png",
-      "../assets/products/Bagcross (28).png"
+      "../assets/products/Bagcross (27).jpg",
+      "../assets/products/Bagcross (28).jpg"
     ],
     "oldPrice": 1460
   },
@@ -930,20 +538,11 @@
     "price": 702,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (29).png",
-      "../assets/products/Bagcross (30).png"
+      "../assets/products/Bagcross (29).jpg",
+      "../assets/products/Bagcross (30).jpg"
     ]
   },
   {
@@ -956,20 +555,11 @@
     "price": 140,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (31).png",
-      "../assets/products/Bagcross (32).png"
+      "../assets/products/Bagcross (31).jpg",
+      "../assets/products/Bagcross (32).jpg"
     ],
     "oldPrice": 168
   },
@@ -983,20 +573,11 @@
     "price": 2038,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Bagcross (33).png",
-      "../assets/products/Bagcross (34).png"
+      "../assets/products/Bagcross (33).jpg",
+      "../assets/products/Bagcross (34).jpg"
     ]
   },
   {
@@ -1009,20 +590,11 @@
     "price": 272,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (1).png",
-      "../assets/products/BagBeach (2).png"
+      "../assets/products/BagBeach (1).jpg",
+      "../assets/products/BagBeach (2).jpg"
     ],
     "oldPrice": 326
   },
@@ -1036,20 +608,11 @@
     "price": 1023,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (3).png",
-      "../assets/products/BagBeach (4).png"
+      "../assets/products/BagBeach (3).jpg",
+      "../assets/products/BagBeach (4).jpg"
     ]
   },
   {
@@ -1062,20 +625,11 @@
     "price": 137,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (5).png",
-      "../assets/products/BagBeach (6).png"
+      "../assets/products/BagBeach (5).jpg",
+      "../assets/products/BagBeach (6).jpg"
     ],
     "oldPrice": 164
   },
@@ -1089,20 +643,11 @@
     "price": 2885,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (7).png",
-      "../assets/products/BagBeach (8).png"
+      "../assets/products/BagBeach (7).jpg",
+      "../assets/products/BagBeach (8).jpg"
     ]
   },
   {
@@ -1115,20 +660,11 @@
     "price": 2814,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (9).png",
-      "../assets/products/BagBeach (10).png"
+      "../assets/products/BagBeach (9).jpg",
+      "../assets/products/BagBeach (10).jpg"
     ],
     "oldPrice": 3377
   },
@@ -1142,20 +678,11 @@
     "price": 1604,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (11).png",
-      "../assets/products/BagBeach (12).png"
+      "../assets/products/BagBeach (11).jpg",
+      "../assets/products/BagBeach (12).jpg"
     ]
   },
   {
@@ -1168,20 +695,11 @@
     "price": 699,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (13).png",
-      "../assets/products/BagBeach (14).png"
+      "../assets/products/BagBeach (13).jpg",
+      "../assets/products/BagBeach (14).jpg"
     ],
     "oldPrice": 839
   },
@@ -1195,20 +713,11 @@
     "price": 434,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (15).png",
-      "../assets/products/BagBeach (16).png"
+      "../assets/products/BagBeach (15).jpg",
+      "../assets/products/BagBeach (16).jpg"
     ]
   },
   {
@@ -1221,20 +730,11 @@
     "price": 1605,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (17).png",
-      "../assets/products/BagBeach (18).png"
+      "../assets/products/BagBeach (17).jpg",
+      "../assets/products/BagBeach (18).jpg"
     ],
     "oldPrice": 1926
   },
@@ -1248,20 +748,11 @@
     "price": 289,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (19).png",
-      "../assets/products/BagBeach (20).png"
+      "../assets/products/BagBeach (19).jpg",
+      "../assets/products/BagBeach (20).jpg"
     ]
   },
   {
@@ -1274,20 +765,11 @@
     "price": 1940,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (21).png",
-      "../assets/products/BagBeach (22).png"
+      "../assets/products/BagBeach (21).jpg",
+      "../assets/products/BagBeach (22).jpg"
     ],
     "oldPrice": 2328
   },
@@ -1301,20 +783,11 @@
     "price": 220,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagBeach (23).png",
-      "../assets/products/BagBeach (24).png"
+      "../assets/products/BagBeach (23).jpg",
+      "../assets/products/BagBeach (24).jpg"
     ]
   },
   {
@@ -1327,20 +800,11 @@
     "price": 189,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (1).png",
-      "../assets/products/BagHands (2).png"
+      "../assets/products/BagHands (1).jpg",
+      "../assets/products/BagHands (2).jpg"
     ],
     "oldPrice": 227
   },
@@ -1354,20 +818,11 @@
     "price": 1672,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (3).png",
-      "../assets/products/BagHands (4).png"
+      "../assets/products/BagHands (3).jpg",
+      "../assets/products/BagHands (4).jpg"
     ]
   },
   {
@@ -1380,20 +835,11 @@
     "price": 2027,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (5).png",
-      "../assets/products/BagHands (6).png"
+      "../assets/products/BagHands (5).jpg",
+      "../assets/products/BagHands (6).jpg"
     ],
     "oldPrice": 2432
   },
@@ -1407,20 +853,11 @@
     "price": 1300,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (7).png",
-      "../assets/products/BagHands (8).png"
+      "../assets/products/BagHands (7).jpg",
+      "../assets/products/BagHands (8).jpg"
     ]
   },
   {
@@ -1433,20 +870,11 @@
     "price": 1742,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (9).png",
-      "../assets/products/BagHands (10).png"
+      "../assets/products/BagHands (9).jpg",
+      "../assets/products/BagHands (10).jpg"
     ],
     "oldPrice": 2090
   },
@@ -1460,20 +888,11 @@
     "price": 422,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (11).png",
-      "../assets/products/BagHands (12).png"
+      "../assets/products/BagHands (11).jpg",
+      "../assets/products/BagHands (12).jpg"
     ]
   },
   {
@@ -1486,20 +905,11 @@
     "price": 760,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (13).png",
-      "../assets/products/BagHands (14).png"
+      "../assets/products/BagHands (13).jpg",
+      "../assets/products/BagHands (14).jpg"
     ],
     "oldPrice": 912
   },
@@ -1513,20 +923,11 @@
     "price": 364,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (15).png",
-      "../assets/products/BagHands (16).png"
+      "../assets/products/BagHands (15).jpg",
+      "../assets/products/BagHands (16).jpg"
     ]
   },
   {
@@ -1539,20 +940,11 @@
     "price": 1598,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (17).png",
-      "../assets/products/BagHands (18).png"
+      "../assets/products/BagHands (17).jpg",
+      "../assets/products/BagHands (18).jpg"
     ],
     "oldPrice": 1918
   },
@@ -1566,20 +958,11 @@
     "price": 592,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (19).png",
-      "../assets/products/BagHands (20).png"
+      "../assets/products/BagHands (19).jpg",
+      "../assets/products/BagHands (20).jpg"
     ]
   },
   {
@@ -1592,20 +975,11 @@
     "price": 2654,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (21).png",
-      "../assets/products/BagHands (22).png"
+      "../assets/products/BagHands (21).jpg",
+      "../assets/products/BagHands (22).jpg"
     ],
     "oldPrice": 3185
   },
@@ -1619,20 +993,11 @@
     "price": 2529,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (23).png",
-      "../assets/products/BagHands (24).png"
+      "../assets/products/BagHands (23).jpg",
+      "../assets/products/BagHands (24).jpg"
     ]
   },
   {
@@ -1645,20 +1010,11 @@
     "price": 192,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (25).png",
-      "../assets/products/BagHands (26).png"
+      "../assets/products/BagHands (25).jpg",
+      "../assets/products/BagHands (26).jpg"
     ],
     "oldPrice": 230
   },
@@ -1672,20 +1028,11 @@
     "price": 1737,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (27).png",
-      "../assets/products/BagHands (28).png"
+      "../assets/products/BagHands (27).jpg",
+      "../assets/products/BagHands (28).jpg"
     ]
   },
   {
@@ -1698,20 +1045,11 @@
     "price": 2093,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (29).png",
-      "../assets/products/BagHands (30).png"
+      "../assets/products/BagHands (29).jpg",
+      "../assets/products/BagHands (30).jpg"
     ],
     "oldPrice": 2512
   },
@@ -1725,20 +1063,11 @@
     "price": 2712,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (31).png",
-      "../assets/products/BagHands (32).png"
+      "../assets/products/BagHands (31).jpg",
+      "../assets/products/BagHands (32).jpg"
     ]
   },
   {
@@ -1751,20 +1080,11 @@
     "price": 612,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (33).png",
-      "../assets/products/BagHands (34).png"
+      "../assets/products/BagHands (33).jpg",
+      "../assets/products/BagHands (34).jpg"
     ],
     "oldPrice": 734
   },
@@ -1778,20 +1098,11 @@
     "price": 1267,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (35).png",
-      "../assets/products/BagHands (36).png"
+      "../assets/products/BagHands (35).jpg",
+      "../assets/products/BagHands (36).jpg"
     ]
   },
   {
@@ -1804,20 +1115,11 @@
     "price": 2236,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagHands (37).png",
-      "../assets/products/BagHands (38).png"
+      "../assets/products/BagHands (37).jpg",
+      "../assets/products/BagHands (38).jpg"
     ],
     "oldPrice": 2683
   },
@@ -1831,20 +1133,11 @@
     "price": 1785,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (1).png",
-      "../assets/products/BagSh (2).png"
+      "../assets/products/BagSh (1).jpg",
+      "../assets/products/BagSh (2).jpg"
     ]
   },
   {
@@ -1857,20 +1150,11 @@
     "price": 2902,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (3).png",
-      "../assets/products/BagSh (4).png"
+      "../assets/products/BagSh (3).jpg",
+      "../assets/products/BagSh (4).jpg"
     ],
     "oldPrice": 3482
   },
@@ -1884,20 +1168,11 @@
     "price": 792,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (5).png",
-      "../assets/products/BagSh (6).png"
+      "../assets/products/BagSh (5).jpg",
+      "../assets/products/BagSh (6).jpg"
     ]
   },
   {
@@ -1910,20 +1185,11 @@
     "price": 2651,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (7).png",
-      "../assets/products/BagSh (8).png"
+      "../assets/products/BagSh (7).jpg",
+      "../assets/products/BagSh (8).jpg"
     ],
     "oldPrice": 3181
   },
@@ -1937,20 +1203,11 @@
     "price": 2681,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (9).png",
-      "../assets/products/BagSh (10).png"
+      "../assets/products/BagSh (9).jpg",
+      "../assets/products/BagSh (10).jpg"
     ]
   },
   {
@@ -1963,20 +1220,11 @@
     "price": 1832,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (11).png",
-      "../assets/products/BagSh (12).png"
+      "../assets/products/BagSh (11).jpg",
+      "../assets/products/BagSh (12).jpg"
     ],
     "oldPrice": 2198
   },
@@ -1990,20 +1238,11 @@
     "price": 2973,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (13).png",
-      "../assets/products/BagSh (14).png"
+      "../assets/products/BagSh (13).jpg",
+      "../assets/products/BagSh (14).jpg"
     ]
   },
   {
@@ -2016,20 +1255,11 @@
     "price": 1973,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (15).png",
-      "../assets/products/BagSh (16).png"
+      "../assets/products/BagSh (15).jpg",
+      "../assets/products/BagSh (16).jpg"
     ],
     "oldPrice": 2368
   },
@@ -2043,20 +1273,11 @@
     "price": 218,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (17).png",
-      "../assets/products/BagSh (18).png"
+      "../assets/products/BagSh (17).jpg",
+      "../assets/products/BagSh (18).jpg"
     ]
   },
   {
@@ -2069,20 +1290,11 @@
     "price": 1670,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (19).png",
-      "../assets/products/BagSh (20).png"
+      "../assets/products/BagSh (19).jpg",
+      "../assets/products/BagSh (20).jpg"
     ],
     "oldPrice": 2004
   },
@@ -2096,20 +1308,11 @@
     "price": 1923,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (21).png",
-      "../assets/products/BagSh (22).png"
+      "../assets/products/BagSh (21).jpg",
+      "../assets/products/BagSh (22).jpg"
     ]
   },
   {
@@ -2122,20 +1325,11 @@
     "price": 2791,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/BagSh (23).png",
-      "../assets/products/BagSh (24).png"
+      "../assets/products/BagSh (23).jpg",
+      "../assets/products/BagSh (24).jpg"
     ],
     "oldPrice": 3349
   },
@@ -2149,20 +1343,11 @@
     "price": 507,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (1).png",
-      "../assets/products/Shheel (2).png"
+      "../assets/products/Shheel (1).jpg",
+      "../assets/products/Shheel (2).jpg"
     ]
   },
   {
@@ -2175,20 +1360,11 @@
     "price": 986,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (3).png",
-      "../assets/products/Shheel (4).png"
+      "../assets/products/Shheel (3).jpg",
+      "../assets/products/Shheel (4).jpg"
     ],
     "oldPrice": 1183
   },
@@ -2202,20 +1378,11 @@
     "price": 2936,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (5).png",
-      "../assets/products/Shheel (6).png"
+      "../assets/products/Shheel (5).jpg",
+      "../assets/products/Shheel (6).jpg"
     ]
   },
   {
@@ -2228,20 +1395,11 @@
     "price": 908,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (7).png",
-      "../assets/products/Shheel (8).png"
+      "../assets/products/Shheel (7).jpg",
+      "../assets/products/Shheel (8).jpg"
     ],
     "oldPrice": 1090
   },
@@ -2255,20 +1413,11 @@
     "price": 2472,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (9).png",
-      "../assets/products/Shheel (10).png"
+      "../assets/products/Shheel (9).jpg",
+      "../assets/products/Shheel (10).jpg"
     ]
   },
   {
@@ -2281,20 +1430,11 @@
     "price": 384,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (11).png",
-      "../assets/products/Shheel (12).png"
+      "../assets/products/Shheel (11).jpg",
+      "../assets/products/Shheel (12).jpg"
     ],
     "oldPrice": 461
   },
@@ -2308,20 +1448,11 @@
     "price": 739,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (13).png",
-      "../assets/products/Shheel (14).png"
+      "../assets/products/Shheel (13).jpg",
+      "../assets/products/Shheel (14).jpg"
     ]
   },
   {
@@ -2334,20 +1465,11 @@
     "price": 2295,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (15).png",
-      "../assets/products/Shheel (16).png"
+      "../assets/products/Shheel (15).jpg",
+      "../assets/products/Shheel (16).jpg"
     ],
     "oldPrice": 2754
   },
@@ -2361,20 +1483,11 @@
     "price": 301,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (17).png",
-      "../assets/products/Shheel (18).png"
+      "../assets/products/Shheel (17).jpg",
+      "../assets/products/Shheel (18).jpg"
     ]
   },
   {
@@ -2387,20 +1500,11 @@
     "price": 2486,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (19).png",
-      "../assets/products/Shheel (20).png"
+      "../assets/products/Shheel (19).jpg",
+      "../assets/products/Shheel (20).jpg"
     ],
     "oldPrice": 2983
   },
@@ -2414,20 +1518,11 @@
     "price": 2662,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (21).png",
-      "../assets/products/Shheel (22).png"
+      "../assets/products/Shheel (21).jpg",
+      "../assets/products/Shheel (22).jpg"
     ]
   },
   {
@@ -2440,20 +1535,11 @@
     "price": 2302,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (23).png",
-      "../assets/products/Shheel (24).png"
+      "../assets/products/Shheel (23).jpg",
+      "../assets/products/Shheel (24).jpg"
     ],
     "oldPrice": 2762
   },
@@ -2467,20 +1553,11 @@
     "price": 1459,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (25).png",
-      "../assets/products/Shheel (26).png"
+      "../assets/products/Shheel (25).jpg",
+      "../assets/products/Shheel (26).jpg"
     ]
   },
   {
@@ -2493,20 +1570,11 @@
     "price": 1951,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (27).png",
-      "../assets/products/Shheel (28).png"
+      "../assets/products/Shheel (27).jpg",
+      "../assets/products/Shheel (28).jpg"
     ],
     "oldPrice": 2341
   },
@@ -2520,20 +1588,11 @@
     "price": 228,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (29).png",
-      "../assets/products/Shheel (30).png"
+      "../assets/products/Shheel (29).jpg",
+      "../assets/products/Shheel (30).jpg"
     ]
   },
   {
@@ -2546,20 +1605,11 @@
     "price": 1866,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (31).png",
-      "../assets/products/Shheel (32).png"
+      "../assets/products/Shheel (31).jpg",
+      "../assets/products/Shheel (32).jpg"
     ],
     "oldPrice": 2239
   },
@@ -2573,20 +1623,11 @@
     "price": 2565,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (33).png",
-      "../assets/products/Shheel (34).png"
+      "../assets/products/Shheel (33).jpg",
+      "../assets/products/Shheel (34).jpg"
     ]
   },
   {
@@ -2599,20 +1640,11 @@
     "price": 2611,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (35).png",
-      "../assets/products/Shheel (36).png"
+      "../assets/products/Shheel (35).jpg",
+      "../assets/products/Shheel (36).jpg"
     ],
     "oldPrice": 3133
   },
@@ -2626,20 +1658,11 @@
     "price": 684,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (37).png",
-      "../assets/products/Shheel (38).png"
+      "../assets/products/Shheel (37).jpg",
+      "../assets/products/Shheel (38).jpg"
     ]
   },
   {
@@ -2652,20 +1675,11 @@
     "price": 1767,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (39).png",
-      "../assets/products/Shheel (40).png"
+      "../assets/products/Shheel (39).jpg",
+      "../assets/products/Shheel (40).jpg"
     ],
     "oldPrice": 2120
   },
@@ -2679,20 +1693,11 @@
     "price": 2806,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shheel (41).png",
-      "../assets/products/Shheel (42).png"
+      "../assets/products/Shheel (41).jpg",
+      "../assets/products/Shheel (42).jpg"
     ]
   },
   {
@@ -2705,20 +1710,11 @@
     "price": 1635,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (1).png",
-      "../assets/products/ShSnak (2).png"
+      "../assets/products/ShSnak (1).jpg",
+      "../assets/products/ShSnak (2).jpg"
     ],
     "oldPrice": 1962
   },
@@ -2732,20 +1728,11 @@
     "price": 1561,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (3).png",
-      "../assets/products/ShSnak (4).png"
+      "../assets/products/ShSnak (3).jpg",
+      "../assets/products/ShSnak (4).jpg"
     ]
   },
   {
@@ -2758,20 +1745,11 @@
     "price": 1051,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (5).png",
-      "../assets/products/ShSnak (6).png"
+      "../assets/products/ShSnak (5).jpg",
+      "../assets/products/ShSnak (6).jpg"
     ],
     "oldPrice": 1261
   },
@@ -2785,20 +1763,11 @@
     "price": 1120,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (7).png",
-      "../assets/products/ShSnak (8).png"
+      "../assets/products/ShSnak (7).jpg",
+      "../assets/products/ShSnak (8).jpg"
     ]
   },
   {
@@ -2811,20 +1780,11 @@
     "price": 1059,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (9).png",
-      "../assets/products/ShSnak (10).png"
+      "../assets/products/ShSnak (9).jpg",
+      "../assets/products/ShSnak (10).jpg"
     ],
     "oldPrice": 1271
   },
@@ -2838,20 +1798,11 @@
     "price": 2521,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (11).png",
-      "../assets/products/ShSnak (12).png"
+      "../assets/products/ShSnak (11).jpg",
+      "../assets/products/ShSnak (12).jpg"
     ]
   },
   {
@@ -2864,20 +1815,11 @@
     "price": 2261,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (13).png",
-      "../assets/products/ShSnak (14).png"
+      "../assets/products/ShSnak (13).jpg",
+      "../assets/products/ShSnak (14).jpg"
     ],
     "oldPrice": 2713
   },
@@ -2891,20 +1833,11 @@
     "price": 2946,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (15).png",
-      "../assets/products/ShSnak (16).png"
+      "../assets/products/ShSnak (15).jpg",
+      "../assets/products/ShSnak (16).jpg"
     ]
   },
   {
@@ -2917,20 +1850,11 @@
     "price": 1307,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (17).png",
-      "../assets/products/ShSnak (18).png"
+      "../assets/products/ShSnak (17).jpg",
+      "../assets/products/ShSnak (18).jpg"
     ],
     "oldPrice": 1568
   },
@@ -2944,20 +1868,11 @@
     "price": 1117,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (19).png",
-      "../assets/products/ShSnak (20).png"
+      "../assets/products/ShSnak (19).jpg",
+      "../assets/products/ShSnak (20).jpg"
     ]
   },
   {
@@ -2970,20 +1885,11 @@
     "price": 2768,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (21).png",
-      "../assets/products/ShSnak (22).png"
+      "../assets/products/ShSnak (21).jpg",
+      "../assets/products/ShSnak (22).jpg"
     ],
     "oldPrice": 3322
   },
@@ -2997,20 +1903,11 @@
     "price": 1882,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (23).png",
-      "../assets/products/ShSnak (24).png"
+      "../assets/products/ShSnak (23).jpg",
+      "../assets/products/ShSnak (24).jpg"
     ]
   },
   {
@@ -3023,20 +1920,11 @@
     "price": 1461,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (25).png",
-      "../assets/products/ShSnak (26).png"
+      "../assets/products/ShSnak (25).jpg",
+      "../assets/products/ShSnak (26).jpg"
     ],
     "oldPrice": 1753
   },
@@ -3050,20 +1938,11 @@
     "price": 1695,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (27).png",
-      "../assets/products/ShSnak (28).png"
+      "../assets/products/ShSnak (27).jpg",
+      "../assets/products/ShSnak (28).jpg"
     ]
   },
   {
@@ -3076,20 +1955,11 @@
     "price": 874,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (29).png",
-      "../assets/products/ShSnak (30).png"
+      "../assets/products/ShSnak (29).jpg",
+      "../assets/products/ShSnak (30).jpg"
     ],
     "oldPrice": 1049
   },
@@ -3103,20 +1973,11 @@
     "price": 1119,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (31).png",
-      "../assets/products/ShSnak (32).png"
+      "../assets/products/ShSnak (31).jpg",
+      "../assets/products/ShSnak (32).jpg"
     ]
   },
   {
@@ -3129,20 +1990,11 @@
     "price": 2248,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (33).png",
-      "../assets/products/ShSnak (34).png"
+      "../assets/products/ShSnak (33).jpg",
+      "../assets/products/ShSnak (34).jpg"
     ],
     "oldPrice": 2698
   },
@@ -3156,20 +2008,11 @@
     "price": 1581,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (35).png",
-      "../assets/products/ShSnak (36).png"
+      "../assets/products/ShSnak (35).jpg",
+      "../assets/products/ShSnak (36).jpg"
     ]
   },
   {
@@ -3182,20 +2025,11 @@
     "price": 118,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (37).png",
-      "../assets/products/ShSnak (38).png"
+      "../assets/products/ShSnak (37).jpg",
+      "../assets/products/ShSnak (38).jpg"
     ],
     "oldPrice": 142
   },
@@ -3209,20 +2043,11 @@
     "price": 1718,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/ShSnak (39).png",
-      "../assets/products/ShSnak (40).png"
+      "../assets/products/ShSnak (39).jpg",
+      "../assets/products/ShSnak (40).jpg"
     ]
   },
   {
@@ -3235,20 +2060,11 @@
     "price": 1654,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (1).png",
-      "../assets/products/Shsandel (2).png"
+      "../assets/products/Shsandel (1).jpg",
+      "../assets/products/Shsandel (2).jpg"
     ],
     "oldPrice": 1985
   },
@@ -3262,20 +2078,11 @@
     "price": 181,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (3).png",
-      "../assets/products/Shsandel (4).png"
+      "../assets/products/Shsandel (3).jpg",
+      "../assets/products/Shsandel (4).jpg"
     ]
   },
   {
@@ -3288,20 +2095,11 @@
     "price": 2143,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (5).png",
-      "../assets/products/Shsandel (6).png"
+      "../assets/products/Shsandel (5).jpg",
+      "../assets/products/Shsandel (6).jpg"
     ],
     "oldPrice": 2572
   },
@@ -3315,20 +2113,11 @@
     "price": 451,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (7).png",
-      "../assets/products/Shsandel (8).png"
+      "../assets/products/Shsandel (7).jpg",
+      "../assets/products/Shsandel (8).jpg"
     ]
   },
   {
@@ -3341,20 +2130,11 @@
     "price": 1234,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (9).png",
-      "../assets/products/Shsandel (10).png"
+      "../assets/products/Shsandel (9).jpg",
+      "../assets/products/Shsandel (10).jpg"
     ],
     "oldPrice": 1481
   },
@@ -3368,20 +2148,11 @@
     "price": 702,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (11).png",
-      "../assets/products/Shsandel (12).png"
+      "../assets/products/Shsandel (11).jpg",
+      "../assets/products/Shsandel (12).jpg"
     ]
   },
   {
@@ -3394,20 +2165,11 @@
     "price": 531,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (13).png",
-      "../assets/products/Shsandel (14).png"
+      "../assets/products/Shsandel (13).jpg",
+      "../assets/products/Shsandel (14).jpg"
     ],
     "oldPrice": 637
   },
@@ -3421,20 +2183,11 @@
     "price": 507,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (15).png",
-      "../assets/products/Shsandel (16).png"
+      "../assets/products/Shsandel (15).jpg",
+      "../assets/products/Shsandel (16).jpg"
     ]
   },
   {
@@ -3447,20 +2200,11 @@
     "price": 1142,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (17).png",
-      "../assets/products/Shsandel (18).png"
+      "../assets/products/Shsandel (17).jpg",
+      "../assets/products/Shsandel (18).jpg"
     ],
     "oldPrice": 1370
   },
@@ -3474,20 +2218,11 @@
     "price": 615,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shsandel (19).png",
-      "../assets/products/Shsandel (20).png"
+      "../assets/products/Shsandel (19).jpg",
+      "../assets/products/Shsandel (20).jpg"
     ]
   },
   {
@@ -3500,20 +2235,11 @@
     "price": 2480,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (1).png",
-      "../assets/products/Shflats (2).png"
+      "../assets/products/Shflats (1).jpg",
+      "../assets/products/Shflats (2).jpg"
     ],
     "oldPrice": 2976
   },
@@ -3527,20 +2253,11 @@
     "price": 713,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (3).png",
-      "../assets/products/Shflats (4).png"
+      "../assets/products/Shflats (3).jpg",
+      "../assets/products/Shflats (4).jpg"
     ]
   },
   {
@@ -3553,20 +2270,11 @@
     "price": 1269,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (5).png",
-      "../assets/products/Shflats (6).png"
+      "../assets/products/Shflats (5).jpg",
+      "../assets/products/Shflats (6).jpg"
     ],
     "oldPrice": 1523
   },
@@ -3580,20 +2288,11 @@
     "price": 474,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (7).png",
-      "../assets/products/Shflats (8).png"
+      "../assets/products/Shflats (7).jpg",
+      "../assets/products/Shflats (8).jpg"
     ]
   },
   {
@@ -3606,20 +2305,11 @@
     "price": 2329,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (9).png",
-      "../assets/products/Shflats (10).png"
+      "../assets/products/Shflats (9).jpg",
+      "../assets/products/Shflats (10).jpg"
     ],
     "oldPrice": 2795
   },
@@ -3633,20 +2323,11 @@
     "price": 323,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (11).png",
-      "../assets/products/Shflats (12).png"
+      "../assets/products/Shflats (11).jpg",
+      "../assets/products/Shflats (12).jpg"
     ]
   },
   {
@@ -3659,20 +2340,11 @@
     "price": 1333,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (13).png",
-      "../assets/products/Shflats (14).png"
+      "../assets/products/Shflats (13).jpg",
+      "../assets/products/Shflats (14).jpg"
     ],
     "oldPrice": 1600
   },
@@ -3686,20 +2358,11 @@
     "price": 2005,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (15).png",
-      "../assets/products/Shflats (16).png"
+      "../assets/products/Shflats (15).jpg",
+      "../assets/products/Shflats (16).jpg"
     ]
   },
   {
@@ -3712,20 +2375,11 @@
     "price": 500,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (17).png",
-      "../assets/products/Shflats (18).png"
+      "../assets/products/Shflats (17).jpg",
+      "../assets/products/Shflats (18).jpg"
     ],
     "oldPrice": 600
   },
@@ -3739,20 +2393,11 @@
     "price": 529,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (19).png",
-      "../assets/products/Shflats (20).png"
+      "../assets/products/Shflats (19).jpg",
+      "../assets/products/Shflats (20).jpg"
     ]
   },
   {
@@ -3765,20 +2410,11 @@
     "price": 677,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (21).png",
-      "../assets/products/Shflats (22).png"
+      "../assets/products/Shflats (21).jpg",
+      "../assets/products/Shflats (22).jpg"
     ],
     "oldPrice": 812
   },
@@ -3792,20 +2428,11 @@
     "price": 1820,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (23).png",
-      "../assets/products/Shflats (24).png"
+      "../assets/products/Shflats (23).jpg",
+      "../assets/products/Shflats (24).jpg"
     ]
   },
   {
@@ -3818,20 +2445,11 @@
     "price": 1732,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (25).png",
-      "../assets/products/Shflats (26).png"
+      "../assets/products/Shflats (25).jpg",
+      "../assets/products/Shflats (26).jpg"
     ],
     "oldPrice": 2078
   },
@@ -3845,20 +2463,11 @@
     "price": 1458,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (27).png",
-      "../assets/products/Shflats (28).png"
+      "../assets/products/Shflats (27).jpg",
+      "../assets/products/Shflats (28).jpg"
     ]
   },
   {
@@ -3871,20 +2480,11 @@
     "price": 1173,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (29).png",
-      "../assets/products/Shflats (30).png"
+      "../assets/products/Shflats (29).jpg",
+      "../assets/products/Shflats (30).jpg"
     ],
     "oldPrice": 1408
   },
@@ -3898,20 +2498,11 @@
     "price": 2774,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (31).png",
-      "../assets/products/Shflats (32).png"
+      "../assets/products/Shflats (31).jpg",
+      "../assets/products/Shflats (32).jpg"
     ]
   },
   {
@@ -3924,20 +2515,11 @@
     "price": 2637,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (33).png",
-      "../assets/products/Shflats (34).png"
+      "../assets/products/Shflats (33).jpg",
+      "../assets/products/Shflats (34).jpg"
     ],
     "oldPrice": 3164
   },
@@ -3951,20 +2533,11 @@
     "price": 382,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (35).png",
-      "../assets/products/Shflats (36).png"
+      "../assets/products/Shflats (35).jpg",
+      "../assets/products/Shflats (36).jpg"
     ]
   },
   {
@@ -3977,20 +2550,11 @@
     "price": 2849,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (37).png",
-      "../assets/products/Shflats (38).png"
+      "../assets/products/Shflats (37).jpg",
+      "../assets/products/Shflats (38).jpg"
     ],
     "oldPrice": 3419
   },
@@ -4004,20 +2568,11 @@
     "price": 1007,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (39).png",
-      "../assets/products/Shflats (40).png"
+      "../assets/products/Shflats (39).jpg",
+      "../assets/products/Shflats (40).jpg"
     ]
   },
   {
@@ -4030,20 +2585,11 @@
     "price": 2022,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (41).png",
-      "../assets/products/Shflats (42).png"
+      "../assets/products/Shflats (41).jpg",
+      "../assets/products/Shflats (42).jpg"
     ],
     "oldPrice": 2426
   },
@@ -4057,20 +2603,11 @@
     "price": 888,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (43).png",
-      "../assets/products/Shflats (44).png"
+      "../assets/products/Shflats (43).jpg",
+      "../assets/products/Shflats (44).jpg"
     ]
   },
   {
@@ -4083,20 +2620,11 @@
     "price": 2548,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (45).png",
-      "../assets/products/Shflats (46).png"
+      "../assets/products/Shflats (45).jpg",
+      "../assets/products/Shflats (46).jpg"
     ],
     "oldPrice": 3058
   },
@@ -4110,20 +2638,11 @@
     "price": 1452,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (47).png",
-      "../assets/products/Shflats (48).png"
+      "../assets/products/Shflats (47).jpg",
+      "../assets/products/Shflats (48).jpg"
     ]
   },
   {
@@ -4136,20 +2655,11 @@
     "price": 1914,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (49).png",
-      "../assets/products/Shflats (50).png"
+      "../assets/products/Shflats (49).jpg",
+      "../assets/products/Shflats (50).jpg"
     ],
     "oldPrice": 2297
   },
@@ -4163,20 +2673,11 @@
     "price": 652,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (51).png",
-      "../assets/products/Shflats (52).png"
+      "../assets/products/Shflats (51).jpg",
+      "../assets/products/Shflats (52).jpg"
     ]
   },
   {
@@ -4189,20 +2690,11 @@
     "price": 1982,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (53).png",
-      "../assets/products/Shflats (54).png"
+      "../assets/products/Shflats (53).jpg",
+      "../assets/products/Shflats (54).jpg"
     ],
     "oldPrice": 2378
   },
@@ -4216,20 +2708,11 @@
     "price": 230,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (55).png",
-      "../assets/products/Shflats (56).png"
+      "../assets/products/Shflats (55).jpg",
+      "../assets/products/Shflats (56).jpg"
     ]
   },
   {
@@ -4242,20 +2725,11 @@
     "price": 2733,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (57).png",
-      "../assets/products/Shflats (58).png"
+      "../assets/products/Shflats (57).jpg",
+      "../assets/products/Shflats (58).jpg"
     ],
     "oldPrice": 3280
   },
@@ -4269,20 +2743,11 @@
     "price": 177,
     "liked": false,
     "addedToCart": false,
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "black",
-      "white",
-      "orange",
-      "purple"
-    ],
-    "sizes": [35, 36, 37, 38, 39, 40],
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
     "images": [
-      "../assets/products/Shflats (59).png",
-      "../assets/products/Shflats (60).png"
+      "../assets/products/Shflats (59).jpg",
+      "../assets/products/Shflats (60).jpg"
     ]
   }
 ]

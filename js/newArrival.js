@@ -1,27 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
   const itemsCon = document.getElementById("items-con");
   const buttons = document.querySelectorAll(".btn-group .btn");
+  const searchInput = document.querySelector(".search-bar input"); // 🟢 سيرش الناف بار
   let allProducts = [];
+  let currentFilter = "all";
+  let searchQuery = "";
 
-  // ✅ Load data from JSON file
+  // ✅ تحميل المنتجات من JSON
   fetch("../products.json")
     .then((response) => response.json())
     .then((data) => {
       allProducts = data;
-      displayProducts("all");
+      displayProducts("all", "");
     })
     .catch((error) => console.error("Error loading products:", error));
 
-  // ✅ Function to display products
-  function displayProducts(filter) {
+  // ✅ دالة عرض المنتجات
+  function displayProducts(filter, query) {
     itemsCon.innerHTML = "";
 
-    const filtered =
+    // فلترة حسب النوع (All / Shoes / Bags)
+    let filtered =
       filter === "all"
         ? allProducts
-        : allProducts.filter((item) => item.Category === filter);
+        : allProducts.filter(
+            (item) =>
+              item.Category &&
+              item.Category.trim().toLowerCase() === filter.toLowerCase()
+          );
 
-    // ✅ If no products found
+    // 🟢 تطبيق البحث
+    if (query && query.trim() !== "") {
+      filtered = filtered.filter((item) =>
+        item.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+
+    // في حالة عدم وجود نتائج
     if (filtered.length === 0) {
       itemsCon.innerHTML = `
         <p class="text-center text-muted py-5">No products found.</p>
@@ -29,9 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // ✅ Create product cards
+    // 🟢 إنشاء الكروت
     filtered.forEach((item) => {
-      // Main column (must be inside .row)
       const col = document.createElement("div");
       col.className = "col-12 col-sm-6 col-lg-3";
 
@@ -57,15 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-      // ✅ When clicking on the card (excluding the button)
       const card = col.querySelector(".luv-card");
-      const addToCartBtn = col.querySelector(".luv-card__btn");
 
+      // 🟢 لما تضغط على الكارت
       card.addEventListener("click", (e) => {
-        // Avoid triggering when clicking the "Add to Cart" button
-        // if (e.target === addToCartBtn) return;
-
-        // Save product to localStorage and redirect
+        if (e.target.classList.contains("luv-card__btn")) return;
         localStorage.setItem("selectedProduct", JSON.stringify(item));
         window.location.href = "./productDetails.html";
       });
@@ -74,13 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ Filter buttons functionality
+  // ✅ أزرار الفلترة
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      const filter = btn.getAttribute("data-filter");
-      displayProducts(filter);
+
+      currentFilter = btn.getAttribute("data-filter");
+      displayProducts(currentFilter, searchQuery);
     });
+  });
+
+  // ✅ تشغيل السيرش بتاع الناف بار
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    displayProducts(currentFilter, searchQuery);
   });
 });

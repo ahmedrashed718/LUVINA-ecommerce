@@ -136,7 +136,7 @@
         </ul>
 
         <form class="d-flex align-items-center gap-3">
-          <div
+          <!-- <div
             class="search-bar d-flex align-items-center px-3 border rounded-pill"
           >
             <i class="bi bi-search me-2 text-muted"></i>
@@ -146,7 +146,7 @@
               placeholder="Search..."
               aria-label="Search"
             />
-          </div>
+          </div> -->
 
           <a href="./ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
@@ -302,218 +302,232 @@
       // ==========================================
       // ✅ Redirect if user is not logged in
       // ==========================================
-      let userData = JSON.parse(localStorage.getItem("loggedInUser"));
-      if (!userData) {
-        Swal.fire({
-          icon: "warning",
-          title: "Access Denied",
-          text: "You must be logged in to view your profile.",
-          confirmButtonColor: "#007bff",
-          timer: 2000,
-          showConfirmButton: false,
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        // تحقق من حالة تسجيل الدخول باستخدام النظام الموحد
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        const loggedInUser = localStorage.getItem("loggedInUser");
 
-        setTimeout(() => {
-          window.location.href = "Login-Customer.html";
-        }, 2000);
-      }
-
-      // ==========================================
-      // ✅ Helper function: update user in users array
-      // ==========================================
-      function updateUserInLocalStorage(updatedUser) {
-        // Get all users from localStorage
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-
-        // Find the current user by email
-        const userIndex = users.findIndex((u) => u.email === updatedUser.email);
-
-        if (userIndex !== -1) {
-          users[userIndex] = { ...users[userIndex], ...updatedUser };
-        } else {
-          users.push(updatedUser);
-        }
-
-        // Save updates
-        localStorage.setItem("users", JSON.stringify(users));
-        localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
-
-        // Update runtime variable too
-        userData = updatedUser;
-      }
-
-      // ==========================================
-      // ✅ Elements
-      // ==========================================
-      const editAddressBtn = document.getElementById("editAddressBtn");
-      const editAddressInput = document.getElementById("editAddressInput");
-      const userAddressEl = document.getElementById("userAddress");
-      const addressError = document.getElementById("addressError");
-      const logoutBtn = document.getElementById("logoutBtn");
-      const profileImage = document.getElementById("profileImage");
-      const imageUpload = document.getElementById("imageUpload");
-      const changeImageBtn = document.getElementById("changeImageBtn");
-
-      // ==========================================
-      // ✅ Display user data
-      // ==========================================
-      if (userData) {
-        document.getElementById("userName").textContent =
-          userData.fullname || "Guest User";
-        document.getElementById("userEmail").textContent =
-          userData.email || "No email provided";
-        document.getElementById("userNumber").textContent =
-          userData.phone || "";
-
-        if (userData.address) {
-          userAddressEl.textContent = userData.address;
-        } else {
-          userAddressEl.textContent = "No address added yet";
-        }
-
-        // ✅ Load saved profile image if available
-        if (userData.profileImage) {
-          profileImage.src = userData.profileImage;
-        }
-      }
-
-      // ==========================================
-      // ✅ Change Profile Image + Save to localStorage
-      // ==========================================
-      changeImageBtn.addEventListener("click", () => {
-        imageUpload.click();
-      });
-
-      profileImage.addEventListener("click", () => {
-        imageUpload.click();
-      });
-
-      imageUpload.addEventListener("change", (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-
-          reader.onload = function (e) {
-            const imageBase64 = e.target.result;
-
-            // ✅ Update UI
-            profileImage.src = imageBase64;
-
-            // ✅ Save to both loggedInUser and users array
-            const updatedUser = { ...userData, profileImage: imageBase64 };
-            updateUserInLocalStorage(updatedUser);
-
-            Swal.fire({
-              icon: "success",
-              title: "Profile Updated",
-              text: "Your profile photo has been updated successfully!",
-              confirmButtonColor: "#007bff",
-              timer: 1500,
-              showConfirmButton: false,
-            });
-          };
-
-          reader.readAsDataURL(file);
-        }
-      });
-
-      // ==========================================
-      // ✅ Handle Address Edit & Validation
-      // ==========================================
-      editAddressBtn.addEventListener("click", () => {
-        if (
-          editAddressInput.style.display === "none" ||
-          editAddressInput.style.display === ""
-        ) {
-          // Show input field
-          editAddressInput.style.display = "block";
-          editAddressInput.value = userAddressEl.textContent.includes(
-            "No address"
-          )
-            ? ""
-            : userAddressEl.textContent;
-          editAddressBtn.textContent = "Save Address";
-        } else {
-          const newAddress = editAddressInput.value.trim();
-
-          // ✅ Address validation
-          if (newAddress.length < 5) {
-            addressError.style.display = "block";
-            editAddressInput.classList.add("is-invalid");
-
-            Swal.fire({
-              icon: "error",
-              title: "Invalid Address",
-              text: "Please enter at least 5 characters.",
-              confirmButtonColor: "#007bff",
-            });
-
-            return;
-          }
-
-          // ✅ Save valid address
-          addressError.style.display = "none";
-          editAddressInput.classList.remove("is-invalid");
-
-          userAddressEl.textContent = newAddress;
-          const updatedUser = { ...userData, address: newAddress };
-          updateUserInLocalStorage(updatedUser);
-
-          // Hide input field
-          editAddressInput.style.display = "none";
-          editAddressBtn.textContent = "Edit Address";
-
+        if (isLoggedIn !== "true" || !loggedInUser) {
+          // إعادة التوجيه إلى صفحة تسجيل الدخول
           Swal.fire({
-            icon: "success",
-            title: "Address Updated",
-            text: "Your address has been updated successfully!",
+            icon: "warning",
+            title: "Access Denied",
+            text: "You must be logged in to view your profile.",
             confirmButtonColor: "#007bff",
-            timer: 1500,
+            timer: 2000,
             showConfirmButton: false,
           });
+
+          setTimeout(() => {
+            window.location.href = "Login-Customer.html";
+          }, 2000);
+          return;
         }
-      });
 
-      // ==========================================
-      // ✅ Hide validation error while typing
-      // ==========================================
-      editAddressInput.addEventListener("input", () => {
-        if (editAddressInput.value.trim().length >= 5) {
-          addressError.style.display = "none";
-          editAddressInput.classList.remove("is-invalid");
+        // إذا كان المستخدم مسجلاً، متابعة تحميل البيانات
+        let userData = JSON.parse(loggedInUser);
+
+        // ==========================================
+        // ✅ Helper function: update user in users array
+        // ==========================================
+        function updateUserInLocalStorage(updatedUser) {
+          // Get all users from localStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+
+          // Find the current user by email
+          const userIndex = users.findIndex(
+            (u) => u.email === updatedUser.email
+          );
+
+          if (userIndex !== -1) {
+            users[userIndex] = { ...users[userIndex], ...updatedUser };
+          } else {
+            users.push(updatedUser);
+          }
+
+          // Save updates
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
+
+          // Update runtime variable too
+          userData = updatedUser;
         }
-      });
 
-      // ==========================================
-      // ✅ Logout confirmation
-      // ==========================================
-      logoutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
+        // ==========================================
+        // ✅ Elements
+        // ==========================================
+        const editAddressBtn = document.getElementById("editAddressBtn");
+        const editAddressInput = document.getElementById("editAddressInput");
+        const userAddressEl = document.getElementById("userAddress");
+        const addressError = document.getElementById("addressError");
+        const logoutBtn = document.getElementById("logoutBtn");
+        const profileImage = document.getElementById("profileImage");
+        const imageUpload = document.getElementById("imageUpload");
+        const changeImageBtn = document.getElementById("changeImageBtn");
 
-        Swal.fire({
-          title: "Are you sure you want to log out?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#d33",
-          cancelButtonColor: "#3085d6",
-          confirmButtonText: "Yes, log out",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            localStorage.removeItem("loggedInUser");
+        // ==========================================
+        // ✅ Display user data
+        // ==========================================
+        if (userData) {
+          document.getElementById("userName").textContent =
+            userData.fullname || userData.name || "Guest User";
+          document.getElementById("userEmail").textContent =
+            userData.email || "No email provided";
+          document.getElementById("userNumber").textContent =
+            userData.phone || userData.mobile || "";
+
+          if (userData.address) {
+            userAddressEl.textContent = userData.address;
+          } else {
+            userAddressEl.textContent = "No address added yet";
+          }
+
+          // ✅ Load saved profile image if available
+          if (userData.profileImage) {
+            profileImage.src = userData.profileImage;
+          }
+        }
+
+        // ==========================================
+        // ✅ Change Profile Image + Save to localStorage
+        // ==========================================
+        changeImageBtn.addEventListener("click", () => {
+          imageUpload.click();
+        });
+
+        profileImage.addEventListener("click", () => {
+          imageUpload.click();
+        });
+
+        imageUpload.addEventListener("change", (event) => {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              const imageBase64 = e.target.result;
+
+              // ✅ Update UI
+              profileImage.src = imageBase64;
+
+              // ✅ Save to both loggedInUser and users array
+              const updatedUser = { ...userData, profileImage: imageBase64 };
+              updateUserInLocalStorage(updatedUser);
+
+              Swal.fire({
+                icon: "success",
+                title: "Profile Updated",
+                text: "Your profile photo has been updated successfully!",
+                confirmButtonColor: "#007bff",
+                timer: 1500,
+                showConfirmButton: false,
+              });
+            };
+
+            reader.readAsDataURL(file);
+          }
+        });
+
+        // ==========================================
+        // ✅ Handle Address Edit & Validation
+        // ==========================================
+        editAddressBtn.addEventListener("click", () => {
+          if (
+            editAddressInput.style.display === "none" ||
+            editAddressInput.style.display === ""
+          ) {
+            // Show input field
+            editAddressInput.style.display = "block";
+            editAddressInput.value = userAddressEl.textContent.includes(
+              "No address"
+            )
+              ? ""
+              : userAddressEl.textContent;
+            editAddressBtn.textContent = "Save Address";
+          } else {
+            const newAddress = editAddressInput.value.trim();
+
+            // ✅ Address validation
+            if (newAddress.length < 5) {
+              addressError.style.display = "block";
+              editAddressInput.classList.add("is-invalid");
+
+              Swal.fire({
+                icon: "error",
+                title: "Invalid Address",
+                text: "Please enter at least 5 characters.",
+                confirmButtonColor: "#007bff",
+              });
+
+              return;
+            }
+
+            // ✅ Save valid address
+            addressError.style.display = "none";
+            editAddressInput.classList.remove("is-invalid");
+
+            userAddressEl.textContent = newAddress;
+            const updatedUser = { ...userData, address: newAddress };
+            updateUserInLocalStorage(updatedUser);
+
+            // Hide input field
+            editAddressInput.style.display = "none";
+            editAddressBtn.textContent = "Edit Address";
 
             Swal.fire({
               icon: "success",
-              title: "Logged out",
-              text: "You have been logged out successfully.",
+              title: "Address Updated",
+              text: "Your address has been updated successfully!",
               confirmButtonColor: "#007bff",
               timer: 1500,
               showConfirmButton: false,
             });
-
-            setTimeout(() => {
-              window.location.href = "Login-Customer.html";
-            }, 1600);
           }
+        });
+
+        // ==========================================
+        // ✅ Hide validation error while typing
+        // ==========================================
+        editAddressInput.addEventListener("input", () => {
+          if (editAddressInput.value.trim().length >= 5) {
+            addressError.style.display = "none";
+            editAddressInput.classList.remove("is-invalid");
+          }
+        });
+
+        // ==========================================
+        // ✅ Logout confirmation
+        // ==========================================
+        logoutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          Swal.fire({
+            title: "Are you sure you want to log out?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, log out",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // إزالة بيانات تسجيل الدخول من localStorage
+              localStorage.removeItem("loggedInUser");
+              localStorage.removeItem("isLoggedIn");
+
+              Swal.fire({
+                icon: "success",
+                title: "Logged out",
+                text: "You have been logged out successfully.",
+                confirmButtonColor: "#007bff",
+                timer: 1500,
+                showConfirmButton: false,
+              });
+
+              setTimeout(() => {
+                window.location.href = "Login-Customer.html";
+              }, 1600);
+            }
+          });
         });
       });
     </script>
