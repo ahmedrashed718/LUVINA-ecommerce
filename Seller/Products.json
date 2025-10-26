@@ -1,0 +1,2753 @@
+ [
+  {
+    "id": 1,
+    "Category": "Shoes",
+    "subCategory": "Flats",  
+    "name": "Mamba Loafer",
+    "description": "Suede flat moccasin that is easily slipped on and off the foot without any laces , perfectly designed as a shoe to relax and loaf around in.",
+    "rating": 4.7,
+    "price": 100,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/1A.png", "../assets/products/1B.png", "../assets/products/1C.png"]
+  },
+  {
+    "id": 2,
+    "Category": "Shoes",
+    "subCategory": "Heels",  
+    "name": "The Caren Pump",
+    "description": "Stiletto High Heel leather Pumps, Pointed Toe , Heel measures around cm",
+    "rating": 3.8,
+    "price": 200,
+    "oldPrice": 240,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/2A.png", "../assets/products/2B.png", "../assets/products/2C.png"]
+  },
+  {
+    "id": 3,
+    "Category": "Shoes",
+    "subCategory": "Heels",  
+    "name": "The Dorra Pump",
+    "description": "Chunky Heel Leather Pumps, Pointed Toe , Block Heel measures around cm",
+    "rating": 4.2,
+    "price": 300,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/3A.png", "../assets/products/3B.png", "../assets/products/3C.png"]
+  },
+  {
+    "id": 4,
+    "Category": "Shoes",
+    "subCategory": "Heels",  
+    "name": "Carolina Pump",
+    "description": "Stiletto mid Heel leather Pumps, Pointed Toe , Heel measures around cm",
+    "rating": 4.9,
+    "price": 400,
+    "oldPrice": 480,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/4A.png", "../assets/products/4B.png", "../assets/products/4C.png"]
+  },
+  {
+    "id": 5,
+    "Category": "Shoes",
+    "subCategory": "Sandals",  
+    "name": "Allen Heel",
+    "description": "pointed heeled slingback shoes with fur leather in stone , Stiletto heel measures around 9 cm",
+    "rating": 3.5,
+    "price": 500,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/5A.png", "../assets/products/5B.png", "../assets/products/5C.png"]
+  },
+  {
+    "id": 6,
+    "Category": "Shoes",
+    "subCategory": "Sandals",  
+    "name": "Lorra Court Pump",
+    "description": "These court shoes are a work of art. Featuring a pointed toe and a slingback you'll be prepared for any event, from glamorous nights out to productive days in the office , Cow Print, Heel measures around 9 cm",
+    "rating": 4.1,
+    "price": 600,
+    "oldPrice": 720,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/6A.png", "../assets/products/6B.png", "../assets/products/6C.png"]
+  },
+  {
+    "id": 7,
+    "Category": "Shoes",
+    "subCategory": "Flats",  
+    "name": "Mary Ballet Flats",
+    "description": "Leather Round Toe Ballet Flats with Adjustable Strap",
+    "rating": 4.4,
+    "price": 700,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/7A.png", "../assets/products/7B.png", "../assets/products/7C.png"]
+  },
+  {
+    "id": 8,
+    "Category": "Shoes",
+    "subCategory": "Heels",  
+    "name": "Eva Pump",
+    "description": "The Fresh pump features a fashionable high stiletto heel and a classic pointy toe that is sure to impress. The perfect wardrobe essential, Heel measures around 8 cm",
+    "rating": 3.9,
+    "price": 800,
+    "oldPrice": 960,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/8A.png", "../assets/products/8B.png", "../assets/products/8C.png"]
+  },
+  {
+    "id": 9,
+    "Category": "Shoes",
+    "subCategory": "Heels",  
+    "name": "Teema Pump",
+    "description": "Stiletto Heel Suede Pumps, Pointed Toe , Heel measures around 8 cm",
+    "rating": 4.6,
+    "price": 900,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/9A.png", "../assets/products/9B.png", "../assets/products/9C.png"]
+  },
+  {
+    "id": 10,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",    
+    "name": "Lace Sneaker",
+    "description": "Beige, Blue, White Leather With Lace Sneaker",
+    "rating": 3.7,
+    "price": 1000,
+    "oldPrice": 1200,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/10A.png", "../assets/products/10B.png", "../assets/products/10C.png"]
+  },
+  {
+    "id": 11,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "The Justina",
+    "description": "Shoulder Bag made of shiny leather , zip closure , Wear the adjustable extra long strap as crossbody dimensions 29*17*6",
+    "rating": 4.8,
+    "price": 1100,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/11A.png", "../assets/products/11B.png", "../assets/products/11C.png"]
+  },
+  {
+    "id": 12,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "The Pamela",
+    "description": "clutch bag made of leather , Zip fastening on top , dimensions 27*6*17",
+    "rating": 4.3,
+    "price": 1200,
+    "oldPrice": 1440,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/12A.png", "../assets/products/12B.png", "../assets/products/12C.png"]
+  },
+  {
+    "id": 13,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "The Tamara",
+    "description": "crossbody bag leather material , inside Zip and upper buckle Closure, Wear the adjustable strap doubled over the shoulder or long and crossbody. Handle on top , dimensions 20*7.5*13",
+    "rating": 3.6,
+    "price": 1300,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/13A.png", "../assets/products/13B.png", "../assets/products/13C.png"]
+  },
+  {
+    "id": 14,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "The Erica",
+    "description": "Shoulder Bag with PU Leather material made ,inside extra small stylish pouch,Top Zip fastening,dimensions 22*9*22",
+    "rating": 4.0,
+    "price": 1400,
+    "oldPrice": 1680,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/14A.png", "../assets/products/14B.png", "../assets/products/14C.png"]
+  },
+  {
+    "id": 15,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "The Marble Bag",
+    "description": "crossbody bag leather material inside Zip and upper buckle Closure, Wear the adjustable strap doubled over the shoulder or long and crossbody. , dimensions 20.5*6*15",
+    "rating": 3.9,
+    "price": 1500,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/15A.png", "../assets/products/15B.png", "../assets/products/15C.png"]
+  },
+  {
+    "id": 16,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "The Jupiter Bucket Bag",
+    "description": "Hand Bag in PU Leather material made ,squared shape, zip fastening on top ,extra long handle, dimensions 15.5*9.5*18",
+    "rating": 4.5,
+    "price": 1600,
+    "oldPrice": 1920,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/16A.png", "../assets/products/16B.png", "../assets/products/16C.png"]
+  },
+  {
+    "id": 17,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "The Jessica Handbag",
+    "description": "Hand Bag Leather Material , inside Zip Closure with flap front metal buckle and Handle at the top dimensions",
+    "rating": 4.1,
+    "price": 1700,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/17A.png", "../assets/products/17B.png", "../assets/products/17C.png"]
+  },
+  {
+    "id": 18,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "The Mariana",
+    "description": "Hand Bag Textile material mixed with leather made , squared shape ,Zip fastening, and front kiss closure , dimensions 21*8*13",
+    "rating": 4.4,
+    "price": 1800,
+    "oldPrice": 2160,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/18A.png", "../assets/products/18B.png", "../assets/products/18C.png"]
+  },
+  {
+    "id": 19,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "The Cheetah",
+    "description": "cheetah look crossbody bag ,fabric material , squared shape , handle on top , zip closure , dimensions 24.5*11*21",
+    "rating": 3.8,
+    "price": 1900,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/19A.png", "../assets/products/19B.png", "../assets/products/19C.png"]
+  },
+  {
+    "id": 20,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "The Desert Storm",
+    "description": "Hesse wood braided juite material Crossbody bag , kiss lock coin , dimensions 24*6*14",
+    "rating": 4.9,
+    "price": 2000,
+    "oldPrice": 2400,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red", "blue", "green", "yellow", "black", "white", "orange", "purple"],
+    "sizes": [35, 36, 37, 38, 39, 40],
+    "images": ["../assets/products/20A.png", "../assets/products/20B.png", "../assets/products/20C.png"]
+  },
+  {
+    "id": 21,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Muse",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 2542,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": ["../assets/products/Bagcross (1).png","../assets/products/Bagcross (2).png"]
+  },
+  {
+    "id": 22,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Delight",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 2391,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": ["../assets/products/Bagcross (3).png","../assets/products/Bagcross (4).png"],
+    "oldPrice": 2869
+  },
+  {
+    "id": 23,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Charm",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 1885,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (5).png",
+      "../assets/products/Bagcross (6).png"
+    ]
+  },
+  {
+    "id": 24,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Bloom",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 1750,
+    "liked": false,
+    "addedToCart": false,
+     "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (7).png",
+      "../assets/products/Bagcross (8).png"
+    ],
+    "oldPrice": 2100
+  },
+  {
+    "id": 25,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Muse",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 643,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (9).png",
+      "../assets/products/Bagcross (10).png"
+    ]
+  },
+  {
+    "id": 26,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Bloom",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 2388,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (11).png",
+      "../assets/products/Bagcross (12).png"
+    ],
+    "oldPrice": 2866
+  },
+  {
+    "id": 27,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Delight",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 2982,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (13).png",
+      "../assets/products/Bagcross (14).png"
+    ]
+  },
+  {
+    "id": 28,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Bloom",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 2443,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (15).png",
+      "../assets/products/Bagcross (16).png"
+    ],
+    "oldPrice": 2932
+  },
+  {
+    "id": 29,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Luxe",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1680,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (17).png",
+      "../assets/products/Bagcross (18).png"
+    ]
+  },
+  {
+    "id": 30,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Elegance",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 2841,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (19).png",
+      "../assets/products/Bagcross (20).png"
+    ],
+    "oldPrice": 3409
+  },
+  {
+    "id": 31,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Muse",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 2632,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (21).png",
+      "../assets/products/Bagcross (22).png"
+    ]
+  },
+  {
+    "id": 32,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Charm",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1920,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (23).png",
+      "../assets/products/Bagcross (24).png"
+    ],
+    "oldPrice": 2304
+  },
+  {
+    "id": 33,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Grace",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.6,
+    "price": 2419,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (25).png",
+      "../assets/products/Bagcross (26).png"
+    ]
+  },
+  {
+    "id": 34,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Dream",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 1217,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (27).png",
+      "../assets/products/Bagcross (28).png"
+    ],
+    "oldPrice": 1460
+  },
+  {
+    "id": 35,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Flair",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 702,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (29).png",
+      "../assets/products/Bagcross (30).png"
+    ]
+  },
+  {
+    "id": 36,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Elegance",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 140,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (31).png",
+      "../assets/products/Bagcross (32).png"
+    ],
+    "oldPrice": 168
+  },
+  {
+    "id": 37,
+    "Category": "Bags",
+    "subCategory": "Crossbody Bag",
+    "name": "Crossbody Flair",
+    "description": "A stylish crossbody bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 2038,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Bagcross (33).png",
+      "../assets/products/Bagcross (34).png"
+    ]
+  },
+  {
+    "id": 38,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Grace",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 272,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (1).png",
+      "../assets/products/BagBeach (2).png"
+    ],
+    "oldPrice": 326
+  },
+  {
+    "id": 39,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Delight",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 1023,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (3).png",
+      "../assets/products/BagBeach (4).png"
+    ]
+  },
+  {
+    "id": 40,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Grace",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 137,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (5).png",
+      "../assets/products/BagBeach (6).png"
+    ],
+    "oldPrice": 164
+  },
+  {
+    "id": 41,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Grace",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 2885,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (7).png",
+      "../assets/products/BagBeach (8).png"
+    ]
+  },
+  {
+    "id": 42,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Muse",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 2814,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (9).png",
+      "../assets/products/BagBeach (10).png"
+    ],
+    "oldPrice": 3377
+  },
+  {
+    "id": 43,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Grace",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 1604,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (11).png",
+      "../assets/products/BagBeach (12).png"
+    ]
+  },
+  {
+    "id": 44,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Dream",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 699,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (13).png",
+      "../assets/products/BagBeach (14).png"
+    ],
+    "oldPrice": 839
+  },
+  {
+    "id": 45,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Luxe",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 434,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (15).png",
+      "../assets/products/BagBeach (16).png"
+    ]
+  },
+  {
+    "id": 46,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Bloom",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 1605,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (17).png",
+      "../assets/products/BagBeach (18).png"
+    ],
+    "oldPrice": 1926
+  },
+  {
+    "id": 47,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Grace",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 289,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (19).png",
+      "../assets/products/BagBeach (20).png"
+    ]
+  },
+  {
+    "id": 48,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Delight",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 1940,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (21).png",
+      "../assets/products/BagBeach (22).png"
+    ],
+    "oldPrice": 2328
+  },
+  {
+    "id": 49,
+    "Category": "Bags",
+    "subCategory": "Beach Bag",
+    "name": "Beach Delight",
+    "description": "A stylish beach bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 220,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagBeach (23).png",
+      "../assets/products/BagBeach (24).png"
+    ]
+  },
+  {
+    "id": 50,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Grace",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 189,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (1).png",
+      "../assets/products/BagHands (2).png"
+    ],
+    "oldPrice": 227
+  },
+  {
+    "id": 51,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Muse",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.6,
+    "price": 1672,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (3).png",
+      "../assets/products/BagHands (4).png"
+    ]
+  },
+  {
+    "id": 52,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Charm",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 2027,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (5).png",
+      "../assets/products/BagHands (6).png"
+    ],
+    "oldPrice": 2432
+  },
+  {
+    "id": 53,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Flair",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1300,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (7).png",
+      "../assets/products/BagHands (8).png"
+    ]
+  },
+  {
+    "id": 54,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Luxe",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 1742,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (9).png",
+      "../assets/products/BagHands (10).png"
+    ],
+    "oldPrice": 2090
+  },
+  {
+    "id": 55,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Grace",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 422,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (11).png",
+      "../assets/products/BagHands (12).png"
+    ]
+  },
+  {
+    "id": 56,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Bloom",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 760,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (13).png",
+      "../assets/products/BagHands (14).png"
+    ],
+    "oldPrice": 912
+  },
+  {
+    "id": 57,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Grace",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 364,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (15).png",
+      "../assets/products/BagHands (16).png"
+    ]
+  },
+  {
+    "id": 58,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Dream",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 1598,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (17).png",
+      "../assets/products/BagHands (18).png"
+    ],
+    "oldPrice": 1918
+  },
+  {
+    "id": 59,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Grace",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 592,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (19).png",
+      "../assets/products/BagHands (20).png"
+    ]
+  },
+  {
+    "id": 60,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Flair",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.6,
+    "price": 2654,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (21).png",
+      "../assets/products/BagHands (22).png"
+    ],
+    "oldPrice": 3185
+  },
+  {
+    "id": 61,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Charm",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2529,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (23).png",
+      "../assets/products/BagHands (24).png"
+    ]
+  },
+  {
+    "id": 62,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Elegance",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 192,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (25).png",
+      "../assets/products/BagHands (26).png"
+    ],
+    "oldPrice": 230
+  },
+  {
+    "id": 63,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Delight",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.5,
+    "price": 1737,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (27).png",
+      "../assets/products/BagHands (28).png"
+    ]
+  },
+  {
+    "id": 64,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Flair",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2093,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (29).png",
+      "../assets/products/BagHands (30).png"
+    ],
+    "oldPrice": 2512
+  },
+  {
+    "id": 65,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Elegance",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 2712,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (31).png",
+      "../assets/products/BagHands (32).png"
+    ]
+  },
+  {
+    "id": 66,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Muse",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 612,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (33).png",
+      "../assets/products/BagHands (34).png"
+    ],
+    "oldPrice": 734
+  },
+  {
+    "id": 67,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Charm",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1267,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (35).png",
+      "../assets/products/BagHands (36).png"
+    ]
+  },
+  {
+    "id": 68,
+    "Category": "Bags",
+    "subCategory": "Hand Bag",
+    "name": "Hand Flair",
+    "description": "A stylish hand bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 2236,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagHands (37).png",
+      "../assets/products/BagHands (38).png"
+    ],
+    "oldPrice": 2683
+  },
+  {
+    "id": 69,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Grace",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 1785,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (1).png",
+      "../assets/products/BagSh (2).png"
+    ]
+  },
+  {
+    "id": 70,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Grace",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 2902,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (3).png",
+      "../assets/products/BagSh (4).png"
+    ],
+    "oldPrice": 3482
+  },
+  {
+    "id": 71,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Velvet",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 792,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (5).png",
+      "../assets/products/BagSh (6).png"
+    ]
+  },
+  {
+    "id": 72,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Luxe",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 2651,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (7).png",
+      "../assets/products/BagSh (8).png"
+    ],
+    "oldPrice": 3181
+  },
+  {
+    "id": 73,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Luxe",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 2681,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (9).png",
+      "../assets/products/BagSh (10).png"
+    ]
+  },
+  {
+    "id": 74,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Muse",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 1832,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (11).png",
+      "../assets/products/BagSh (12).png"
+    ],
+    "oldPrice": 2198
+  },
+  {
+    "id": 75,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Velvet",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 2973,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (13).png",
+      "../assets/products/BagSh (14).png"
+    ]
+  },
+  {
+    "id": 76,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Delight",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 1973,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (15).png",
+      "../assets/products/BagSh (16).png"
+    ],
+    "oldPrice": 2368
+  },
+  {
+    "id": 77,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Flair",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 218,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (17).png",
+      "../assets/products/BagSh (18).png"
+    ]
+  },
+  {
+    "id": 78,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Muse",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1670,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (19).png",
+      "../assets/products/BagSh (20).png"
+    ],
+    "oldPrice": 2004
+  },
+  {
+    "id": 79,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Velvet",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 1923,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (21).png",
+      "../assets/products/BagSh (22).png"
+    ]
+  },
+  {
+    "id": 80,
+    "Category": "Bags",
+    "subCategory": "Shoulder Bag",
+    "name": "Shoulder Velvet",
+    "description": "A stylish shoulder bag from our bags collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 2791,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/BagSh (23).png",
+      "../assets/products/BagSh (24).png"
+    ],
+    "oldPrice": 3349
+  },
+  {
+    "id": 81,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Muse",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 507,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (1).png",
+      "../assets/products/Shheel (2).png"
+    ]
+  },
+  {
+    "id": 82,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Muse",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 986,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (3).png",
+      "../assets/products/Shheel (4).png"
+    ],
+    "oldPrice": 1183
+  },
+  {
+    "id": 83,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Muse",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 2936,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (5).png",
+      "../assets/products/Shheel (6).png"
+    ]
+  },
+  {
+    "id": 84,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Elegance",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 908,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (7).png",
+      "../assets/products/Shheel (8).png"
+    ],
+    "oldPrice": 1090
+  },
+  {
+    "id": 85,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Dream",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2472,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (9).png",
+      "../assets/products/Shheel (10).png"
+    ]
+  },
+  {
+    "id": 86,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Grace",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 384,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (11).png",
+      "../assets/products/Shheel (12).png"
+    ],
+    "oldPrice": 461
+  },
+  {
+    "id": 87,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Charm",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 739,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (13).png",
+      "../assets/products/Shheel (14).png"
+    ]
+  },
+  {
+    "id": 88,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Dream",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 2295,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (15).png",
+      "../assets/products/Shheel (16).png"
+    ],
+    "oldPrice": 2754
+  },
+  {
+    "id": 89,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Charm",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 301,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (17).png",
+      "../assets/products/Shheel (18).png"
+    ]
+  },
+  {
+    "id": 90,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Dream",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 2486,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (19).png",
+      "../assets/products/Shheel (20).png"
+    ],
+    "oldPrice": 2983
+  },
+  {
+    "id": 91,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Dream",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.6,
+    "price": 2662,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (21).png",
+      "../assets/products/Shheel (22).png"
+    ]
+  },
+  {
+    "id": 92,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Luxe",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 2302,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (23).png",
+      "../assets/products/Shheel (24).png"
+    ],
+    "oldPrice": 2762
+  },
+  {
+    "id": 93,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Flair",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1459,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (25).png",
+      "../assets/products/Shheel (26).png"
+    ]
+  },
+  {
+    "id": 94,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Bloom",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 1951,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (27).png",
+      "../assets/products/Shheel (28).png"
+    ],
+    "oldPrice": 2341
+  },
+  {
+    "id": 95,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Dream",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 228,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (29).png",
+      "../assets/products/Shheel (30).png"
+    ]
+  },
+  {
+    "id": 96,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Velvet",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.6,
+    "price": 1866,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (31).png",
+      "../assets/products/Shheel (32).png"
+    ],
+    "oldPrice": 2239
+  },
+  {
+    "id": 97,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Flair",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2565,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (33).png",
+      "../assets/products/Shheel (34).png"
+    ]
+  },
+  {
+    "id": 98,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Velvet",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.5,
+    "price": 2611,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (35).png",
+      "../assets/products/Shheel (36).png"
+    ],
+    "oldPrice": 3133
+  },
+  {
+    "id": 99,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Delight",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 684,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (37).png",
+      "../assets/products/Shheel (38).png"
+    ]
+  },
+  {
+    "id": 100,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Grace",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 1767,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (39).png",
+      "../assets/products/Shheel (40).png"
+    ],
+    "oldPrice": 2120
+  },
+  {
+    "id": 101,
+    "Category": "Shoes",
+    "subCategory": "Heels",
+    "name": "Heels Elegance",
+    "description": "A stylish heels from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 2806,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shheel (41).png",
+      "../assets/products/Shheel (42).png"
+    ]
+  },
+  {
+    "id": 102,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Bloom",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1635,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (1).png",
+      "../assets/products/ShSnak (2).png"
+    ],
+    "oldPrice": 1962
+  },
+  {
+    "id": 103,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Flair",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1561,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (3).png",
+      "../assets/products/ShSnak (4).png"
+    ]
+  },
+  {
+    "id": 104,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Velvet",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1051,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (5).png",
+      "../assets/products/ShSnak (6).png"
+    ],
+    "oldPrice": 1261
+  },
+  {
+    "id": 105,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Luxe",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.5,
+    "price": 1120,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (7).png",
+      "../assets/products/ShSnak (8).png"
+    ]
+  },
+  {
+    "id": 106,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Luxe",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1059,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (9).png",
+      "../assets/products/ShSnak (10).png"
+    ],
+    "oldPrice": 1271
+  },
+  {
+    "id": 107,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Velvet",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 2521,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (11).png",
+      "../assets/products/ShSnak (12).png"
+    ]
+  },
+  {
+    "id": 108,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Charm",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 2261,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (13).png",
+      "../assets/products/ShSnak (14).png"
+    ],
+    "oldPrice": 2713
+  },
+  {
+    "id": 109,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Flair",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 2946,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (15).png",
+      "../assets/products/ShSnak (16).png"
+    ]
+  },
+  {
+    "id": 110,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Delight",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 1307,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (17).png",
+      "../assets/products/ShSnak (18).png"
+    ],
+    "oldPrice": 1568
+  },
+  {
+    "id": 111,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Grace",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 1117,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (19).png",
+      "../assets/products/ShSnak (20).png"
+    ]
+  },
+  {
+    "id": 112,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Luxe",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2768,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (21).png",
+      "../assets/products/ShSnak (22).png"
+    ],
+    "oldPrice": 3322
+  },
+  {
+    "id": 113,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Flair",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1882,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (23).png",
+      "../assets/products/ShSnak (24).png"
+    ]
+  },
+  {
+    "id": 114,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Delight",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 1461,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (25).png",
+      "../assets/products/ShSnak (26).png"
+    ],
+    "oldPrice": 1753
+  },
+  {
+    "id": 115,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Flair",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1695,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (27).png",
+      "../assets/products/ShSnak (28).png"
+    ]
+  },
+  {
+    "id": 116,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Dream",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 874,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (29).png",
+      "../assets/products/ShSnak (30).png"
+    ],
+    "oldPrice": 1049
+  },
+  {
+    "id": 117,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Grace",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 1119,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (31).png",
+      "../assets/products/ShSnak (32).png"
+    ]
+  },
+  {
+    "id": 118,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Elegance",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 2248,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (33).png",
+      "../assets/products/ShSnak (34).png"
+    ],
+    "oldPrice": 2698
+  },
+  {
+    "id": 119,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Charm",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.7,
+    "price": 1581,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (35).png",
+      "../assets/products/ShSnak (36).png"
+    ]
+  },
+  {
+    "id": 120,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Velvet",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 118,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (37).png",
+      "../assets/products/ShSnak (38).png"
+    ],
+    "oldPrice": 142
+  },
+  {
+    "id": 121,
+    "Category": "Shoes",
+    "subCategory": "Sneakers",
+    "name": "Sneakers Velvet",
+    "description": "A stylish sneakers from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 1718,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/ShSnak (39).png",
+      "../assets/products/ShSnak (40).png"
+    ]
+  },
+  {
+    "id": 122,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Bloom",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 1654,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (1).png",
+      "../assets/products/Shsandel (2).png"
+    ],
+    "oldPrice": 1985
+  },
+  {
+    "id": 123,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Elegance",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 181,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (3).png",
+      "../assets/products/Shsandel (4).png"
+    ]
+  },
+  {
+    "id": 124,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Grace",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 2143,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (5).png",
+      "../assets/products/Shsandel (6).png"
+    ],
+    "oldPrice": 2572
+  },
+  {
+    "id": 125,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Charm",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 451,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (7).png",
+      "../assets/products/Shsandel (8).png"
+    ]
+  },
+  {
+    "id": 126,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Velvet",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1234,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (9).png",
+      "../assets/products/Shsandel (10).png"
+    ],
+    "oldPrice": 1481
+  },
+  {
+    "id": 127,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Grace",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 702,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (11).png",
+      "../assets/products/Shsandel (12).png"
+    ]
+  },
+  {
+    "id": 128,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Grace",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 531,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (13).png",
+      "../assets/products/Shsandel (14).png"
+    ],
+    "oldPrice": 637
+  },
+  {
+    "id": 129,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Bloom",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 507,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (15).png",
+      "../assets/products/Shsandel (16).png"
+    ]
+  },
+  {
+    "id": 130,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Elegance",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 1142,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (17).png",
+      "../assets/products/Shsandel (18).png"
+    ],
+    "oldPrice": 1370
+  },
+  {
+    "id": 131,
+    "Category": "Shoes",
+    "subCategory": "Sandals",
+    "name": "Sandals Velvet",
+    "description": "A stylish sandals from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 615,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shsandel (19).png",
+      "../assets/products/Shsandel (20).png"
+    ]
+  },
+  {
+    "id": 132,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Velvet",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.9,
+    "price": 2480,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (1).png",
+      "../assets/products/Shflats (2).png"
+    ],
+    "oldPrice": 2976
+  },
+  {
+    "id": 133,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Velvet",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.5,
+    "price": 713,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (3).png",
+      "../assets/products/Shflats (4).png"
+    ]
+  },
+  {
+    "id": 134,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Delight",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1269,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (5).png",
+      "../assets/products/Shflats (6).png"
+    ],
+    "oldPrice": 1523
+  },
+  {
+    "id": 135,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Flair",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 474,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (7).png",
+      "../assets/products/Shflats (8).png"
+    ]
+  },
+  {
+    "id": 136,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Muse",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 2329,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (9).png",
+      "../assets/products/Shflats (10).png"
+    ],
+    "oldPrice": 2795
+  },
+  {
+    "id": 137,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Bloom",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 323,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (11).png",
+      "../assets/products/Shflats (12).png"
+    ]
+  },
+  {
+    "id": 138,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Delight",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 1333,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (13).png",
+      "../assets/products/Shflats (14).png"
+    ],
+    "oldPrice": 1600
+  },
+  {
+    "id": 139,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Grace",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 2005,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (15).png",
+      "../assets/products/Shflats (16).png"
+    ]
+  },
+  {
+    "id": 140,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Dream",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 500,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (17).png",
+      "../assets/products/Shflats (18).png"
+    ],
+    "oldPrice": 600
+  },
+  {
+    "id": 141,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Dream",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.5,
+    "price": 529,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (19).png",
+      "../assets/products/Shflats (20).png"
+    ]
+  },
+  {
+    "id": 142,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Elegance",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 677,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (21).png",
+      "../assets/products/Shflats (22).png"
+    ],
+    "oldPrice": 812
+  },
+  {
+    "id": 143,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Flair",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1820,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (23).png",
+      "../assets/products/Shflats (24).png"
+    ]
+  },
+  {
+    "id": 144,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 1732,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (25).png",
+      "../assets/products/Shflats (26).png"
+    ],
+    "oldPrice": 2078
+  },
+  {
+    "id": 145,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Luxe",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 1458,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (27).png",
+      "../assets/products/Shflats (28).png"
+    ]
+  },
+  {
+    "id": 146,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Delight",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1173,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (29).png",
+      "../assets/products/Shflats (30).png"
+    ],
+    "oldPrice": 1408
+  },
+  {
+    "id": 147,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.1,
+    "price": 2774,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (31).png",
+      "../assets/products/Shflats (32).png"
+    ]
+  },
+  {
+    "id": 148,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Dream",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 2637,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (33).png",
+      "../assets/products/Shflats (34).png"
+    ],
+    "oldPrice": 3164
+  },
+  {
+    "id": 149,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Grace",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 382,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (35).png",
+      "../assets/products/Shflats (36).png"
+    ]
+  },
+  {
+    "id": 150,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 2849,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (37).png",
+      "../assets/products/Shflats (38).png"
+    ],
+    "oldPrice": 3419
+  },
+  {
+    "id": 151,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Bloom",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.6,
+    "price": 1007,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (39).png",
+      "../assets/products/Shflats (40).png"
+    ]
+  },
+  {
+    "id": 152,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Muse",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.9,
+    "price": 2022,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (41).png",
+      "../assets/products/Shflats (42).png"
+    ],
+    "oldPrice": 2426
+  },
+  {
+    "id": 153,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Luxe",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 888,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (43).png",
+      "../assets/products/Shflats (44).png"
+    ]
+  },
+  {
+    "id": 154,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Bloom",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.3,
+    "price": 2548,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (45).png",
+      "../assets/products/Shflats (46).png"
+    ],
+    "oldPrice": 3058
+  },
+  {
+    "id": 155,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Elegance",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.7,
+    "price": 1452,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (47).png",
+      "../assets/products/Shflats (48).png"
+    ]
+  },
+  {
+    "id": 156,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Luxe",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 1914,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (49).png",
+      "../assets/products/Shflats (50).png"
+    ],
+    "oldPrice": 2297
+  },
+  {
+    "id": 157,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.8,
+    "price": 652,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (51).png",
+      "../assets/products/Shflats (52).png"
+    ]
+  },
+  {
+    "id": 158,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Delight",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.0,
+    "price": 1982,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (53).png",
+      "../assets/products/Shflats (54).png"
+    ],
+    "oldPrice": 2378
+  },
+  {
+    "id": 159,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Muse",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.4,
+    "price": 230,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (55).png",
+      "../assets/products/Shflats (56).png"
+    ]
+  },
+  {
+    "id": 160,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 3.8,
+    "price": 2733,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (57).png",
+      "../assets/products/Shflats (58).png"
+    ],
+    "oldPrice": 3280
+  },
+  {
+    "id": 161,
+    "Category": "Shoes",
+    "subCategory": "Flats",
+    "name": "Flats Charm",
+    "description": "A stylish flats from our shoes collection, crafted with attention to detail and perfect for modern fashion.",
+    "rating": 4.2,
+    "price": 177,
+    "liked": false,
+    "addedToCart": false,
+    "colors": ["red","blue","green","yellow","black","white","orange","purple"],
+    "sizes": [35,36,37,38,39,40],
+    "images": [
+      "../assets/products/Shflats (59).png",
+      "../assets/products/Shflats (60).png"
+    ]
+  }
+]

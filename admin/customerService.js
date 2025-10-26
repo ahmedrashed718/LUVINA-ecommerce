@@ -71,15 +71,19 @@ function renderTickets(filteredTickets = null) {
         
         // Determine badge class based on status
         let badgeClass = '';
+        let statusText = '';
         switch(ticket.status) {
             case 'open':
                 badgeClass = 'bg-danger-subtle text-danger';
+                statusText = 'Open';
                 break;
             case 'inprogress':
                 badgeClass = 'bg-warning-subtle text-warning';
+                statusText = 'In Progress';
                 break;
             case 'closed':
                 badgeClass = 'bg-success-subtle text-success';
+                statusText = 'Closed';
                 break;
         }
         
@@ -87,7 +91,7 @@ function renderTickets(filteredTickets = null) {
             <td>${ticket.id}</td>
             <td>${ticket.customerName}</td>
             <td class="text-center align-middle">
-                <span class="badge ${badgeClass} px-3 py-2 rounded-5 status ${ticket.status}">${ticket.status}</span>
+                <span class="badge ${badgeClass} px-3 py-2 rounded-5 status ${ticket.status}">${statusText}</span>
             </td>
             <td>${ticket.subject}</td>
             <td><a href="#" class="text-primary text-decoration-none view" data-index="${index}">View</a></td>
@@ -155,23 +159,30 @@ function showTicketPopup(ticketIndex) {
     const closeTicketBtn = overlay.querySelector('#closeTicketBtn');
     const closeBtn = overlay.querySelector('.popup-close');
     
-    // Take Action logic
+    // Update button states based on current status
+    updateButtonStates(ticket.status, takeActionBtn, closeTicketBtn);
+    
+    // Take Action logic - فقط يغير من open إلى inprogress
     takeActionBtn.addEventListener('click', () => {
-        // Update ticket status
+        // Update ticket status فقط إذا كانت open
         if (ticket.status === 'open') {
             ticket.status = 'inprogress';
-        } else if (ticket.status === 'inprogress') {
-            ticket.status = 'closed';
+            
+            // Re-render tickets
+            renderTickets();
+            
+            // Close popup
+            document.body.removeChild(overlay);
+            
+            // Show success message
+            alert('Ticket status changed to In Progress!');
+        } else {
+            // إذا كانت الحالة ليست open، نظهر رسالة
+            alert('Ticket is already in progress. Only Open tickets can be moved to In Progress.');
         }
-        
-        // Re-render tickets
-        renderTickets();
-        
-        // Close popup
-        document.body.removeChild(overlay);
     });
     
-    // Close Ticket logic
+    // Close Ticket logic - يغير الحالة إلى closed بغض النظر عن الحالة الحالية
     closeTicketBtn.addEventListener('click', () => {
         // Update ticket status to closed
         ticket.status = 'closed';
@@ -181,6 +192,9 @@ function showTicketPopup(ticketIndex) {
         
         // Close popup
         document.body.removeChild(overlay);
+        
+        // Show success message
+        alert('Ticket has been closed!');
     });
     
     // Close button logic
@@ -194,6 +208,31 @@ function showTicketPopup(ticketIndex) {
             document.body.removeChild(overlay);
         }
     });
+}
+
+// Function to update button states based on ticket status
+function updateButtonStates(status, takeActionBtn, closeTicketBtn) {
+    switch(status) {
+        case 'open':
+            takeActionBtn.disabled = false;
+            takeActionBtn.textContent = 'Take Action';
+            closeTicketBtn.disabled = false;
+            break;
+        case 'inprogress':
+            takeActionBtn.disabled = true;
+            takeActionBtn.textContent = 'Already In Progress';
+            takeActionBtn.style.backgroundColor = '#6c757d';
+            closeTicketBtn.disabled = false;
+            break;
+        case 'closed':
+            takeActionBtn.disabled = true;
+            takeActionBtn.textContent = 'Take Action';
+            takeActionBtn.style.backgroundColor = '#6c757d';
+            closeTicketBtn.disabled = true;
+            closeTicketBtn.style.backgroundColor = '#6c757d';
+            closeTicketBtn.textContent = 'Already Closed';
+            break;
+    }
 }
 
 // Submit new ticket

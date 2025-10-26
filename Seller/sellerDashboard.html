@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Dashboard</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="seller.css">
+
+  <!-- Styles -->
+  <style>
+    
+    
+
+    /* Cards Section */
+    .stats-section {
+      padding: 2rem;
+    }
+
+    .stats-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .stats-header h4 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .stats-header p {
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+
+    .stats-card {
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .stats-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stats-card i {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .stats-card .card-title {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .stats-card .card-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .orders-card {
+      background: linear-gradient(135deg, #FFE2E5 0%, #FFCAD0 100%);
+    }
+
+    .orders-card i {
+      color: #FF6B7A;
+    }
+
+    .sales-card {
+      background: linear-gradient(135deg, #FFF4DE 0%, #FFE8BD 100%);
+    }
+
+    .sales-card i {
+      color: #FF9F43;
+    }
+
+    .products-card {
+      background: linear-gradient(135deg, #DCFCE7 0%, #A8F0C1 100%);
+    }
+
+    .products-card i {
+      color: #3CD856;
+    }
+
+    .profit-card {
+      background: linear-gradient(135deg, #DDE7FF 0%, #B8CCFF 100%);
+    }
+
+    .profit-card i {
+      color: #5A67D8;
+    }
+
+    /* Charts Section */
+    .charts-section {
+      padding: 0 2rem 2rem;
+    }
+
+    .chart-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .chart-card h5 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    #salesChart {
+      width: 100% !important;
+      height: 300px !important;
+    }
+
+    /* Best Sellers */
+    .best-sellers-list .seller-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .best-sellers-list .seller-item:last-child {
+      border-bottom: none;
+    }
+
+    .best-sellers-list img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    .best-sellers-list h6 {
+      margin: 0;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .best-sellers-list small {
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .sidebar {
+        width: 220px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-header {
+        padding: 1rem;
+      }
+
+      .stats-section,
+      .charts-section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2 sidebar d-flex flex-column">
+        <div class="logo text-center my-3">
+          <img src="../assets/Luvina-logo-dashborad.svg" alt="Logo" width="170" />
+          <p class="text-secondary mb-0">Seller panel</p>
+        </div>
+
+        <a href="./sellerDashboard.html" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="./sellerOrders.html"><i class="bi bi-bag"></i> Orders</a>
+        <a href="./sellerProducts.html"><i class="bi bi-box-seam"></i> Products</a>
+
+
+        <button class="logout-btn mt-auto">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-10 main-content bg-light">
+        <!-- Dashboard Content -->
+        <div id="dashboard" class="content">
+          <!-- Header Section -->
+          <div class="dashboard-header">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+              <h2 class="head">Dashboard</h2>
+
+              <button class="btn-create" id="addProductBtn">
+                Add New Product
+              </button>
+            </div>
+          </div>
+          
+          <!-- Cards Section -->
+          <div class="stats-section">
+            <div class="stats-header">
+              <h4>This Week's Sales</h4>
+              <p>Sales summary and performance overview</p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="stats-card orders-card text-center">
+                  <i class="bi bi-cart-check"></i>
+                  <p class="card-title">Total Orders</p>
+                  <div class="card-value">1,250</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stats-card sales-card text-center">
+                  <i class="bi bi-currency-dollar"></i>
+                  <p class="card-title">Total Sales</p>
+                  <div class="card-value">$32,450</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stats-card products-card text-center">
+                  <i class="bi bi-box-seam"></i>
+                  <p class="card-title">Total Products</p>
+                  <div class="card-value">342</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stats-card profit-card text-center">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <p class="card-title">Total Profits</p>
+                  <div class="card-value">$12,580</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="charts-section">
+            <div class="row g-4 align-items-stretch">
+              <!-- Line Chart -->
+              <div class="col-md-8">
+                <div class="chart-card">
+                  <h5>Sales Overview (Curved Chart)</h5>
+                  <div style="height: 320px;">
+                    <canvas id="salesChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Best Sellers -->
+              <div class="col-md-4">
+                <div class="chart-card">
+                  <h5>Best Sellers</h5>
+                  <div class="best-sellers-list">
+                    <div class="seller-item">
+                      <img src="./assets/Bag1.webp" alt="The Darcy Bag" />
+                      <div>
+                        <h6>The Darcy Bag</h6>
+                        <small>Bags</small>
+                      </div>
+                    </div>
+
+                    <div class="seller-item">
+                      <img src="./assets/Bag4.webp" alt="The Pamela Bag" />
+                      <div>
+                        <h6>The Pamela Bag</h6>
+                        <small>Bags</small>
+                      </div>
+                    </div>
+
+                    <div class="seller-item">
+                      <img src="./assets/heelhover.webp" alt="The Tala Heels" />
+                      <div>
+                        <h6>The Tala Heels</h6>
+                        <small>Shoes</small>
+                      </div>
+                    </div>
+
+                    <div class="seller-item">
+                      <img src="./assets/Prod2.webp" alt="The Marcy" />
+                      <div>
+                        <h6>The Marcy</h6>
+                        <small>Shoes</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- JS -->
+<script src="mainSeller.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Initialize the sales chart
+  document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Sales ($)',
+          data: [3200, 4500, 3800, 5200, 6100, 7500, 6200],
+          borderColor: '#635BFF',
+          backgroundColor: 'rgba(99, 91, 255, 0.1)',
+          tension: 0.4,
+          fill: true,
+          pointBackgroundColor: '#635BFF',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          pointRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

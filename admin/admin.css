@@ -202,7 +202,7 @@
 }
 
 /* ====================== CARD COLORS ====================== */
-.orders {
+/* .orders {
   background-color: #ffe2e5;
 }
 .sales {
@@ -213,7 +213,24 @@
 }
 .profit {
   background-color: #dde7ff;
-}
+} */
+ .orders{
+        background-color: #FFE2E5 !important; 
+    }
+    
+    
+    .sales{
+        background-color: #FFF4DE !important;
+    }
+
+    
+    .products{
+        background-color: #DCFCE7 !important;
+    }
+    
+    .profit{
+        background-color: #DDE7FF !important;
+    }
 
 /* ====================== EMPLOYEES LIST ====================== */
 .employees-list img {

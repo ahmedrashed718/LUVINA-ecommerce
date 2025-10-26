@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+     
+
+      .head {
+        font-weight: 700;
+        color: #333;
+      }
+
+      .subhead {
+        color: #888;
+      }
+
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card i {
+        font-size: 2rem;
+        color: #5a67d8;
+      }
+
+      .stats-number {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 8px;
+      }
+
+      .employees-list img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .employees-list .employee {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .employees-list h6 {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .employees-list p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #888;
+      }
+
+
+      #salesChart {
+        width: 100% !important;
+        height: 300px !important;
+      }
+
+      .bg-grey{
+    background-color: #f5f5f5;
+}
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="container-fluid px-4 py-4 bg-grey">
+
+<div class=" card bg-white p-4 mx-2 my-4">
+
+      <!-- Heading -->
+      <div class="mb-4">
+        <h2 class="head">This Week's Sales</h2>
+        <p class="subhead">Sales summary and performance overview</p>
+      </div>
+
+      <!-- Statistic Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <i class="bi bi-cart-check"></i>
+            <p class="mt-2 mb-0 text-muted">Total Orders</p>
+            <div class="stats-number">1,250</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <i class="bi bi-currency-dollar"></i>
+            <p class="mt-2 mb-0 text-muted">Revenue</p>
+            <div class="stats-number">$32,450</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <i class="bi bi-people"></i>
+            <p class="mt-2 mb-0 text-muted">New Customers</p>
+            <div class="stats-number">342</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card p-3 text-center">
+            <i class="bi bi-truck"></i>
+            <p class="mt-2 mb-0 text-muted">Delivered Orders</p>
+            <div class="stats-number">1,120</div>
+          </div>
+        </div>
+      </div>
+</div>
+      <!-- Chart + Employees Section -->
+      <div class="row g-4">
+        <!-- Chart Section -->
+        <div class="col-md-8">
+          <div class="card p-4">
+            <h5 class="mb-3 fw-bold">Sales Overview (Curved & Log Scale)</h5>
+            <canvas id="salesChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Employees Section -->
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="mb-3 fw-bold">Top Employees</h5>
+            <div class="employees-list">
+              <div class="employee">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Employee" />
+                <div>
+                  <h6>Aya Ahmed</h6>
+                  <p>Sales Manager</p>
+                </div>
+              </div>
+              <div class="employee">
+                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Employee" />
+                <div>
+                  <h6>Omar Hassan</h6>
+                  <p>Customer Support</p>
+                </div>
+              </div>
+              <div class="employee">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Employee" />
+                <div>
+                  <h6>Sara Ali</h6>
+                  <p>Marketing</p>
+                </div>
+              </div>
+              <div class="employee">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Employee" />
+                <div>
+                  <h6>Khaled Nabil</h6>
+                  <p>Delivery Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+
+    <!-- Chart.js Script -->
+    <script>
+      const ctx = document.getElementById("salesChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Sales (Log Scale)",
+              data: [2, 40, 10, 150, 80, 200, 50], // 👈 منحنى طالع ونازل
+              borderColor: "#5a67d8",
+              backgroundColor: "rgba(90,103,216,0.15)",
+              borderWidth: 3,
+              tension: 0.45, // 👈 كيرف ناعم
+              fill: true,
+              pointRadius: 4,
+              pointBackgroundColor: "#5a67d8",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false, // 👈 يخلي الرسم يتمدد حسب المساحة
+          plugins: {
+            legend: { display: false },
+          },
+          scales: {
+            y: {
+              type: "logarithmic",
+              beginAtZero: false,
+              title: {
+                display: true,
+                text: "Sales (log scale)",
+              },
+              min: 1,
+              max: 300, // 👈 يضمن إن المنحنى كله يظهر
+              ticks: {
+                callback: function (value) {
+                  return value;
+                },
+              },
+            },
+            x: {
+              title: {
+                display: true,
+                text: "Days",
+              },
+            },
+          },
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
