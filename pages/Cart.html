@@ -117,7 +117,10 @@
       id="mainNavbar"
       class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
     >
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <a
+        class="navbar-brand fw-bold d-flex align-items-center"
+        href="../Home.html"
+      >
         <img
           src="../assets/images/Luvina-logo-navbar.svg"
           alt="Logo"
@@ -180,6 +183,10 @@
 
           <a href="./ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
+          </a>
+
+          <a href="./Wishlist.html" class="icon-btn position-relative">
+            <i class="bi bi-heart fs-4"></i>
           </a>
 
           <a href="./Cart.html" class="icon-btn position-relative">
@@ -336,6 +343,14 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- User Manager -->
+    <script src="../js/user-manager.js"></script>
+    <!-- Cart Counter Badge -->
+    <script src="../js/cart-counter.js"></script>
+    <!-- Wishlist Manager -->
+    <script src="../js/wishlist-manager.js"></script>
+    <!-- Navbar Profile Dropdown -->
+    <script src="../js/navbar-profile.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -368,7 +383,7 @@
         cartContentEl.style.display = "block";
         orderSummaryEl.style.display = "block";
 
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cart = getUserCart() || [];
 
         // لو الكارت فاضي
         if (cart.length === 0) {
@@ -448,21 +463,21 @@
 
           plusBtn.addEventListener("click", () => {
             cart[index].quantity++;
-            localStorage.setItem("cart", JSON.stringify(cart));
+            saveUserCart(cart);
             location.reload();
           });
 
           minusBtn.addEventListener("click", () => {
             if (cart[index].quantity > 1) {
               cart[index].quantity--;
-              localStorage.setItem("cart", JSON.stringify(cart));
+              saveUserCart(cart);
               location.reload();
             }
           });
 
           removeBtn.addEventListener("click", () => {
             cart.splice(index, 1);
-            localStorage.setItem("cart", JSON.stringify(cart));
+            saveUserCart(cart);
             location.reload();
           });
         });

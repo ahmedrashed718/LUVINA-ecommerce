@@ -23,21 +23,25 @@
   <body>
     <!-- Sidebar -->
     <div class="sidebar d-flex flex-column" id="sidebar">
-      <div class="logo">
-        <img
-          src="../assets/images/new-logo.svg"
-          alt="Logo"
-          width="170"
-        />
-        <p class="text-center text-secondary">admin panel</p>
+      <div class="logo text-center my-3">
+        <a href="../Home.html" style="text-decoration: none;">
+          <img
+            src="../assets/images/Luvina-logo-navbar.svg"
+            alt="LUVINA Logo"
+            width="170"
+            style="cursor: pointer;"
+          />
+        </a>
+        <p class="text-center text-secondary mb-0">admin panel</p>
       </div>
       <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
       <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
       <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
-      <a href="./customers.html"><i class="bi bi-people"></i> Sellers</a>
+      <a href="./user-management.html"><i class="bi bi-people"></i> Users</a>
+      <a href="./customers.html"><i class="bi bi-shop"></i> Sellers</a>
       <a href="./customerService.html" class="active"><i class="bi bi-chat-left-text"></i> Customer service</a>
 
-      <button class="logout-btn mt-auto"><i class="bi bi-box-arrow-right text-white"></i> Logout</button>
+      <button class="logout-btn mt-auto" onclick="logoutAdmin()"><i class="bi bi-box-arrow-right text-white"></i> Logout</button>
     </div>
 
     <!-- Main Content -->
@@ -46,81 +50,358 @@
         <i class="bi bi-list fs-3"></i>
       </button>
 
-      <!-- Customer Service Section -->
-      <div id="service" class="container-fluid py-3 mx-0 bg-white">
-        <div class="d-flex justify-content-between">
-          <h2 class="head">Customer Service Management</h2>
-          <div class="col-md-4 search">
-            <input type="text" class="form-control w-75" placeholder="Search here...">
+      <!-- Header Section -->
+      <div class="bg-white shadow-sm p-3 mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="head mb-0">💬 Customer Service</h2>
+          <div class="search">
+            <input type="text" class="form-control" placeholder="Search tickets..." id="searchTickets">
           </div>
-          <button class="btn create create-ticket">Create New Ticket</button>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="bg-white shadow-sm p-4 mb-4 mx-3 rounded-3">
+        <div class="mb-3">
+          <h5 class="fw-bold mb-1">Ticket Statistics</h5>
+          <p class="text-muted mb-0">Overview of support tickets</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card p-3 text-center border-0 shadow-sm">
+              <i class="bi bi-ticket-detailed fs-3 text-primary"></i>
+              <p class="mt-2 mb-0 text-muted">Total Tickets</p>
+              <div class="fw-bold fs-5" id="totalTickets">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3 text-center border-0 shadow-sm">
+              <i class="bi bi-hourglass fs-3 text-warning"></i>
+              <p class="mt-2 mb-0 text-muted">Open Tickets</p>
+              <div class="fw-bold fs-5" id="openTickets">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3 text-center border-0 shadow-sm">
+              <i class="bi bi-arrow-repeat fs-3 text-info"></i>
+              <p class="mt-2 mb-0 text-muted">In Progress</p>
+              <div class="fw-bold fs-5" id="inProgressTickets">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3 text-center border-0 shadow-sm">
+              <i class="bi bi-check-circle fs-3 text-success"></i>
+              <p class="mt-2 mb-0 text-muted">Resolved</p>
+              <div class="fw-bold fs-5" id="resolvedTickets">0</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Tickets Table -->
-      <div id="ticketsTable" class="table-responsive my-5 shadow rounded table align-middle text-center mx-auto w-75">
+      <div class="table-responsive mx-3 my-2 px-2 rounded bg-white">
+        <p class="text-muted">Here's your customer support tickets overview</p>
         <table class="table align-middle">
           <thead>
             <tr>
               <th>Ticket ID</th>
               <th>Customer Name</th>
-              <th>Status</th>
+              <th>Email</th>
+              <th>Category</th>
               <th>Subject</th>
-              <th>Action</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Created</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody id="ticketsBody">
-            <!-- Tickets will be populated by JavaScript -->
+            <tr>
+              <td colspan="9" class="text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2 text-muted">Loading tickets...</p>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Create Ticket Form -->
-      <div id="createTicketForm" class="my-5 shadow rounded bg-white p-4 w-75 mx-auto" style="display: none;">
-        <h4 class="mb-4 fw-bold">Create New Ticket</h4>
-        <form id="ticketForm">
-          <div class="mb-3">
-            <label class="form-label">Customer Name</label>
-            <input type="text" class="form-control" id="customerName" placeholder="Alice Johnson" required>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" id="customerEmail" placeholder="alice.j@example.com" required>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Issue Category</label>
-            <select class="form-select" id="issueCategory">
-              <option>Order Inquiry</option>
-              <option>Product Defect</option>
-              <option>Billing Issue</option>
-              <option>Shipping Delay</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Subject</label>
-            <input type="text" class="form-control" id="ticketSubject" placeholder="Enter a brief subject">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Description</label>
-            <textarea class="form-control" id="ticketDescription" rows="4" placeholder="Describe the issue in detail"></textarea>
-          </div>
-
-          <div class="d-flex justify-content-end gap-3">
-            <button type="button" id="cancelForm" class="btn btn-light border">Cancel</button>
-            <button type="submit" class="btn btn-primary px-4">Submit Ticket</button>
-          </div>
-        </form>
+      <div id="emptyTickets" class="text-center py-5 mx-3" style="display: none;">
+        <i class="bi bi-ticket-detailed" style="font-size: 3rem; color: #ccc;"></i>
+        <p class="text-muted mt-3">No support tickets found</p>
       </div>
+
     </div>
 
     <!-- JavaScript Files -->
-    <script src="customerService.js"></script>
-    <script src="mainAdmin.js"></script>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/ticket-manager.js"></script>
+    <script src="../js/user-manager.js"></script>
+    <script src="./mainAdmin.js"></script>
+    
+    <script>
+      // Check if admin is logged in
+      if (!isAdmin()) {
+        alert('Access Denied: Admin only');
+        window.location.href = '../pages/Login-Customer.html';
+      }
+      
+      // Load tickets on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        loadAllTickets();
+        updateTicketStats();
+      });
+      
+      function updateTicketStats() {
+        const stats = getTicketStats();
+        document.getElementById('totalTickets').textContent = stats.total;
+        document.getElementById('openTickets').textContent = stats.open;
+        document.getElementById('inProgressTickets').textContent = stats.inProgress;
+        document.getElementById('resolvedTickets').textContent = stats.resolved;
+      }
+      
+      function loadAllTickets() {
+        const tickets = getAllTickets();
+        const tbody = document.getElementById('ticketsBody');
+        const emptyState = document.getElementById('emptyTickets');
+        
+        if (tickets.length === 0) {
+          tbody.parentElement.parentElement.style.display = 'none';
+          emptyState.style.display = 'block';
+          return;
+        }
+        
+        tbody.innerHTML = '';
+        emptyState.style.display = 'none';
+        
+        // Sort tickets by date (newest first)
+        tickets.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        
+        tickets.forEach(ticket => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td><strong>${ticket.ticketNumber}</strong></td>
+            <td>${ticket.name}</td>
+            <td>${ticket.email}</td>
+            <td><span class="badge bg-info">${ticket.category}</span></td>
+            <td>${ticket.subject}</td>
+            <td><span class="badge ${getTicketPriorityBadge(ticket.priority)}">${ticket.priority}</span></td>
+            <td>
+              <select class="form-select form-select-sm" data-ticket="${ticket.ticketNumber}" onchange="updateStatus(this)">
+                <option value="Open" ${ticket.status === 'Open' ? 'selected' : ''}>Open</option>
+                <option value="In Progress" ${ticket.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+                <option value="Resolved" ${ticket.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+                <option value="Closed" ${ticket.status === 'Closed' ? 'selected' : ''}>Closed</option>
+              </select>
+            </td>
+            <td><small>${formatTicketDate(ticket.createdAt)}</small></td>
+            <td>
+              <button class="btn btn-sm btn-info" onclick="viewTicketDetails('${ticket.ticketNumber}')">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="btn btn-sm btn-success" onclick="respondToTicket('${ticket.ticketNumber}')">
+                <i class="bi bi-reply"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" onclick="deleteTicketAdmin('${ticket.ticketNumber}')">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+      
+      function updateStatus(selectElement) {
+        const ticketNumber = selectElement.dataset.ticket;
+        const newStatus = selectElement.value;
+        
+        if (updateTicketStatus(ticketNumber, newStatus)) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Status Updated!',
+            text: `Ticket ${ticketNumber} status changed to ${newStatus}`,
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+          updateTicketStats();
+        }
+      }
+      
+      function viewTicketDetails(ticketNumber) {
+        const ticket = getTicketByNumber(ticketNumber);
+        
+        if (!ticket) {
+          Swal.fire('Error', 'Ticket not found', 'error');
+          return;
+        }
+        
+        const responsesHtml = ticket.responses && ticket.responses.length > 0 ?
+          ticket.responses.map(r => `
+            <div class="border-bottom py-2">
+              <strong>${r.respondedBy}</strong> - <small>${formatTicketDate(r.timestamp)}</small>
+              <p class="mb-0 mt-1">${r.message}</p>
+            </div>
+          `).join('') :
+          '<p class="text-muted">No responses yet</p>';
+        
+        Swal.fire({
+          title: `Ticket ${ticket.ticketNumber}`,
+          html: `
+            <div class="text-start">
+              <p><strong>Customer:</strong> ${ticket.name}</p>
+              <p><strong>Email:</strong> ${ticket.email}</p>
+              <p><strong>Phone:</strong> ${ticket.phone}</p>
+              <p><strong>Category:</strong> <span class="badge bg-info">${ticket.category}</span></p>
+              <p><strong>Priority:</strong> <span class="badge ${getTicketPriorityBadge(ticket.priority)}">${ticket.priority}</span></p>
+              <p><strong>Status:</strong> <span class="badge ${getTicketStatusBadge(ticket.status)}">${ticket.status}</span></p>
+              <hr>
+              <h6>Subject:</h6>
+              <p>${ticket.subject}</p>
+              <h6>Message:</h6>
+              <p>${ticket.message}</p>
+              <hr>
+              <h6>Responses:</h6>
+              ${responsesHtml}
+            </div>
+          `,
+          width: 700,
+          confirmButtonColor: '#6c63ff'
+        });
+      }
+      
+      function respondToTicket(ticketNumber) {
+        const ticket = getTicketByNumber(ticketNumber);
+        
+        if (!ticket) {
+          Swal.fire('Error', 'Ticket not found', 'error');
+          return;
+        }
+        
+        Swal.fire({
+          title: `Respond to Ticket ${ticketNumber}`,
+          html: `
+            <p class="text-start"><strong>Subject:</strong> ${ticket.subject}</p>
+            <textarea id="responseMessage" class="form-control" rows="4" placeholder="Type your response..."></textarea>
+          `,
+          showCancelButton: true,
+          confirmButtonColor: '#6c63ff',
+          confirmButtonText: 'Send Response',
+          preConfirm: () => {
+            const message = document.getElementById('responseMessage').value;
+            if (!message.trim()) {
+              Swal.showValidationMessage('Please enter a response');
+              return false;
+            }
+            return message;
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            if (addTicketResponse(ticketNumber, result.value)) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Response Sent!',
+                text: 'Your response has been added to the ticket',
+                confirmButtonColor: '#6c63ff'
+              });
+              loadAllTickets();
+            }
+          }
+        });
+      }
+      
+      function deleteTicketAdmin(ticketNumber) {
+        Swal.fire({
+          title: 'Delete Ticket?',
+          text: `Are you sure you want to delete ticket ${ticketNumber}?`,
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#6c63ff',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            if (deleteTicket(ticketNumber)) {
+              Swal.fire('Deleted!', 'Ticket has been deleted.', 'success');
+              loadAllTickets();
+              updateTicketStats();
+            }
+          }
+        });
+      }
+      
+      function logoutAdmin() {
+        localStorage.removeItem('loggedInUser');
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = '../pages/Login-Customer.html';
+      }
+      
+      // Search functionality
+      const searchInput = document.getElementById('searchTickets');
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const query = this.value.trim();
+          if (query === '') {
+            loadAllTickets();
+          } else {
+            const results = searchTickets(query);
+            displaySearchResults(results);
+          }
+        });
+      }
+      
+      function displaySearchResults(tickets) {
+        const tbody = document.getElementById('ticketsBody');
+        tbody.innerHTML = '';
+        
+        if (tickets.length === 0) {
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="9" class="text-center py-4">
+                <p class="text-muted">No tickets found matching your search</p>
+              </td>
+            </tr>
+          `;
+          return;
+        }
+        
+        tickets.forEach(ticket => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td><strong>${ticket.ticketNumber}</strong></td>
+            <td>${ticket.name}</td>
+            <td>${ticket.email}</td>
+            <td><span class="badge bg-info">${ticket.category}</span></td>
+            <td>${ticket.subject}</td>
+            <td><span class="badge ${getTicketPriorityBadge(ticket.priority)}">${ticket.priority}</span></td>
+            <td>
+              <select class="form-select form-select-sm" data-ticket="${ticket.ticketNumber}" onchange="updateStatus(this)">
+                <option value="Open" ${ticket.status === 'Open' ? 'selected' : ''}>Open</option>
+                <option value="In Progress" ${ticket.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+                <option value="Resolved" ${ticket.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+                <option value="Closed" ${ticket.status === 'Closed' ? 'selected' : ''}>Closed</option>
+              </select>
+            </td>
+            <td><small>${formatTicketDate(ticket.createdAt)}</small></td>
+            <td>
+              <button class="btn btn-sm btn-info" onclick="viewTicketDetails('${ticket.ticketNumber}')">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="btn btn-sm btn-success" onclick="respondToTicket('${ticket.ticketNumber}')">
+                <i class="bi bi-reply"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" onclick="deleteTicketAdmin('${ticket.ticketNumber}')">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+    </script>
   </body>
 </html>

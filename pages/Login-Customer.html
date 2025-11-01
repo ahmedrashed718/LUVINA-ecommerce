@@ -220,6 +220,13 @@
         );
 
         if (user) {
+          // Check if account is active
+          if (user.status && user.status !== 'active') {
+            loginError.textContent = "Your account has been suspended. Please contact admin.";
+            loginError.style.display = "block";
+            return;
+          }
+
           // Remember email
           const rememberMe = document.getElementById("rememberMe").checked;
           if (rememberMe) {
@@ -228,15 +235,23 @@
             localStorage.removeItem("rememberedEmail");
           }
 
-          // ✅ احفظ بيانات اليوزر الحالي في localStorage
+          // ✅ Save logged in user data
           localStorage.setItem("loggedInUser", JSON.stringify(user));
-
-          // ✅ علامة تسجيل الدخول
           localStorage.setItem("isLoggedIn", "true");
 
-          // ✅ توجيه للصفحة التالية
-          window.location.href = "../Home.html";
+          // ✅ Route based on account type
+          const accountType = user.accountType || 'customer';
+          
+          if (accountType === 'admin') {
+            window.location.href = "../admin/dashboard .html";
+          } else if (accountType === 'business') {
+            window.location.href = "../Seller/sellerDashboard.html";
+          } else {
+            // Default: customer
+            window.location.href = "../Home.html";
+          }
         } else {
+          loginError.textContent = "Invalid email or password";
           loginError.style.display = "block";
         }
       });
@@ -248,5 +263,6 @@
           () => (window.location.href = "Signup-Customer.html")
         );
     </script>
+    <script src="../js/user-manager.js"></script>
   </body>
 </html>

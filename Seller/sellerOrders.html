@@ -30,16 +30,18 @@
       <!-- Sidebar -->
       <div class="col-md-2 sidebar d-flex flex-column">
         <div class="logo text-center my-3">
-          <img src="../assets/Luvina-logo-dashborad.svg" alt="Logo" width="170" />
+          <a href="../Home.html" style="text-decoration: none;">
+            <img src="../assets/images/Luvina-logo-navbar.svg" alt="LUVINA Logo" width="170" style="cursor: pointer;" />
+          </a>
           <p class="text-secondary mb-0">Seller panel</p>
         </div>
 
-        <a href="./sellerDashboard.html" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
-        <a href="./sellerOrders.html"><i class="bi bi-bag"></i> Orders</a>
+        <a href="./sellerDashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="./sellerOrders.html" class="active"><i class="bi bi-bag"></i> Orders</a>
         <a href="./sellerProducts.html"><i class="bi bi-box-seam"></i> Products</a>
 
 
-        <button class="logout-btn mt-auto">
+        <button class="logout-btn mt-auto" onclick="logoutSeller()">
           <i class="bi bi-box-arrow-right"></i> Logout
         </button>
       </div>
@@ -48,11 +50,7 @@
   <div class="col-md-10">
     <div class="dashboard-header">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
-              <h2 class="head">Dashboard</h2>
-
-              <button class="btn-create" id="addProductBtn">
-                Add New Product
-              </button>
+              <h2 class="head">Orders</h2>
             </div>
           </div>
 
@@ -77,55 +75,22 @@
                   <th>Status</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="ordersTableBody">
                 <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status shipped">Shipped</span></td>
-                </tr>
-                <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status delivered">Delivered</span></td>
-                </tr>
-                <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status canceled">Canceled</span></td>
-                </tr>
-                 <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status canceled">Canceled</span></td>
-                </tr>
-                 <tr>
-                  <td>#1234867</td>
-                  <td>Mohamed</td>
-                  <td>June 1, 2020</td>
-                  <td>450 EGP</td>
-                  <td><span class="status delivered">Delivered</span></td>
+                  <td colspan="8" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Loading orders...</p>
+                  </td>
                 </tr>
               </tbody>
-              <tbody id="ordersTableBody">
-  <!-- Data will be inserted here dynamically -->
-</tbody>
-
             </table>
+          </div>
+          
+          <div id="emptyOrders" class="text-center py-5" style="display: none;">
+            <i class="bi bi-cart-x" style="font-size: 3rem; color: #ccc;"></i>
+            <p class="text-muted mt-3">No orders found</p>
           </div>
 
           <nav aria-label="Page navigation">
@@ -149,49 +114,132 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/user-manager.js"></script>
+<script src="../js/admin-data-manager.js"></script>
+<script src="../js/order-manager.js"></script>
 <script src="./mainSeller.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-function loadAdminOrders() {
-  const orders = JSON.parse(localStorage.getItem("adminOrders")) || [];
-  const tableBody = document.querySelector("tbody");
-  
-  if (!tableBody) return;
-  
-  tableBody.innerHTML = '';
+
+<script>
+  // Check if business account is logged in
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (!loggedInUser || (loggedInUser.accountType !== 'business' && loggedInUser.accountType !== 'admin')) {
+    alert('Access Denied: Business account only');
+    window.location.href = '../pages/Login-Customer.html';
+  }
+
+  // Load orders on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    loadAllOrders();
+  });
+
+function loadAllOrders() {
+  const orders = adminDataManager.getAllOrdersForAdmin();
+  const tbody = document.getElementById('ordersTableBody');
+  const emptyState = document.getElementById('emptyOrders');
   
   if (orders.length === 0) {
-    tableBody.innerHTML = `
-      <tr>
-        <td colspan="5" class="text-center py-4">
-          <p class="text-muted">No orders found</p>
-        </td>
-      </tr>
-    `;
+    tbody.parentElement.style.display = 'none';
+    emptyState.style.display = 'block';
     return;
   }
   
-  orders.reverse().forEach(order => {
+  tbody.innerHTML = '';
+  emptyState.style.display = 'none';
+  
+  // Sort orders by date (newest first)
+  orders.sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate));
+  
+  orders.forEach(order => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>#${order.orderNumber}</td>
+      <td><strong>${order.orderNumber}</strong></td>
       <td>${order.customerName}</td>
-      <td>${order.date}</td>
-      <td>${order.totalPrice} EGP</td>
-      <td><span class="status ${order.status.toLowerCase()}">${order.status}</span></td>
+      <td>${order.email}</td>
+      <td>${adminDataManager.formatDateAdmin(order.orderDate)}</td>
+      <td>${order.items.length} items</td>
+      <td><strong>${adminDataManager.formatCurrency(order.total)}</strong></td>
+      <td><span class="badge ${getStatusBadge(order.status)}">${order.status}</span></td>
+      <td>
+        <button class="btn btn-sm btn-info" onclick="viewOrderDetails('${order.orderNumber}')">
+          <i class="bi bi-eye"></i> View
+        </button>
+      </td>
     `;
-    tableBody.appendChild(row);
+    tbody.appendChild(row);
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  loadAdminOrders();
+function getStatusBadge(status) {
+  const badges = {
+    'Pending': 'bg-warning text-dark',
+    'Processing': 'bg-info',
+    'Shipped': 'bg-primary',
+    'Delivered': 'bg-success',
+    'Cancelled': 'bg-danger'
+  };
+  return badges[status] || 'bg-secondary';
+}
+
+function viewOrderDetails(orderNumber) {
+  const order = adminDataManager.getOrderDetails(orderNumber);
   
-  setInterval(() => {
-    loadAdminOrders();
-  }, 3000);
-});
+  if (!order) {
+    Swal.fire('Error', 'Order not found', 'error');
+    return;
+  }
+  
+  const itemsList = order.items.map(item => `
+    <div class="d-flex justify-content-between border-bottom py-2">
+      <div>
+        <strong>${item.name}</strong><br>
+        <small>Qty: ${item.quantity} × ${item.price} EGP</small>
+      </div>
+      <div><strong>${item.quantity * item.price} EGP</strong></div>
+    </div>
+  `).join('');
+  
+  Swal.fire({
+    title: `Order ${order.orderNumber}`,
+    html: `
+      <div class="text-start">
+        <p><strong>Customer:</strong> ${order.customerName}</p>
+        <p><strong>Email:</strong> ${order.email}</p>
+        <p><strong>Phone:</strong> ${order.phone}</p>
+        <p><strong>Address:</strong> ${order.address}</p>
+        <p><strong>Status:</strong> <span class="badge ${getStatusBadge(order.status)}">${order.status}</span></p>
+        <p><strong>Payment:</strong> ${order.paymentMethod}</p>
+        <hr>
+        <h6>Items:</h6>
+        ${itemsList}
+        <hr>
+        <div class="d-flex justify-content-between">
+          <strong>Subtotal:</strong>
+          <strong>${order.subtotal} EGP</strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <strong>Shipping:</strong>
+          <strong>${order.shipping} EGP</strong>
+        </div>
+        <div class="d-flex justify-content-between mt-2 pt-2 border-top">
+          <strong>Total:</strong>
+          <strong>${order.total} EGP</strong>
+        </div>
+      </div>
+    `,
+    width: 600,
+    confirmButtonColor: '#635BFF'
+  });
+}
+
+function logoutSeller() {
+  if (confirm('Are you sure you want to logout?')) {
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = '../pages/Login-Customer.html';
+  }
+}
 </script>
   </body>
 </html>

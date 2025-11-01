@@ -184,6 +184,15 @@
             <div class="invalid-feedback">Passwords do not match.</div>
           </div>
 
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Account Type</label>
+            <select class="form-select" id="accountType" required>
+              <option value="customer">Customer Account</option>
+              <option value="business">Business Account (Sell Products)</option>
+            </select>
+            <small class="text-muted">Business accounts can list and sell products on the platform.</small>
+          </div>
+
           <button class="sign-btn" type="submit">Sign Up</button>
         </form>
 
@@ -254,11 +263,16 @@
           return;
         }
 
+        const accountType = document.getElementById("accountType").value;
+        
         users.push({
           fullname: fullname.value.trim(),
           phone: phone.value.trim(),
           email: email.value.trim(),
           password: password.value.trim(),
+          accountType: accountType,
+          createdAt: new Date().toISOString(),
+          status: 'active'
         });
         localStorage.setItem("users", JSON.stringify(users));
 
@@ -273,5 +287,6 @@
         window.location.href = "Login-Customer.html";
       });
     </script>
+    <script src="../js/user-manager.js"></script>
   </body>
 </html>

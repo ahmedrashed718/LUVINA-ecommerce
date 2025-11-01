@@ -28,25 +28,29 @@
         <!-- Sidebar -->
         <div class="sidebar d-flex flex-column" id="sidebar">
           <div class="logo text-center my-3">
-            <img
-              src="../assets/images/new-logo.svg"
-              alt="Logo"
-              width="170"
-            />
+            <a href="../Home.html" style="text-decoration: none;">
+              <img
+                src="../assets/images/Luvina-logo-navbar.svg"
+                alt="LUVINA Logo"
+                width="170"
+                style="cursor: pointer;"
+              />
+            </a>
             <p class="text-secondary mb-0">admin panel</p>
           </div>
 
-          <a href="./dashboard.html" class="active"
+          <a href="./dashboard .html" class="active"
             ><i class="bi bi-speedometer2"></i> Dashboard</a
           >
           <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
           <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
-          <a href="./customers.html"><i class="bi bi-people"></i> Sellers</a>
+          <a href="./user-management.html"><i class="bi bi-people"></i> Users</a>
+          <a href="./customers.html"><i class="bi bi-shop"></i> Sellers</a>
           <a href="./customerService.html"
             ><i class="bi bi-chat-left-text"></i> Customer service</a
           >
 
-          <button class="logout-btn mt-auto">
+          <button class="logout-btn mt-auto" onclick="logoutAdmin()">
             <i class="bi bi-box-arrow-right text-white"></i> Logout
           </button>
         </div>
@@ -88,28 +92,28 @@
                   <div class="orders card p-3 text-center border-0 shadow-sm">
                     <i class="bi bi-bag fs-3 text-danger"></i>
                     <p class="mt-2 mb-0 text-muted">Total Orders</p>
-                    <div class="fw-bold fs-5">1,250</div>
+                    <div class="fw-bold fs-5" id="totalOrders">0</div>
                   </div>
                 </div>
                 <div class="col-md-3 ">
                   <div class="sales card p-3 text-center border-0 shadow-sm">
                     <i class="bi bi-wallet-fill fs-3 text-warning"></i>
                     <p class="mt-2 mb-0 text-muted">Total Sales</p>
-                    <div class="fw-bold fs-5">$32,450</div>
+                    <div class="fw-bold fs-5" id="totalSales">0 EGP</div>
                   </div>
                 </div>
                 <div class="col-md-3 ">
                   <div class="products card p-3 text-center border-0 shadow-sm">
                     <i class="bi bi-box-seam fs-3 text-success"></i>
                     <p class="mt-2 mb-0 text-muted">Total Products</p>
-                    <div class="fw-bold fs-5">342</div>
+                    <div class="fw-bold fs-5" id="totalProducts">0</div>
                   </div>
                 </div>
                 <div class="col-md-3 ">
                   <div class="profit card p-3 text-center border-0 shadow-sm">
-                    <i class="bi bi-currency-dollar fs-3 text-primary"></i>
-                    <p class="mt-2 mb-0 text-muted">Total Profits</p>
-                    <div class="fw-bold fs-5">1,120</div>
+                    <i class="bi bi-people-fill fs-3 text-primary"></i>
+                    <p class="mt-2 mb-0 text-muted">Total Users</p>
+                    <div class="fw-bold fs-5" id="totalUsers">0</div>
                   </div>
                 </div>
               </div>
@@ -125,67 +129,14 @@
                 </div>
               </div>
 
-              <!-- Employees -->
+              <!-- Recent Orders -->
               <div class="col-md-4">
                 <div class="card p-4 shadow-sm border-0">
-                  <h5 class="fw-bold mb-3">Top Sales</h5>
-                  <div class="employees-list">
-                    <div class="d-flex align-items-center mb-3">
-                      <img
-                        src="https://randomuser.me/api/portraits/women/65.jpg"
-                        class="rounded-circle me-3"
-                        width="50"
-                        height="50"
-                        alt="Employee"
-                      />
-                      <div>
-                        <h6 class="mb-0">Aya Ahmed</h6>
-                        <small class="text-muted">Sales Manager</small>
-                      </div>
-                    </div>
-
-                    <div class="d-flex align-items-center mb-3">
-                      <img
-                        src="https://randomuser.me/api/portraits/men/54.jpg"
-                        class="rounded-circle me-3"
-                        width="50"
-                        height="50"
-                        alt="Employee"
-                      />
-                      <div>
-                        <h6 class="mb-0">Omar Hassan</h6>
-                        <small class="text-muted">Customer Support</small>
-                      </div>
-                    </div>
-
-                    <div class="d-flex align-items-center mb-3">
-                      <img
-                        src="https://randomuser.me/api/portraits/women/48.jpg"
-                        class="rounded-circle me-3"
-                        width="50"
-                        height="50"
-                        alt="Employee"
-                      />
-                      <div>
-                        <h6 class="mb-0">Sara Ali</h6>
-                        <small class="text-muted">Marketing</small>
-                      </div>
-                    </div>
-
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="https://randomuser.me/api/portraits/men/33.jpg"
-                        class="rounded-circle me-3"
-                        width="50"
-                        height="50"
-                        alt="Employee"
-                      />
-                      <div>
-                        <h6 class="mb-0">Khaled Nabil</h6>
-                        <small class="text-muted">Delivery Lead</small>
-                      </div>
-                    </div>
+                  <h5 class="fw-bold mb-3">Recent Orders</h5>
+                  <div id="recentOrdersList">
+                    <p class="text-muted text-center">No recent orders</p>
                   </div>
+                  <a href="./order.html" class="btn btn-sm btn-outline-primary mt-3">View All Orders</a>
                 </div>
               </div>
             </div>
@@ -194,9 +145,116 @@
         </div>
    
     <!-- JS -->
-    <script src="./mainAdmin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="../js/admin-data-manager.js"></script>
+    <script src="../js/user-manager.js"></script>
+    <script src="./mainAdmin.js"></script>
     
+    <script>
+      // Check if admin is logged in
+      if (!isAdmin()) {
+        alert('Access Denied: Admin only');
+        window.location.href = '../pages/Login-Customer.html';
+      }
+      
+      // Load dashboard data
+      document.addEventListener('DOMContentLoaded', function() {
+        loadDashboardData();
+      });
+      
+      function loadDashboardData() {
+        const stats = adminDataManager.getAdminDashboardStats();
+        
+        // Update cards
+        document.getElementById('totalOrders').textContent = stats.orders.total;
+        document.getElementById('totalSales').textContent = adminDataManager.formatCurrency(stats.sales.total);
+        document.getElementById('totalProducts').textContent = stats.products.total;
+        document.getElementById('totalUsers').textContent = stats.users.total;
+        
+        // Load recent orders
+        loadRecentOrders();
+        
+        // Load sales chart
+        loadSalesChart();
+      }
+      
+      function loadRecentOrders() {
+        const recentOrders = adminDataManager.getRecentOrders(5);
+        const container = document.getElementById('recentOrdersList');
+        
+        if (recentOrders.length === 0) {
+          container.innerHTML = '<p class="text-muted text-center py-3">No recent orders</p>';
+          return;
+        }
+        
+        container.innerHTML = '';
+        recentOrders.forEach(order => {
+          const statusClass = {
+            'Pending': 'warning',
+            'Processing': 'info',
+            'Shipped': 'primary',
+            'Delivered': 'success',
+            'Cancelled': 'danger'
+          }[order.status] || 'secondary';
+          
+          const orderHtml = `
+            <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+              <div>
+                <h6 class="mb-0">${order.orderNumber}</h6>
+                <small class="text-muted">${order.customerName}</small>
+              </div>
+              <span class="badge bg-${statusClass}">${order.status}</span>
+            </div>
+          `;
+          container.innerHTML += orderHtml;
+        });
+      }
+      
+      function loadSalesChart() {
+        const chartData = adminDataManager.getSalesChartData();
+        
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: chartData.labels,
+            datasets: [{
+              label: 'Sales (EGP)',
+              data: chartData.data,
+              borderColor: '#6c63ff',
+              backgroundColor: 'rgba(108, 99, 255, 0.1)',
+              borderWidth: 2,
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top'
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  callback: function(value) {
+                    return value + ' EGP';
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+      
+      function logoutAdmin() {
+        localStorage.removeItem('loggedInUser');
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = '../pages/Login-Customer.html';
+      }
+    </script>
   </body>
 </html>

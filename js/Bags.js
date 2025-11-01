@@ -1,38 +1,58 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const bagsCon = document.getElementById("bags-con");
   const buttons = document.querySelectorAll(".btn-group .btn");
   const searchInput = document.querySelector(".search-bar input");
   let allBags = [];
   let currentFilter = "all";
 
-  // ✅ Fetch products from JSON file
-  fetch("../products.json")
-    .then((response) => response.json())
-    .then((data) => {
-      // Get only products that belong to Bags category
-      allBags = data.filter((item) => item.Category?.toLowerCase() === "bags");
+  // ✅ Get products from localStorage (auto-initializes on first load)
+  try {
+    const allProducts = await getProducts();
 
-      // ✅ Check if there's a selected category saved in localStorage
-      const storedCategory = localStorage.getItem("selectedBagCategory");
+    if (allProducts.length === 0) {
+      bagsCon.innerHTML = `
+        <div class="alert alert-warning text-center" role="alert">
+          <h4>⚠️ Failed to Load Products</h4>
+          <p>Please make sure Products.json file exists.</p>
+        </div>
+      `;
+      return;
+    }
 
-      if (storedCategory) {
-        currentFilter = storedCategory;
-        localStorage.removeItem("selectedBagCategory");
-      }
+    // Get only products that belong to Bags category
+    allBags = allProducts.filter(
+      (item) => item.Category?.toLowerCase() === "bags"
+    );
 
-      // ✅ Activate correct filter button
-      activateButton(currentFilter);
+    // ✅ Check if there's a selected category saved in localStorage
+    const storedCategory = localStorage.getItem("selectedBagCategory");
 
-      // ✅ Display filtered products initially
-      displayProducts(currentFilter);
+    if (storedCategory) {
+      currentFilter = storedCategory;
+      localStorage.removeItem("selectedBagCategory");
+    }
 
-      // ✅ Listen to search input
-      searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
-        displayProducts(currentFilter, query);
-      });
-    })
-    .catch((error) => console.error("Error loading products:", error));
+    // ✅ Activate correct filter button
+    activateButton(currentFilter);
+
+    // ✅ Display filtered products initially
+    displayProducts(currentFilter);
+
+    // ✅ Listen to search input
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      displayProducts(currentFilter, query);
+    });
+  } catch (error) {
+    console.error("Error loading products from localStorage:", error);
+    bagsCon.innerHTML = `
+      <div class="alert alert-danger text-center" role="alert">
+        <h4>❌ Error</h4>
+        <p>${error.message}</p>
+        <a href="../init-storage-once.html" class="btn btn-primary mt-3">Initialize Storage</a>
+      </div>
+    `;
+  }
 
   // ✅ Function to activate filter button
   function activateButton(filter) {
@@ -83,12 +103,22 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="luv-card" style="cursor: pointer;">
           <div class="luv-card__imgbox">
             <img
-              src="${item.images[0]}"
+              src="${
+                item.images && item.images[0]
+                  ? item.images[0]
+                  : "https://via.placeholder.com/300"
+              }"
               class="luv-card__img--main"
               alt="${item.name}"
             />
             <img
-              src="${item.images[1]}"
+              src="${
+                item.images && item.images[1]
+                  ? item.images[1]
+                  : item.images && item.images[0]
+                  ? item.images[0]
+                  : "https://via.placeholder.com/300"
+              }"
               class="luv-card__img--hover"
               alt="${item.name} hover"
             />
@@ -96,18 +126,16 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="luv-card__body">
             <p class="luv-card__title">${item.name}</p>
             <p class="luv-card__price">${item.price} EGP</p>
-            <button class="btn luv-card__btn">Add to Cart</button>
+            <button class="btn luv-card__btn">View Details</button>
           </div>
         </div>
       `;
 
-      // ✅ Click on card → go to product details
+      // ✅ Click on card OR button → go to product details
       const card = col.querySelector(".luv-card");
-      card.addEventListener("click", (e) => {
-        if (e.target.classList.contains("luv-card__btn")) return;
-
+      card.addEventListener("click", () => {
         localStorage.setItem("selectedProduct", JSON.stringify(item));
-        window.location.href = "./productDetails.html";
+        window.location.href = "./ProductDetails.html";
       });
 
       bagsCon.appendChild(col);

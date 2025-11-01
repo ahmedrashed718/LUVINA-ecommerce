@@ -98,7 +98,10 @@
       id="mainNavbar"
       class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
     >
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <a
+        class="navbar-brand fw-bold d-flex align-items-center"
+        href="../Home.html"
+      >
         <img
           src="../assets/images/Luvina-logo-navbar.svg"
           alt="Logo"
@@ -362,7 +365,7 @@
         if (user.phone) phoneInput.value = user.phone;
 
         // ✅ تحميل الكارت
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cart = getUserCart() || [];
 
         if (cart.length === 0) {
           orderItemsContainer.innerHTML = `
@@ -417,27 +420,36 @@
         confirmOrderBtn.addEventListener("click", () => {
           const orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-          const newOrder = {
-            orderNumber,
-            user: user.fullname || "Guest",
+          // ✅ Save order using order manager
+          const savedOrderNumber = saveOrder({
+            name: user.fullname || "Guest",
+            email: user.email || "guest@luvina.com",
             address: user.address || "No address",
             phone: user.phone || "N/A",
             items: cart,
+            subtotal: subTotal,
+            shipping: shippingCost,
             total: subTotal + shippingCost,
-            date: new Date().toLocaleString(),
-          };
+            estimatedDelivery: "Oct 30, 2025",
+          });
 
-          orders.push(newOrder);
-          localStorage.setItem("orders", JSON.stringify(orders));
+          // Clear user's cart
+          saveUserCart([]);
 
-          localStorage.removeItem("cart");
-
-          alert(`✅ Order #${orderNumber} confirmed successfully!`);
+          alert(`✅ Order #${savedOrderNumber} confirmed successfully!`);
           window.location.href = "./new-arrival.html";
         });
       });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- User Manager -->
+    <script src="../js/user-manager.js"></script>
+    <!-- Cart Counter (includes getUserCart and saveUserCart functions) -->
+    <script src="../js/cart-counter.js"></script>
+    <!-- Order Manager -->
+    <script src="../js/order-manager.js"></script>
+    <!-- Navbar Profile Dropdown -->
+    <script src="../js/navbar-profile.js"></script>
   </body>
 </html>

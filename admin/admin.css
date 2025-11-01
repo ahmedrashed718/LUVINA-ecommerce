@@ -423,11 +423,19 @@ a.delete {
       transition: 0.2s;
       font-weight: 500;
     }
+    
+    .size-option:hover {
+      border-color: #7353ff;
+      background-color: #f0f0ff;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(115, 83, 255, 0.2);
+    }
 
     .size-option.selected {
       background-color: #7353ff;
       color: #fff;
       border-color: #7353ff;
+      box-shadow: 0 2px 8px rgba(115, 83, 255, 0.3);
     }
 
     .error-message {

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        .user-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .user-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stats-card h2 {
+            color: #6c63ff;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .filter-tabs {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column" id="sidebar">
+        <div class="logo text-center my-3">
+            <a href="../Home.html" style="text-decoration: none;">
+                <img
+                    src="../assets/images/Luvina-logo-navbar.svg"
+                    alt="LUVINA Logo"
+                    width="170"
+                    style="cursor: pointer;"
+                />
+            </a>
+            <p class="text-center text-secondary mb-0">admin panel</p>
+        </div>
+
+        <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
+        <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
+        <a href="./user-management.html" class="active"><i class="bi bi-people"></i> Users</a>
+        <a href="./customers.html"><i class="bi bi-shop"></i> Sellers</a>
+        <a href="./customerService.html"><i class="bi bi-chat-left-text"></i> Customer service</a>
+
+        <button class="logout-btn mt-auto" onclick="logoutAdmin()">
+            <i class="bi bi-box-arrow-right text-white"></i> Logout
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        
+        <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
+            <i class="bi bi-list fs-3"></i>
+        </button>
+
+        <div class="container-fluid py-3">
+        <!-- Header Section -->
+        <div class="bg-white shadow-sm p-3 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="head mb-0">👥 User Management</h2>
+                <div class="search">
+                    <input type="text" class="form-control" placeholder="Search users..." id="searchUsers">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="bg-white shadow-sm p-4 mb-4 mx-3 rounded-3">
+            <div class="mb-3">
+                <h5 class="fw-bold mb-1">User Statistics</h5>
+                <p class="text-muted mb-0">Overview of all registered users</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card p-3 text-center border-0 shadow-sm">
+                        <i class="bi bi-people-fill fs-3 text-primary"></i>
+                        <p class="mt-2 mb-0 text-muted">Total Users</p>
+                        <div class="fw-bold fs-5" id="totalUsers">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center border-0 shadow-sm">
+                        <i class="bi bi-person-check fs-3 text-success"></i>
+                        <p class="mt-2 mb-0 text-muted">Customers</p>
+                        <div class="fw-bold fs-5" id="totalCustomers">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center border-0 shadow-sm">
+                        <i class="bi bi-shop fs-3 text-info"></i>
+                        <p class="mt-2 mb-0 text-muted">Business Accounts</p>
+                        <div class="fw-bold fs-5" id="totalBusiness">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center border-0 shadow-sm">
+                        <i class="bi bi-shield-check fs-3 text-danger"></i>
+                        <p class="mt-2 mb-0 text-muted">Admins</p>
+                        <div class="fw-bold fs-5" id="totalAdmins">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="bg-white shadow-sm p-3 mb-3 mx-3 rounded-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Filter Users</h5>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">
+                    <i class="bi bi-people"></i> All Users
+                </button>
+                <button type="button" class="btn btn-outline-success" data-filter="customer">
+                    <i class="bi bi-person"></i> Customers
+                </button>
+                <button type="button" class="btn btn-outline-info" data-filter="business">
+                    <i class="bi bi-shop"></i> Business
+                </button>
+                <button type="button" class="btn btn-outline-danger" data-filter="admin">
+                    <i class="bi bi-shield"></i> Admins
+                </button>
+            </div>
+        </div>
+        
+        <!-- Users List -->
+        <div id="usersContainer" class="mx-3"></div>
+        
+        <div id="emptyState" class="text-center py-5 mx-3" style="display: none;">
+            <i class="bi bi-person-x" style="font-size: 3rem; color: #ccc;"></i>
+            <p class="text-muted mt-3">No users found</p>
+        </div>
+        
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/user-manager.js"></script>
+    <script>
+        // Check if admin is logged in
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!isAdmin()) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Access Denied',
+                    text: 'You must be an admin to access this page',
+                    confirmButtonColor: '#6c63ff'
+                }).then(() => {
+                    window.location.href = '../pages/Login-Customer.html';
+                });
+                return;
+            }
+            
+            loadUsers();
+            updateStats();
+            
+            // Filter buttons
+            document.querySelectorAll('[data-filter]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    loadUsers(filter);
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('searchUsers');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value.trim().toLowerCase();
+                    searchUsers(query);
+                });
+            }
+        });
+        
+        function updateStats() {
+            const allUsers = getAllUsers();
+            const customers = getUsersByType('customer');
+            const business = getUsersByType('business');
+            const admins = getUsersByType('admin');
+            
+            document.getElementById('totalUsers').textContent = allUsers.length;
+            document.getElementById('totalCustomers').textContent = customers.length;
+            document.getElementById('totalBusiness').textContent = business.length;
+            document.getElementById('totalAdmins').textContent = admins.length;
+        }
+        
+        function loadUsers(filter = 'all') {
+            const container = document.getElementById('usersContainer');
+            const emptyState = document.getElementById('emptyState');
+            
+            let users = getAllUsers();
+            
+            if (filter !== 'all') {
+                users = getUsersByType(filter);
+            }
+            
+            if (users.length === 0) {
+                container.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            container.innerHTML = '';
+            
+            users.forEach(user => {
+                const userCard = document.createElement('div');
+                userCard.className = 'user-card';
+                userCard.innerHTML = `
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h5 class="mb-1">
+                                ${user.fullname}
+                                <span class="badge ${getAccountTypeBadge(user.accountType)} ms-2">
+                                    ${user.accountType}
+                                </span>
+                                <span class="badge ${getStatusBadge(user.status)} ms-1">
+                                    ${user.status}
+                                </span>
+                            </h5>
+                            <p class="text-muted mb-1">
+                                <i class="bi bi-envelope"></i> ${user.email}
+                            </p>
+                            <p class="text-muted mb-0">
+                                <i class="bi bi-telephone"></i> ${user.phone}
+                            </p>
+                            <small class="text-muted">
+                                Joined: ${formatDate(user.createdAt)}
+                            </small>
+                        </div>
+                        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                            ${user.accountType !== 'admin' ? `
+                                <button class="btn btn-sm btn-warning" onclick="toggleStatus('${user.email}', '${user.status}')">
+                                    <i class="bi bi-ban"></i> ${user.status === 'active' ? 'Suspend' : 'Activate'}
+                                </button>
+                                <button class="btn btn-sm btn-danger" onclick="removeUser('${user.email}')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            ` : '<span class="badge bg-secondary">Protected</span>'}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(userCard);
+            });
+        }
+        
+        function toggleStatus(email, currentStatus) {
+            const newStatus = currentStatus === 'active' ? 'suspended' : 'active';
+            
+            Swal.fire({
+                title: `${newStatus === 'suspended' ? 'Suspend' : 'Activate'} User?`,
+                text: `Are you sure you want to ${newStatus} this account?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#6c63ff',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, proceed'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    if (updateUserStatus(email, newStatus)) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: `Account ${newStatus} successfully`,
+                            confirmButtonColor: '#6c63ff'
+                        });
+                        const currentFilter = document.querySelector('[data-filter].active').dataset.filter;
+                        loadUsers(currentFilter);
+                        updateStats();
+                    }
+                }
+            });
+        }
+        
+        function removeUser(email) {
+            Swal.fire({
+                title: 'Delete User?',
+                text: "This action cannot be undone!",
+                icon: 'error',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c63ff',
+                confirmButtonText: 'Yes, delete'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    if (deleteUser(email)) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Deleted!',
+                            text: 'User has been deleted',
+                            confirmButtonColor: '#6c63ff'
+                        });
+                        const currentFilter = document.querySelector('[data-filter].active').dataset.filter;
+                        loadUsers(currentFilter);
+                        updateStats();
+                    }
+                }
+            });
+        }
+        
+        function searchUsers(query) {
+            const container = document.getElementById('usersContainer');
+            const emptyState = document.getElementById('emptyState');
+            
+            let users = getAllUsers();
+            
+            if (query !== '') {
+                users = users.filter(user => 
+                    user.fullname.toLowerCase().includes(query) ||
+                    user.email.toLowerCase().includes(query) ||
+                    user.phone.includes(query) ||
+                    user.accountType.toLowerCase().includes(query)
+                );
+            }
+            
+            if (users.length === 0) {
+                container.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            container.innerHTML = '';
+            
+            users.forEach(user => {
+                const userCard = document.createElement('div');
+                userCard.className = 'user-card';
+                userCard.innerHTML = `
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h5 class="mb-1">
+                                ${user.fullname}
+                                <span class="badge ${getAccountTypeBadge(user.accountType)} ms-2">
+                                    ${user.accountType}
+                                </span>
+                                <span class="badge ${getStatusBadge(user.status)} ms-1">
+                                    ${user.status}
+                                </span>
+                            </h5>
+                            <p class="text-muted mb-1">
+                                <i class="bi bi-envelope"></i> ${user.email}
+                            </p>
+                            <p class="text-muted mb-0">
+                                <i class="bi bi-telephone"></i> ${user.phone}
+                            </p>
+                            <small class="text-muted">
+                                Joined: ${formatDate(user.createdAt)}
+                            </small>
+                        </div>
+                        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                            ${user.accountType !== 'admin' ? `
+                                <button class="btn btn-sm btn-warning" onclick="toggleStatus('${user.email}', '${user.status}')">
+                                    <i class="bi bi-ban"></i> ${user.status === 'active' ? 'Suspend' : 'Activate'}
+                                </button>
+                                <button class="btn btn-sm btn-danger" onclick="removeUser('${user.email}')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            ` : '<span class="badge bg-secondary">Protected</span>'}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(userCard);
+            });
+        }
+        
+        function logoutAdmin() {
+            localStorage.removeItem('loggedInUser');
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = '../pages/Login-Customer.html';
+        }
+    </script>
+    <script src="./mainAdmin.js"></script>
+</body>
+</html>
+

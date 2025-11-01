@@ -193,7 +193,9 @@
       <!-- Sidebar -->
       <div class="col-md-2 sidebar d-flex flex-column">
         <div class="logo text-center my-3">
-          <img src="../assets/Luvina-logo-dashborad.svg" alt="Logo" width="170" />
+          <a href="../Home.html" style="text-decoration: none;">
+            <img src="../assets/images/Luvina-logo-navbar.svg" alt="LUVINA Logo" width="170" style="cursor: pointer;" />
+          </a>
           <p class="text-secondary mb-0">Seller panel</p>
         </div>
 
@@ -234,28 +236,28 @@
                 <div class="stats-card orders-card text-center">
                   <i class="bi bi-cart-check"></i>
                   <p class="card-title">Total Orders</p>
-                  <div class="card-value">1,250</div>
+                  <div class="card-value" id="totalOrders">0</div>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="stats-card sales-card text-center">
                   <i class="bi bi-currency-dollar"></i>
                   <p class="card-title">Total Sales</p>
-                  <div class="card-value">$32,450</div>
+                  <div class="card-value" id="totalSales">0 EGP</div>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="stats-card products-card text-center">
                   <i class="bi bi-box-seam"></i>
                   <p class="card-title">Total Products</p>
-                  <div class="card-value">342</div>
+                  <div class="card-value" id="totalProducts">0</div>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="stats-card profit-card text-center">
                   <i class="bi bi-graph-up-arrow"></i>
-                  <p class="card-title">Total Profits</p>
-                  <div class="card-value">$12,580</div>
+                  <p class="card-title">Pending Orders</p>
+                  <div class="card-value" id="pendingOrders">0</div>
                 </div>
               </div>
             </div>
@@ -321,19 +323,56 @@
   </div>
 
  <!-- JS -->
-<script src="mainSeller.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/user-manager.js"></script>
+<script src="../js/localStorage-products.js"></script>
+<script src="../js/admin-data-manager.js"></script>
+<script src="./mainSeller.js"></script>
+
 <script>
-  // Initialize the sales chart
-  document.addEventListener('DOMContentLoaded', function () {
+  // Check if business account is logged in
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (!loggedInUser || (loggedInUser.accountType !== 'business' && loggedInUser.accountType !== 'admin')) {
+    alert('Access Denied: Business account only');
+    window.location.href = '../pages/Login-Customer.html';
+  }
+
+  // Load dashboard data
+  document.addEventListener('DOMContentLoaded', async function () {
+    await loadSellerDashboard();
+  });
+  
+  async function loadSellerDashboard() {
+    // Get real data from localStorage
+    const orders = adminDataManager.getAllOrdersForAdmin();
+    const products = await getProducts();
+    
+    // Calculate statistics
+    const totalOrders = orders.length;
+    const totalSales = orders.reduce((sum, order) => sum + (order.total || 0), 0);
+    const pendingOrders = orders.filter(o => o.status === 'Pending').length;
+    
+    // Update UI
+    document.getElementById('totalOrders').textContent = totalOrders;
+    document.getElementById('totalSales').textContent = adminDataManager.formatCurrency(totalSales);
+    document.getElementById('totalProducts').textContent = products.length;
+    document.getElementById('pendingOrders').textContent = pendingOrders;
+    
+    // Load sales chart with real data
+    loadSalesChart();
+  }
+  
+  function loadSalesChart() {
+    const chartData = adminDataManager.getSalesChartData();
     const ctx = document.getElementById('salesChart').getContext('2d');
     const salesChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        labels: chartData.labels,
         datasets: [{
-          label: 'Sales ($)',
-          data: [3200, 4500, 3800, 5200, 6100, 7500, 6200],
+          label: 'Sales (EGP)',
+          data: chartData.data,
           borderColor: '#635BFF',
           backgroundColor: 'rgba(99, 91, 255, 0.1)',
           tension: 0.4,
@@ -348,12 +387,17 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false }
+          legend: { display: true }
         },
         scales: {
           y: {
             beginAtZero: true,
-            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            ticks: {
+              callback: function(value) {
+                return value + ' EGP';
+              }
+            }
           },
           x: {
             grid: { display: false }
@@ -361,10 +405,16 @@
         }
       }
     });
-  });
+  }
+  
+  function logoutSeller() {
+    if (confirm('Are you sure you want to logout?')) {
+      localStorage.removeItem('loggedInUser');
+      localStorage.removeItem('isLoggedIn');
+      window.location.href = '../pages/Login-Customer.html';
+    }
+  }
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

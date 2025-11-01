@@ -22,8 +22,9 @@
 
 
 body {
-  background-color: var(--white_color);
+  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
   color: var(--p_color);
+  min-height: 100vh;
 }
 
 /* Product Section */
@@ -408,3 +409,250 @@ body {
           margin-bottom: 20px;
         }
       }
+
+/* ==================== MOBILE RESPONSIVE DESIGN ==================== */
+
+/* Mobile First - Phones (< 576px) */
+@media (max-width: 576px) {
+  /* Navbar */
+  .navbar-brand img {
+    width: 120px !important;
+  }
+  
+  .navbar-nav {
+    padding: 15px 0;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  
+  .icon-btn {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Hero Section */
+  .carousel-item img,
+  .hero-section img {
+    height: 50vh !important;
+    object-fit: cover;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Product Cards */
+  .luv-card {
+    margin-bottom: 20px;
+  }
+  
+  .luv-card__imgbox img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .product-card img {
+    height: 200px !important;
+  }
+  
+  /* Product Details Page */
+  .imgh,
+  .main-img {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover;
+  }
+  
+  .small-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .small-thumbs img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* Buttons */
+  .btn-group {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  
+  .btn-lg {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  /* Cart Page */
+  .cart-item {
+    padding: 15px !important;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cart-item img {
+    width: 100% !important;
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .quantity-controls {
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  /* Wishlist */
+  .wishlist-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Profile Page */
+  .profile-section .row {
+    flex-direction: column;
+  }
+  
+  .profile-card,
+  .address-card,
+  .order-card {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer .col-md-3,
+  footer .col-md-2,
+  footer .col-md-5 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  footer .d-flex {
+    flex-direction: column;
+  }
+  
+  footer input,
+  footer button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Spacing */
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Container */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Modals */
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  /* Forms */
+  .form-control {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Tablets (577px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .navbar-brand img {
+    width: 140px !important;
+  }
+  
+  .carousel-item img,
+  .hero-section img {
+    height: 60vh !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  .luv-card__imgbox img {
+    height: 280px;
+  }
+  
+  .product-card img {
+    height: 250px !important;
+  }
+  
+  /* 2 columns on tablet */
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Desktop (> 992px) */
+@media (min-width: 993px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .carousel-item img {
+    height: 85vh;
+  }
+}
+
+/* General responsive utilities */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-truncate-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-truncate-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .icon-btn,
+  .nav-link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

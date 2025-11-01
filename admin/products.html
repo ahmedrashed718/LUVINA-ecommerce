@@ -13,6 +13,56 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
+  <style>
+    /* Upload Box Styling */
+    .upload-box {
+      border: 2px dashed #ddd;
+      border-radius: 8px;
+      padding: 40px 20px;
+      text-align: center;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .upload-box:hover {
+      border-color: #635BFF !important;
+      background-color: #f8f9ff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(99, 91, 255, 0.1);
+    }
+    
+    .upload-box:active {
+      transform: translateY(0);
+    }
+    
+    .upload-box i {
+      color: #635BFF;
+      transition: all 0.3s ease;
+    }
+    
+    .upload-box:hover i {
+      transform: scale(1.1);
+    }
+    
+    .upload-box strong {
+      color: #635BFF;
+      font-size: 16px;
+    }
+    
+    /* Image Preview Styling */
+    #uploadImagePreviewContainer {
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    #uploadImagePreviewContainer h6 {
+      color: #333;
+      font-weight: 600;
+    }
+  </style>
+  
 </head>
 
 <body>
@@ -22,15 +72,23 @@
 
   <!-- Sidebar -->
   <div class="sidebar d-flex flex-column" id="sidebar">
-    <div class="logo">
-      <img src="../assets/images/new-logo.svg" alt="Logo" width="170" />
-      <p class="text-center text-secondary">admin panel</p>
+    <div class="logo text-center my-3">
+      <a href="../Home.html" style="text-decoration: none;">
+        <img
+          src="../assets/images/Luvina-logo-navbar.svg"
+          alt="LUVINA Logo"
+          width="170"
+          style="cursor: pointer;"
+        />
+      </a>
+      <p class="text-center text-secondary mb-0">admin panel</p>
     </div>
 
     <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
     <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
     <a href="./products.html" class="active"><i class="bi bi-box-seam"></i> Products</a>
-    <a href="./customers.html"><i class="bi bi-people"></i> Sellers</a>
+    <a href="./user-management.html"><i class="bi bi-people"></i> Users</a>
+    <a href="./customers.html"><i class="bi bi-shop"></i> Sellers</a>
     <a href="./customerService.html"><i class="bi bi-chat-left-text"></i> Customer service</a>
 
     <button class="logout-btn mt-auto" id="logoutBtn">
@@ -192,14 +250,33 @@
           <!-- Right Side -->
           <div class="col-lg-4">
             <div class="card mb-4">
-              <h6 class="card-title">Product Image</h6>
+              <h6 class="card-title">Product Images</h6>
               <hr>
-              <div class="upload-box" required>
+              
+              <!-- Image Preview (shown when editing) -->
+              <div id="imagePreview" style="display: none;">
+                <div id="imagePreviewContainer" class="d-flex flex-wrap gap-2"></div>
+                <small class="text-muted mt-2 d-block">Existing product images (preserved on update)</small>
+              </div>
+              
+              <!-- Upload Box (shown when adding new) -->
+              <div class="upload-box" id="uploadBox" style="cursor: pointer;">
                 <p><i class="fa-solid fa-cloud-arrow-up fa-2x mb-2"></i></p>
-                <p>Drop your image here, or <a href="#">Click to browse</a></p>
+                <p><strong>Click here to select images</strong></p>
+                <p class="text-muted small">or drag and drop your images here</p>
+                <button type="button" class="btn btn-primary mt-3" id="uploadButton">
+                  <i class="fa-solid fa-upload me-2"></i>Browse Images
+                </button>
+                <input type="file" id="fileInput" accept="image/*" multiple style="position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0;">
               </div>
               <br>
-              <small class="text-muted">You can upload at least 1 high-quality image.</small>
+              <small class="text-muted">
+                <i class="bi bi-info-circle me-1"></i>
+                You can upload up to 5 images (Max 5MB each)
+              </small>
+              
+              <!-- Upload Image Preview Container -->
+              <div id="uploadImagePreviewContainer" class="mt-3" style="display: none;"></div>
             </div>
 
             <!-- Category Section (instead of Discount) -->
@@ -237,6 +314,9 @@
 
 
 
+  <!-- ✅ LocalStorage Auto-Initialization -->
+  <script src="../js/localStorage-products.js"></script>
+  <script src="../js/cart-counter.js"></script>
   <script src="./products.js"></script>
   <script src="./mainAdmin.js"></script>
   <!-- Bootstrap JS -->
