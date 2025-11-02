@@ -18,7 +18,6 @@
         padding: 20px;
         font-family: "Poppins", sans-serif;
       }
-
       .login-container {
         max-width: 900px;
         min-height: 500px;
@@ -29,13 +28,11 @@
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
         display: flex;
       }
-
       .model-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
       .form-container {
         flex: 1;
         padding: 40px;
@@ -43,13 +40,11 @@
         flex-direction: column;
         justify-content: center;
       }
-
       .luvina-img {
         display: block;
         max-width: 130px;
         margin: 0 auto 25px;
       }
-
       .sign-btn {
         width: 100%;
         padding: 10px;
@@ -63,30 +58,25 @@
         transition: all 0.3s ease;
         margin-top: 8px;
       }
-
       .sign-btn:hover {
         background: linear-gradient(135deg, #5a55ff, #4b47e0);
         transform: translateY(-2px);
       }
-
       .invalid-feedback {
         display: none;
         color: #dc3545;
         font-size: 0.9rem;
         margin-top: 5px;
       }
-
       .back-link {
         text-align: center;
         margin-top: 15px;
       }
-
       .back-link span {
         color: #6c63ff;
         cursor: pointer;
         font-weight: 600;
       }
-
       @media (max-width: 768px) {
         .login-container {
           flex-direction: column;
@@ -100,21 +90,17 @@
       }
     </style>
   </head>
-
   <body>
     <div class="login-container">
       <div class="col-lg-5 d-none d-lg-block">
         <img src="../assets/images/Model.jpg" alt="Model" class="model-img" />
       </div>
-
       <div class="form-container">
         <img src="../assets/images/logotype.png" alt="" class="luvina-img" />
-
         <h4 class="text-center mb-4 fw-semibold">Verify OTP</h4>
         <p class="text-center text-muted mb-4">
           Enter the 4-digit OTP we’ve sent to your email.
         </p>
-
         <form id="otpForm" novalidate>
           <div class="mb-3">
             <label class="form-label fw-semibold">Enter OTP</label>
@@ -128,48 +114,38 @@
             />
             <div class="invalid-feedback">Invalid OTP. Please try again.</div>
           </div>
-
           <div
             id="otpMessage"
             class="alert text-center py-2"
             style="display: none"
           ></div>
-
           <button class="sign-btn" type="submit">Verify</button>
         </form>
-
         <div class="back-link">
           <span id="goBack">← Back to Reset Password</span>
         </div>
       </div>
     </div>
-
     <script>
       const form = document.getElementById("otpForm");
       const otpInput = document.getElementById("otpInput");
       const message = document.getElementById("otpMessage");
-
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         message.style.display = "none";
         otpInput.nextElementSibling.style.display = "none";
-
         const enteredOtp = otpInput.value.trim();
-
         if (enteredOtp !== "0000") {
           otpInput.nextElementSibling.style.display = "block";
           return;
         }
-
         message.textContent = "✅ OTP Verified Successfully!";
         message.className = "alert alert-success text-center py-2";
         message.style.display = "block";
-
         setTimeout(() => {
           window.location.href = "NewPassword.html";
         }, 1000);
       });
-
       document
         .getElementById("goBack")
         .addEventListener(

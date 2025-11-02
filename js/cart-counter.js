@@ -1,20 +1,12 @@
-/**
- * Simple Cart Counter Badge for LUVINA
- * Shows item count on cart icon in navbar
- */
-
-// Get user's cart from localStorage
 function getUserCart() {
   try {
     const loggedInUser = JSON.parse(
       localStorage.getItem("loggedInUser") || "{}"
     );
     const userEmail = loggedInUser.email;
-
     if (!userEmail) {
       return [];
     }
-
     const userCartKey = `cart_${userEmail}`;
     const cart = JSON.parse(localStorage.getItem(userCartKey)) || [];
     return cart;
@@ -23,19 +15,15 @@ function getUserCart() {
     return [];
   }
 }
-
-// Save user's cart to localStorage
 function saveUserCart(cart) {
   try {
     const loggedInUser = JSON.parse(
       localStorage.getItem("loggedInUser") || "{}"
     );
     const userEmail = loggedInUser.email;
-
     if (!userEmail) {
       return false;
     }
-
     const userCartKey = `cart_${userEmail}`;
     localStorage.setItem(userCartKey, JSON.stringify(cart));
     updateCartBadge();
@@ -45,8 +33,6 @@ function saveUserCart(cart) {
     return false;
   }
 }
-
-// Get cart count from existing cart system
 function getCartCount() {
   try {
     const cart = getUserCart();
@@ -55,13 +41,9 @@ function getCartCount() {
     return 0;
   }
 }
-
-// Update cart counter badge
 function updateCartBadge() {
   const count = getCartCount();
   let badge = document.querySelector(".cart-count-badge");
-
-  // Create badge if doesn't exist
   if (!badge) {
     const cartLinks = document.querySelectorAll('a[href*="Cart.html"]');
     cartLinks.forEach((link) => {
@@ -91,8 +73,6 @@ function updateCartBadge() {
       }
     });
   }
-
-  // Update all badges
   const badges = document.querySelectorAll(".cart-count-badge");
   badges.forEach((badge) => {
     if (count > 0) {
@@ -103,19 +83,12 @@ function updateCartBadge() {
     }
   });
 }
-
-// Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();
 });
-
-// Update when cart changes in other tabs/windows
 window.addEventListener("storage", (e) => {
-  // Check if any user cart key changed
   if (e.key && e.key.startsWith("cart_")) {
     updateCartBadge();
   }
 });
-
-// Periodically check for updates (in case cart changes via JS)
 setInterval(updateCartBadge, 1000);

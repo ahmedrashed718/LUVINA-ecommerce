@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Product Approval - Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="sidebar d-flex flex-column" id="sidebar">
+    <div class="logo text-center my-3">
+      <a href="../Home.html" style="text-decoration: none;">
+        <img
+          src="../assets/images/Luvina-logo-navbar.svg"
+          alt="LUVINA Logo"
+          width="170"
+          style="cursor: pointer;"
+        />
+      </a>
+      <p class="text-center text-secondary mb-0">admin panel</p>
+    </div>
+    <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+    <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
+    <a href="./products.html"><i class="bi bi-box-seam"></i> Products</a>
+    <a href="./seller-product-approval.html" class="active"><i class="bi bi-check2-circle"></i> Product Approval</a>
+    <a href="./user-management.html"><i class="bi bi-people"></i> Users</a>
+    <a href="./customerService.html"><i class="bi bi-chat-left-text"></i> Customer service</a>
+    <button class="logout-btn mt-auto" id="logoutBtn">
+      <i class="bi bi-box-arrow-right text-white"></i> Logout
+    </button>
+  </div>
+  <div class="main-content" id="main-content">
+    <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
+      <i class="bi bi-list fs-3"></i>
+    </button>
+    <div id="service" class="container-fluid py-3 bg-white shadow-sm rounded-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <h2 class="head">Seller Product Approval</h2>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-warning active" id="pendingTab">
+            Pending (<span id="pendingCount">0</span>)
+          </button>
+          <button type="button" class="btn btn-outline-success" id="approvedTab">
+            Approved (<span id="approvedCount">0</span>)
+          </button>
+          <button type="button" class="btn btn-outline-danger" id="rejectedTab">
+            Rejected (<span id="rejectedCount">0</span>)
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive mx-3 my-4">
+      <table class="table" id="sellerProductsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Seller</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="sellerProductsBody">
+        </tbody>
+      </table>
+    </div>
+    <div class="modal fade" id="productDetailsModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Product Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="productDetailsBody">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" id="rejectProductBtn">Reject</button>
+            <button type="button" class="btn btn-success" id="approveProductBtn">Approve</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="rejectionModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reject Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Rejection Reason (Optional)</label>
+            <textarea class="form-control" id="rejectionReason" rows="3" placeholder="Provide a reason for rejection..."></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" id="confirmRejectBtn">Confirm Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/localStorage-products.js"></script>
+  <script src="../js/seller-product-manager.js"></script>
+  <script src="./mainAdmin.js"></script>
+  <script>
+    let currentFilter = 'pending';
+    let selectedProductId = null;
+    function loadSellerProducts(filter = 'pending') {
+      currentFilter = filter;
+      let products = [];
+      switch (filter) {
+        case 'pending':
+          products = getPendingSellerProducts();
+          break;
+        case 'approved':
+          products = getApprovedSellerProducts();
+          break;
+        case 'rejected':
+          products = getRejectedSellerProducts();
+          break;
+      }
+      displayProducts(products);
+      updateCounts();
+    }
+    function displayProducts(products) {
+      const tbody = document.getElementById('sellerProductsBody');
+      if (products.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="9" class="text-center text-muted">
+              <i class="bi bi-inbox me-2"></i>
+              No ${currentFilter} products found.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+      tbody.innerHTML = products.map(product => {
+        const category = product.Category || product.category || 'N/A';
+        const subCategory = product.subCategory || '';
+        const date = new Date(product.createdAt || Date.now()).toLocaleDateString();
+        let statusBadge = '';
+        switch (product.status) {
+          case 'pending':
+            statusBadge = '<span class="badge bg-warning text-dark">Pending</span>';
+            break;
+          case 'approved':
+            statusBadge = '<span class="badge bg-success">Approved</span>';
+            break;
+          case 'rejected':
+            statusBadge = '<span class="badge bg-danger">Rejected</span>';
+            break;
+        }
+        return `
+          <tr>
+            <td>${product.id}</td>
+            <td>${product.name}</td>
+            <td>${product.sellerName || 'Unknown'}</td>
+            <td>${category}${subCategory ? ' - ' + subCategory : ''}</td>
+            <td>${parseFloat(product.price).toFixed(2)} EGP</td>
+            <td>${product.stock || 0}</td>
+            <td>${statusBadge}</td>
+            <td>${date}</td>
+            <td>
+              <button class="btn btn-sm btn-outline-info view-btn" data-id="${product.id}">
+                <i class="bi bi-eye"></i> View
+              </button>
+              ${product.status === 'pending' ? `
+                <button class="btn btn-sm btn-outline-success approve-btn" data-id="${product.id}">
+                  <i class="bi bi-check-lg"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-danger reject-btn" data-id="${product.id}">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              ` : ''}
+            </td>
+          </tr>
+        `;
+      }).join('');
+      document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', () => viewProduct(parseInt(btn.dataset.id)));
+      });
+      document.querySelectorAll('.approve-btn').forEach(btn => {
+        btn.addEventListener('click', () => approveProduct(parseInt(btn.dataset.id)));
+      });
+      document.querySelectorAll('.reject-btn').forEach(btn => {
+        btn.addEventListener('click', () => showRejectModal(parseInt(btn.dataset.id)));
+      });
+    }
+    function viewProduct(productId) {
+      const allProducts = getAllSellerProducts();
+      const product = allProducts.find(p => p.id === productId);
+      if (!product) return;
+      selectedProductId = productId;
+      const detailsBody = document.getElementById('productDetailsBody');
+      detailsBody.innerHTML = `
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Product Information</h6>
+            <table class="table table-sm">
+              <tr><th>Name:</th><td>${product.name}</td></tr>
+              <tr><th>Category:</th><td>${product.Category || product.category}</td></tr>
+              <tr><th>Sub Category:</th><td>${product.subCategory || 'N/A'}</td></tr>
+              <tr><th>Price:</th><td>${product.price} EGP</td></tr>
+              <tr><th>Stock:</th><td>${product.stock}</td></tr>
+              <tr><th>Rating:</th><td>${product.rating || 4.5}</td></tr>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <h6>Seller Information</h6>
+            <table class="table table-sm">
+              <tr><th>Seller:</th><td>${product.sellerName || 'Unknown'}</td></tr>
+              <tr><th>Seller ID:</th><td>${product.sellerId}</td></tr>
+              <tr><th>Created:</th><td>${new Date(product.createdAt).toLocaleString()}</td></tr>
+              <tr><th>Status:</th><td><span class="badge bg-${product.status === 'pending' ? 'warning' : product.status === 'approved' ? 'success' : 'danger'}">${product.status}</span></td></tr>
+            </table>
+          </div>
+          <div class="col-12 mt-3">
+            <h6>Description</h6>
+            <p>${product.description}</p>
+          </div>
+          <div class="col-12 mt-3">
+            <h6>Images</h6>
+            <div class="d-flex gap-2 flex-wrap">
+              ${(product.images || []).map(img => `
+                <img src="${img}" alt="Product" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+              `).join('')}
+            </div>
+          </div>
+          <div class="col-6 mt-3">
+            <h6>Colors</h6>
+            ${(product.colors || []).map(c => {
+              const colorValue = typeof c === 'object' ? c.value : c;
+              const colorName = typeof c === 'object' ? c.name : c;
+              return `<span class="badge" style="background-color: ${colorValue}; color: white;">${colorName}</span>`;
+            }).join(' ')}
+          </div>
+          <div class="col-6 mt-3">
+            <h6>Sizes</h6>
+            ${(product.sizes || []).map(s => `<span class="badge bg-secondary">${s}</span>`).join(' ')}
+          </div>
+        </div>
+      `;
+      const modal = new bootstrap.Modal(document.getElementById('productDetailsModal'));
+      modal.show();
+      const approveBtn = document.getElementById('approveProductBtn');
+      const rejectBtn = document.getElementById('rejectProductBtn');
+      if (product.status === 'pending') {
+        approveBtn.style.display = 'block';
+        rejectBtn.style.display = 'block';
+      } else {
+        approveBtn.style.display = 'none';
+        rejectBtn.style.display = 'none';
+      }
+    }
+    async function approveProduct(productId) {
+      if (confirm('Are you sure you want to approve this product? It will be added to the store.')) {
+        const success = await approveSellerProduct(productId);
+        if (success) {
+          alert('✅ Product approved successfully! It is now available in the store.');
+          bootstrap.Modal.getInstance(document.getElementById('productDetailsModal'))?.hide();
+          loadSellerProducts(currentFilter);
+        } else {
+          alert('❌ Failed to approve product!');
+        }
+      }
+    }
+    function showRejectModal(productId) {
+      selectedProductId = productId;
+      bootstrap.Modal.getInstance(document.getElementById('productDetailsModal'))?.hide();
+      const modal = new bootstrap.Modal(document.getElementById('rejectionModal'));
+      modal.show();
+    }
+    function rejectProduct() {
+      const reason = document.getElementById('rejectionReason').value.trim();
+      const success = rejectSellerProduct(selectedProductId, reason);
+      if (success) {
+        alert('❌ Product rejected.');
+        bootstrap.Modal.getInstance(document.getElementById('rejectionModal'))?.hide();
+        document.getElementById('rejectionReason').value = '';
+        loadSellerProducts(currentFilter);
+      } else {
+        alert('Failed to reject product!');
+      }
+    }
+    function updateCounts() {
+      document.getElementById('pendingCount').textContent = getPendingSellerProducts().length;
+      document.getElementById('approvedCount').textContent = getApprovedSellerProducts().length;
+      document.getElementById('rejectedCount').textContent = getRejectedSellerProducts().length;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      loadSellerProducts('pending');
+      document.getElementById('pendingTab').addEventListener('click', function() {
+        document.querySelectorAll('.btn-group .btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        loadSellerProducts('pending');
+      });
+      document.getElementById('approvedTab').addEventListener('click', function() {
+        document.querySelectorAll('.btn-group .btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        loadSellerProducts('approved');
+      });
+      document.getElementById('rejectedTab').addEventListener('click', function() {
+        document.querySelectorAll('.btn-group .btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        loadSellerProducts('rejected');
+      });
+      document.getElementById('approveProductBtn').addEventListener('click', () => {
+        approveProduct(selectedProductId);
+      });
+      document.getElementById('rejectProductBtn').addEventListener('click', () => {
+        showRejectModal(selectedProductId);
+      });
+      document.getElementById('confirmRejectBtn').addEventListener('click', rejectProduct);
+    });
+  </script>
+</body>
+</html>

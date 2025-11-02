@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
-
-    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,7 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
-
     <style>
       .color-box {
         width: 25px;
@@ -46,9 +43,7 @@
       }
     </style>
   </head>
-
   <body>
-    <!-- Navbar -->
     <nav
       id="mainNavbar"
       class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
@@ -65,7 +60,6 @@
           id="navLogo"
         />
       </a>
-
       <button
         class="navbar-toggler border-0"
         type="button"
@@ -74,7 +68,6 @@
       >
         <i class="bi bi-list fs-2 text-primary"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-lg-4">
           <li class="nav-item">
@@ -103,7 +96,6 @@
             >
           </li>
         </ul>
-
         <form class="d-flex align-items-center gap-3">
           <div
             class="search-bar d-flex align-items-center px-3 border rounded-pill"
@@ -116,30 +108,24 @@
               aria-label="Search"
             />
           </div>
-
           <a href="./ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
           </a>
-
           <a href="./Wishlist.html" class="icon-btn position-relative">
             <i class="bi bi-heart fs-4"></i>
           </a>
-
           <a href="./Cart.html" class="icon-btn position-relative">
             <i class="bi bi-cart3 fs-4"></i>
           </a>
         </form>
       </div>
     </nav>
-
-    <!-- Product Section -->
     <section class="product-details container my-5">
       <div class="row g-5" id="product-container"></div>
     </section>
     <footer class="bg-black text-white pt-5 pb-4">
       <div class="container">
         <div class="row">
-          <!-- Column 1: Logo & tagline -->
           <div class="col-md-3 mb-4">
             <img
               src="../../assets/images/luvina-logo-footer.svg"
@@ -152,8 +138,6 @@
               &nbsp;&nbsp;|&nbsp;&nbsp; Conditions
             </p>
           </div>
-
-          <!-- Column 2: Shoes -->
           <div class="col-md-2 mb-4">
             <h5>Shoes</h5>
             <ul class="list-unstyled mt-3">
@@ -163,8 +147,6 @@
               <li>Sandals</li>
             </ul>
           </div>
-
-          <!-- Column 3: Bags -->
           <div class="col-md-2 mb-4">
             <h5>Bags</h5>
             <ul class="list-unstyled mt-3">
@@ -174,8 +156,6 @@
               <li>Back bags</li>
             </ul>
           </div>
-
-          <!-- Column 4: Newsletter -->
           <div class="col-md-5 mb-4">
             <h5>Sign up & Save</h5>
             <p class="mt-3">
@@ -188,15 +168,12 @@
                 class="form-control rounded-pill"
                 placeholder="Enter your name"
               />
-
               <button class="btn go-btn">Go</button>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Confirm Remove Modal -->
     <div class="modal fade" id="removeConfirmModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-center p-4">
@@ -218,8 +195,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Alert Modal -->
     <div class="modal fade" id="alertModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-center p-4">
@@ -236,20 +211,22 @@
         </div>
       </div>
     </div>
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("product-container");
         const product = JSON.parse(localStorage.getItem("selectedProduct"));
-
         if (!product) {
           container.innerHTML =
             '<p class="text-center text-muted py-5">No product found.</p>';
           return;
         }
-
+        console.log("📦 Product loaded:", product);
+        console.log("📏 Product sizes:", product.sizes);
+        console.log("📏 Sizes is array?", Array.isArray(product.sizes));
+        console.log("📏 Sizes length:", product.sizes?.length);
+        console.log("🎨 Product colors:", product.colors);
+        console.log("🎨 Colors length:", product.colors?.length);
         container.innerHTML = `
           <div class="col-md-6 text-center">
             <img src="${
@@ -270,7 +247,6 @@
               }
             </div>
           </div>
-
           <div class="col-md-6">
             <h4 class="fw-bold text-dark mb-2">${product.name}</h4>
             <div class="mb-2 text-warning">
@@ -279,23 +255,22 @@
             </div>
             <p class="text-secondary mb-3">${product.description}</p>
             <h5 class="fw-bold mt-3 mb-3">${product.price} EGP</h5>
-
             <div class="mt-3">
               <p class="mb-1 fw-semibold">Colors:</p>
               <div class="d-flex gap-2">
                 ${
                   (product.colors || []).length > 0
                     ? product.colors
-                        .map(
-                          (c) =>
-                            `<span class="color-box" style="background-color:${c};"></span>`
-                        )
+                        .map((c) => {
+                          const colorValue = typeof c === 'object' ? c.value : c;
+                          const colorName = typeof c === 'object' ? c.name : '';
+                          return `<span class="color-box" style="background-color:${colorValue};" title="${colorName}"></span>`;
+                        })
                         .join("")
                     : '<span class="text-muted">No colors available</span>'
                 }
               </div>
             </div>
-
             <div class="mt-3">
               <p class="mb-1 fw-semibold">Size:</p>
               <div class="d-flex gap-2">
@@ -310,8 +285,12 @@
                     : '<span class="text-muted">No sizes available</span>'
                 }
               </div>
+              ${
+                !product.sizes || product.sizes.length === 0
+                  ? '<small class="text-danger d-block mt-1">⚠️ Debug: No sizes found in product data. Check console for details.</small>'
+                  : `<small class="text-success d-block mt-1">✅ ${product.sizes.length} size(s) available</small>`
+              }
             </div>
-
             <div class="d-flex gap-3 mt-4">
               <button class="btn btn-dark flex-fill py-2 add-to-cart-btn">
                 <i class="bi bi-cart-plus me-2"></i>Add to Cart
@@ -322,14 +301,12 @@
             </div>
           </div>
         `;
-
         const mainImg = document.querySelector(".main-img");
         document
           .querySelectorAll(".thumb-img")
           .forEach((thumb) =>
             thumb.addEventListener("click", () => (mainImg.src = thumb.src))
           );
-
         const colorBoxes = document.querySelectorAll(".color-box");
         const sizeButtons = document.querySelectorAll(".size-option-btn");
         const addToCartBtn = document.querySelector(".add-to-cart-btn");
@@ -341,18 +318,17 @@
           document.getElementById("removeConfirmModal")
         );
         const confirmRemoveBtn = document.getElementById("confirmRemoveBtn");
-
         let selectedColor = null;
         let selectedSize = null;
-
+        let selectedColorName = null;
         colorBoxes.forEach((box) => {
           box.addEventListener("click", () => {
             colorBoxes.forEach((b) => b.classList.remove("active"));
             box.classList.add("active");
             selectedColor = box.style.backgroundColor;
+            selectedColorName = box.getAttribute("title") || selectedColor;
           });
         });
-
         sizeButtons.forEach((btn) => {
           btn.addEventListener("click", () => {
             sizeButtons.forEach((b) => b.classList.remove("active"));
@@ -360,9 +336,7 @@
             selectedSize = btn.textContent;
           });
         });
-
         let cart = getUserCart() || [];
-
         const isInCart = () => {
           return cart.some(
             (item) =>
@@ -371,7 +345,6 @@
               item.selectedSize === selectedSize
           );
         };
-
         function updateButtonState() {
           if (isInCart()) {
             addToCartBtn.classList.add("btn-green");
@@ -381,13 +354,11 @@
             addToCartBtn.textContent = "Add to Cart";
           }
         }
-
         addToCartBtn.addEventListener("click", () => {
           if (!selectedColor || !selectedSize) {
             alertModal.show();
             return;
           }
-
           if (isInCart()) {
             removeConfirmModal.show();
             confirmRemoveBtn.onclick = () => {
@@ -407,6 +378,7 @@
             cart.push({
               ...product,
               selectedColor,
+              selectedColorName,
               selectedSize,
               quantity: 1,
             });
@@ -414,12 +386,7 @@
             updateButtonState();
           }
         });
-
         updateButtonState();
-
-        // ==================== WISHLIST FUNCTIONALITY ====================
-
-        // Update wishlist button state
         function updateWishlistButtonState() {
           if (isInWishlist(product.id)) {
             addToWishlistBtn.innerHTML =
@@ -433,41 +400,30 @@
             addToWishlistBtn.classList.add("btn-outline-danger");
           }
         }
-
-        // Add to wishlist button click
         addToWishlistBtn.addEventListener("click", () => {
           if (isInWishlist(product.id)) {
-            // Remove from wishlist
             if (confirm("Remove from wishlist?")) {
               removeFromWishlist(product.id);
               updateWishlistButtonState();
             }
           } else {
-            // Add to wishlist
             if (addToWishlist(product)) {
               addToWishlistBtn.innerHTML =
                 '<i class="bi bi-heart-fill me-2"></i>Added!';
               addToWishlistBtn.classList.remove("btn-outline-danger");
               addToWishlistBtn.classList.add("btn-success");
-
               setTimeout(() => {
                 updateWishlistButtonState();
               }, 1500);
             }
           }
         });
-
-        // Initialize wishlist button state
         updateWishlistButtonState();
       });
     </script>
-    <!-- User Manager -->
     <script src="../js/user-manager.js"></script>
-    <!-- Cart Counter Badge -->
     <script src="../js/cart-counter.js"></script>
-    <!-- Wishlist Manager -->
     <script src="../js/wishlist-manager.js"></script>
-    <!-- Navbar Profile Dropdown -->
     <script src="../js/navbar-profile.js"></script>
   </body>
 </html>

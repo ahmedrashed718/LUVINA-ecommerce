@@ -1,40 +1,25 @@
-// Navbar Profile Dropdown for Admin Access
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if user is logged in and is admin
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    
     if (isLoggedIn && loggedInUser) {
         setupProfileDropdown(loggedInUser);
     }
 });
-
 function setupProfileDropdown(user) {
-    // Find all profile icon links
     const profileLinks = document.querySelectorAll('a[href*="ProfilePage.html"]');
-    
     profileLinks.forEach(profileLink => {
-        // If user is admin, convert to admin dropdown
         if (user.accountType === 'admin') {
             createAdminDropdown(profileLink);
         }
-        // If user is business/seller, convert to seller dropdown
         else if (user.accountType === 'business') {
             createSellerDropdown(profileLink);
         }
     });
 }
-
 function createAdminDropdown(profileLink) {
-    // Get parent element
     const parent = profileLink.parentElement;
-    
-    // Create dropdown container
     const dropdownDiv = document.createElement('div');
     dropdownDiv.className = 'dropdown';
-    
-    // Replace link with dropdown button
     dropdownDiv.innerHTML = `
         <a class="icon-btn position-relative dropdown-toggle" href="#" role="button" 
            id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,20 +43,12 @@ function createAdminDropdown(profileLink) {
             </a></li>
         </ul>
     `;
-    
-    // Replace the original link with dropdown
     parent.replaceChild(dropdownDiv, profileLink);
 }
-
 function createSellerDropdown(profileLink) {
-    // Get parent element
     const parent = profileLink.parentElement;
-    
-    // Create dropdown container
     const dropdownDiv = document.createElement('div');
     dropdownDiv.className = 'dropdown';
-    
-    // Replace link with dropdown button
     dropdownDiv.innerHTML = `
         <a class="icon-btn position-relative dropdown-toggle" href="#" role="button" 
            id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,22 +72,16 @@ function createSellerDropdown(profileLink) {
             </a></li>
         </ul>
     `;
-    
-    // Replace the original link with dropdown
     parent.replaceChild(dropdownDiv, profileLink);
 }
-
 function getProfilePath() {
-    // Detect if we're in root or pages directory
     if (window.location.pathname.includes('/pages/')) {
         return './ProfilePage.html';
     } else {
         return './pages/ProfilePage.html';
     }
 }
-
 function getAdminPanelPath() {
-    // Detect if we're in root or pages directory
     if (window.location.pathname.includes('/pages/')) {
         return '../admin/dashboard .html';
     } else if (window.location.pathname.includes('/admin/')) {
@@ -119,9 +90,7 @@ function getAdminPanelPath() {
         return './admin/dashboard .html';
     }
 }
-
 function getSellerPanelPath() {
-    // Detect if we're in root or pages directory
     if (window.location.pathname.includes('/pages/')) {
         return '../Seller/sellerDashboard.html';
     } else if (window.location.pathname.includes('/Seller/')) {
@@ -130,7 +99,6 @@ function getSellerPanelPath() {
         return './Seller/sellerDashboard.html';
     }
 }
-
 function logoutUser() {
     if (confirm('Are you sure you want to logout?')) {
         localStorage.removeItem('loggedInUser');
@@ -138,9 +106,7 @@ function logoutUser() {
         window.location.href = getLoginPath();
     }
 }
-
 function getLoginPath() {
-    // Detect directory and return appropriate path
     if (window.location.pathname.includes('/pages/')) {
         return './Login-Customer.html';
     } else if (window.location.pathname.includes('/admin/')) {
@@ -151,4 +117,3 @@ function getLoginPath() {
         return './pages/Login-Customer.html';
     }
 }
-

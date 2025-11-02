@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Products</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-
   <link rel="stylesheet" href="admin.css">
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
   <style>
-    /* Upload Box Styling */
     .upload-box {
       border: 2px dashed #ddd;
       border-radius: 8px;
@@ -23,54 +17,39 @@
       background-color: transparent;
       transition: all 0.3s ease;
     }
-    
     .upload-box:hover {
       border-color: #635BFF !important;
       background-color: #f8f9ff !important;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(99, 91, 255, 0.1);
     }
-    
     .upload-box:active {
       transform: translateY(0);
     }
-    
     .upload-box i {
       color: #635BFF;
       transition: all 0.3s ease;
     }
-    
     .upload-box:hover i {
       transform: scale(1.1);
     }
-    
     .upload-box strong {
       color: #635BFF;
       font-size: 16px;
     }
-    
-    /* Image Preview Styling */
     #uploadImagePreviewContainer {
       padding: 15px;
       background-color: #f8f9fa;
       border-radius: 8px;
       border: 1px solid #e0e0e0;
     }
-    
     #uploadImagePreviewContainer h6 {
       color: #333;
       font-weight: 600;
     }
   </style>
-  
 </head>
-
 <body>
-
-  <!-- ********************************************************* -->
-
-
-  <!-- Sidebar -->
   <div class="sidebar d-flex flex-column" id="sidebar">
     <div class="logo text-center my-3">
       <a href="../Home.html" style="text-decoration: none;">
@@ -83,47 +62,31 @@
       </a>
       <p class="text-center text-secondary mb-0">admin panel</p>
     </div>
-
     <a href="./dashboard .html"><i class="bi bi-speedometer2"></i> Dashboard</a>
     <a href="./order.html"><i class="bi bi-bag"></i> Orders</a>
     <a href="./products.html" class="active"><i class="bi bi-box-seam"></i> Products</a>
+    <a href="./seller-product-approval.html"><i class="bi bi-check2-circle"></i> Product Approval</a>
     <a href="./user-management.html"><i class="bi bi-people"></i> Users</a>
-    <a href="./customers.html"><i class="bi bi-shop"></i> Sellers</a>
     <a href="./customerService.html"><i class="bi bi-chat-left-text"></i> Customer service</a>
-
     <button class="logout-btn mt-auto" id="logoutBtn">
       <i class="bi bi-box-arrow-right text-white"></i> Logout
     </button>
   </div>
-
-
-  <!-- Main Content******************************************************************************************* -->
   <div class="main-content" id="main-content">
-
     <button class="btn btn-light d-md-none mb-3" id="menu-toggle">
       <i class="bi bi-list fs-3"></i>
     </button>
-
-    <!-- ***************heading nav**************** -->
-
     <div id="service" class="container-fluid py-3 bg-white shadow-sm rounded-3">
       <div class="d-flex justify-content-between align-items-center flex-wrap">
         <h2 class="head">Products</h2>
         <div class="col-md-4 search">
           <input type="text" class="form-control w-75" placeholder="Search here...">
         </div>
-
         <button class="btn create" id="addProductBtn">
           Add New Product
         </button>
-
       </div>
     </div>
-
-    <!-- ***************************** -->
-
-    <!-- ******************table********************* -->
-
     <table class="table mx-3 my-4" id="ProductTable">
       <thead>
         <tr>
@@ -135,19 +98,9 @@
         </tr>
       </thead>
       <tbody id="ProductsBody">
-        <!-- Dynamic Content -->
       </tbody>
-
-
     </table>
-
-
-    <!-- Customer Form -->
-
-
     <div id="productForm" class="d-none mx-3 my-2 p-3">
-
-
       <form novalidate>
         <div class="section-header">
           <h5 class="fw-bold mb-0">Add New Product</h5>
@@ -156,9 +109,7 @@
             <button type="submit" class="btn btn-success"><i class="fa-solid fa-upload me-2"></i>Upload Product</button>
           </div>
         </div>
-
         <div class="row g-4">
-          <!-- Left Side -->
           <div class="col-lg-8">
             <div class="card mb-4">
               <h6 class="card-title">Product Details</h6>
@@ -169,14 +120,12 @@
                   <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
                   <div class="error-message">Please enter product name.</div>
                 </div>
-
                 <div class="col-md-6">
                   <label class="form-label">Product ID</label>
                   <input type="number" class="form-control" id="productId" placeholder="Enter product ID" min="1"
                     step="1" required>
                   <div class="error-message">Please enter a valid Product ID.</div>
                 </div>
-
                 <div class="col-md-6">
                   <label class="form-label">Price</label>
                   <input type="number" class="form-control" id="price" placeholder="Enter price" min="0.01" step="0.01"
@@ -189,22 +138,18 @@
                     required>
                   <div class="error-message">Please enter a valid positive stock quantity.</div>
                 </div>
-
-                <!-- Colors -->
                 <div class="col-md-6">
                   <label class="form-label d-block">Colors</label>
                   <div id="colorSet">
-                    <span class="color-option" style="background-color:#000"></span>
-                    <span class="color-option" style="background-color:#fff; border:1px solid #ccc;"></span>
-                    <span class="color-option" style="background-color:#bf0303"></span>
-                    <span class="color-option" style="background-color:#76440f"></span>
-                    <span class="color-option" style="background-color:#f5deb3"></span>
-                    <span class="color-option" style="background-color:#b57b0f"></span>
-                    <span class="color-option" style="background-color:#075c09"></span>
+                    <span class="color-option" style="background-color:#000" data-color-name="Black"></span>
+                    <span class="color-option" style="background-color:#fff; border:1px solid #ccc;" data-color-name="White"></span>
+                    <span class="color-option" style="background-color:#bf0303" data-color-name="Red"></span>
+                    <span class="color-option" style="background-color:#76440f" data-color-name="Brown"></span>
+                    <span class="color-option" style="background-color:#f5deb3" data-color-name="Beige"></span>
+                    <span class="color-option" style="background-color:#b57b0f" data-color-name="Gold"></span>
+                    <span class="color-option" style="background-color:#075c09" data-color-name="Green"></span>
                   </div>
                 </div>
-
-                <!-- Sizes -->
                 <div class="col-md-6">
                   <label class="form-label d-block">Sizes</label>
                   <div id="sizeSet">
@@ -215,12 +160,10 @@
                     <span class="size-option">40</span>
                   </div>
                 </div>
-
                 <div class="col-md-6">
                   <label class="form-label">Rating</label>
                   <input type="number" class="form-control" id="rating" value="4.5" step="0.1" min="0" max="5" readonly>
                 </div>
-
                 <div class="col-12">
                   <label class="form-label">Product Description</label>
                   <textarea class="form-control" id="description" rows="3" placeholder="Enter product description"
@@ -229,8 +172,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Discount Section -->
             <div class="card">
               <h6 class="card-title">Discount <span class="text-muted">(Optional)</span></h6>
               <hr>
@@ -246,20 +187,14 @@
               </div>
             </div>
           </div>
-
-          <!-- Right Side -->
           <div class="col-lg-4">
             <div class="card mb-4">
               <h6 class="card-title">Product Images</h6>
               <hr>
-              
-              <!-- Image Preview (shown when editing) -->
               <div id="imagePreview" style="display: none;">
                 <div id="imagePreviewContainer" class="d-flex flex-wrap gap-2"></div>
                 <small class="text-muted mt-2 d-block">Existing product images (preserved on update)</small>
               </div>
-              
-              <!-- Upload Box (shown when adding new) -->
               <div class="upload-box" id="uploadBox" style="cursor: pointer;">
                 <p><i class="fa-solid fa-cloud-arrow-up fa-2x mb-2"></i></p>
                 <p><strong>Click here to select images</strong></p>
@@ -274,12 +209,8 @@
                 <i class="bi bi-info-circle me-1"></i>
                 You can upload up to 5 images (Max 5MB each)
               </small>
-              
-              <!-- Upload Image Preview Container -->
               <div id="uploadImagePreviewContainer" class="mt-3" style="display: none;"></div>
             </div>
-
-            <!-- Category Section (instead of Discount) -->
             <div class="card">
               <h6 class="card-title">Product Category</h6>
               <hr>
@@ -299,28 +230,15 @@
               </div>
             </div>
           </div>
-
         </div>
     </div>
     </form>
-
   </div>
-
-
-
-
-
   </div>
-
-
-
-  <!-- ✅ LocalStorage Auto-Initialization -->
   <script src="../js/localStorage-products.js"></script>
   <script src="../js/cart-counter.js"></script>
   <script src="./products.js"></script>
   <script src="./mainAdmin.js"></script>
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

@@ -1,42 +1,24 @@
-/**
- * LUVINA Wishlist Manager
- * Manages wishlist with counter badge
- */
-
-// ==================== WISHLIST FUNCTIONS ====================
-
-/**
- * Get user-specific wishlist key
- */
 function getWishlistKey() {
   try {
     const loggedInUser = JSON.parse(
       localStorage.getItem("loggedInUser") || "{}"
     );
     const userEmail = loggedInUser.email;
-
     if (!userEmail) {
       return null;
     }
-
     return `luvinaWishlist_${userEmail}`;
   } catch (error) {
     console.error("Error getting wishlist key:", error);
     return null;
   }
 }
-
-/**
- * Get all wishlist items
- */
 function getWishlistItems() {
   try {
     const wishlistKey = getWishlistKey();
-
     if (!wishlistKey) {
       return [];
     }
-
     const wishlist = localStorage.getItem(wishlistKey);
     return wishlist ? JSON.parse(wishlist) : [];
   } catch (error) {
@@ -44,18 +26,12 @@ function getWishlistItems() {
     return [];
   }
 }
-
-/**
- * Save wishlist
- */
 function saveWishlist(items) {
   try {
     const wishlistKey = getWishlistKey();
-
     if (!wishlistKey) {
       return false;
     }
-
     localStorage.setItem(wishlistKey, JSON.stringify(items));
     updateWishlistBadge();
     return true;
@@ -64,28 +40,18 @@ function saveWishlist(items) {
     return false;
   }
 }
-
-/**
- * Add item to wishlist
- */
 function addToWishlist(product) {
   try {
     let wishlist = getWishlistItems();
-
-    // Check if already in wishlist
     const exists = wishlist.some((item) => item.id === product.id);
-
     if (exists) {
       console.log("Already in wishlist");
       return false;
     }
-
-    // Add to wishlist
     wishlist.push({
       ...product,
       addedToWishlistAt: new Date().toISOString(),
     });
-
     saveWishlist(wishlist);
     console.log("✅ Added to wishlist:", product.name);
     return true;
@@ -94,10 +60,6 @@ function addToWishlist(product) {
     return false;
   }
 }
-
-/**
- * Remove from wishlist
- */
 function removeFromWishlist(productId) {
   try {
     let wishlist = getWishlistItems();
@@ -109,34 +71,20 @@ function removeFromWishlist(productId) {
     return false;
   }
 }
-
-/**
- * Check if product is in wishlist
- */
 function isInWishlist(productId) {
   const wishlist = getWishlistItems();
   return wishlist.some((item) => item.id === productId);
 }
-
-/**
- * Get wishlist count
- */
 function getWishlistCount() {
   const wishlist = getWishlistItems();
   return wishlist.length;
 }
-
-/**
- * Clear wishlist
- */
 function clearWishlist() {
   try {
     const wishlistKey = getWishlistKey();
-
     if (!wishlistKey) {
       return false;
     }
-
     localStorage.removeItem(wishlistKey);
     updateWishlistBadge();
     return true;
@@ -145,16 +93,9 @@ function clearWishlist() {
     return false;
   }
 }
-
-// ==================== WISHLIST BADGE UI ====================
-
-/**
- * Update wishlist counter badge
- */
 function updateWishlistBadge() {
   const count = getWishlistCount();
   const badges = document.querySelectorAll(".wishlist-count-badge");
-
   badges.forEach((badge) => {
     if (count > 0) {
       badge.textContent = count > 99 ? "99+" : count;
@@ -164,15 +105,10 @@ function updateWishlistBadge() {
     }
   });
 }
-
-/**
- * Initialize wishlist badge on page load
- */
 function initWishlistBadge() {
   const wishlistLinks = document.querySelectorAll(
     'a[href*="wishlist.html"], a[href*="Wishlist.html"]'
   );
-
   wishlistLinks.forEach((link) => {
     if (!link.querySelector(".wishlist-count-badge")) {
       const badge = document.createElement("span");
@@ -199,24 +135,16 @@ function initWishlistBadge() {
       link.appendChild(badge);
     }
   });
-
   updateWishlistBadge();
 }
-
-// Auto-initialize
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initWishlistBadge);
 } else {
   initWishlistBadge();
 }
-
-// Update when wishlist changes in other tabs
 window.addEventListener("storage", (e) => {
-  // Check if any user wishlist key changed
   if (e.key && e.key.startsWith("luvinaWishlist_")) {
     updateWishlistBadge();
   }
 });
-
-// Periodic update
 setInterval(updateWishlistBadge, 1000);

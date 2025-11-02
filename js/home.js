@@ -2,11 +2,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const slide1 = document.getElementById("Featured_Products_Slide1");
   const slide2 = document.getElementById("Featured_Products_Slide2");
   const newArrivalsContainer = document.getElementById("new-arrivals-con");
-
-  // ✅ Get products from localStorage (auto-initializes on first load)
   try {
     const data = await getProducts();
-
     if (data.length === 0) {
       const errorMsg = `
         <div class="alert alert-warning text-center m-5" role="alert">
@@ -18,13 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (newArrivalsContainer) newArrivalsContainer.innerHTML = errorMsg;
       return;
     }
-    // =============================
-    // 🔹 Featured Products
-    // =============================
     const featured = data.slice(0, 8);
     const firstSlide = featured.slice(0, 4);
     const secondSlide = featured.slice(4, 8);
-
     const createCard = (product) => {
       return `
           <div class="col-12 col-md-4 col-lg-3">
@@ -52,21 +45,16 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
         `;
     };
-
     firstSlide.forEach((product) => {
       slide1.innerHTML += createCard(product);
     });
-
     secondSlide.forEach((product) => {
       slide2.innerHTML += createCard(product);
     });
-
     const newArrivals = data.slice(-4);
-
     newArrivals.forEach((product) => {
       const card = document.createElement("div");
       card.className = "col-md-6 col-lg-3";
-
       card.innerHTML = `
           <div class="card text-center border-0 shadow-sm product-card" style="cursor:pointer">
             <div class="position-relative product-img-container">
@@ -90,7 +78,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 class="hover-img position-absolute top-0 start-0"
                 alt="${product.name} Hover"
               />
-
               <!-- overlay for sizes -->
               <div class="product-overlay d-flex flex-column justify-content-center align-items-center">
                 <p class="text-white fw-bold mb-1">Available Sizes:</p>
@@ -108,7 +95,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
               </div>
             </div>
-
             <div class="card-body py-3">
               <p class="text-secondary mb-1 small">${product.name}</p>
               <p class="fw-bold mb-2" style="color: #222">
@@ -118,19 +104,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
           </div>
         `;
-
       newArrivalsContainer.appendChild(card);
     });
-
     const allCards = document.querySelectorAll(".product-card");
-
     allCards.forEach((card, index) => {
       card.addEventListener("click", () => {
         let selectedProduct = null;
-
         const combinedProducts = [...featured, ...newArrivals];
         selectedProduct = combinedProducts[index] || combinedProducts[0];
-
         if (selectedProduct) {
           localStorage.setItem(
             "selectedProduct",

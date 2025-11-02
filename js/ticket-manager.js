@@ -1,19 +1,12 @@
-// Ticket Management System for LUVINA E-Commerce
-
 const TICKETS_KEY = 'supportTickets';
-
-// Generate unique ticket number
 function generateTicketNumber() {
     const timestamp = Date.now();
     const random = Math.floor(Math.random() * 1000);
     return `TKT${timestamp}${random}`;
 }
-
-// Submit a new ticket
 function submitTicket(ticketData) {
     try {
         const tickets = getAllTickets();
-        
         const newTicket = {
             ticketNumber: generateTicketNumber(),
             name: ticketData.name,
@@ -28,10 +21,8 @@ function submitTicket(ticketData) {
             updatedAt: new Date().toISOString(),
             responses: []
         };
-        
         tickets.push(newTicket);
         localStorage.setItem(TICKETS_KEY, JSON.stringify(tickets));
-        
         console.log('✅ Ticket submitted:', newTicket.ticketNumber);
         return newTicket.ticketNumber;
     } catch (error) {
@@ -39,8 +30,6 @@ function submitTicket(ticketData) {
         return null;
     }
 }
-
-// Get all tickets
 function getAllTickets() {
     try {
         return JSON.parse(localStorage.getItem(TICKETS_KEY)) || [];
@@ -49,31 +38,22 @@ function getAllTickets() {
         return [];
     }
 }
-
-// Get ticket by number
 function getTicketByNumber(ticketNumber) {
     const tickets = getAllTickets();
     return tickets.find(t => t.ticketNumber === ticketNumber);
 }
-
-// Get tickets by status
 function getTicketsByStatus(status) {
     const tickets = getAllTickets();
     return tickets.filter(t => t.status === status);
 }
-
-// Get tickets by priority
 function getTicketsByPriority(priority) {
     const tickets = getAllTickets();
     return tickets.filter(t => t.priority === priority);
 }
-
-// Update ticket status
 function updateTicketStatus(ticketNumber, newStatus) {
     try {
         const tickets = getAllTickets();
         const ticketIndex = tickets.findIndex(t => t.ticketNumber === ticketNumber);
-        
         if (ticketIndex !== -1) {
             tickets[ticketIndex].status = newStatus;
             tickets[ticketIndex].updatedAt = new Date().toISOString();
@@ -86,20 +66,16 @@ function updateTicketStatus(ticketNumber, newStatus) {
         return false;
     }
 }
-
-// Add response to ticket
 function addTicketResponse(ticketNumber, response, respondedBy = 'Admin') {
     try {
         const tickets = getAllTickets();
         const ticketIndex = tickets.findIndex(t => t.ticketNumber === ticketNumber);
-        
         if (ticketIndex !== -1) {
             const newResponse = {
                 message: response,
                 respondedBy: respondedBy,
                 timestamp: new Date().toISOString()
             };
-            
             tickets[ticketIndex].responses.push(newResponse);
             tickets[ticketIndex].updatedAt = new Date().toISOString();
             localStorage.setItem(TICKETS_KEY, JSON.stringify(tickets));
@@ -111,13 +87,10 @@ function addTicketResponse(ticketNumber, response, respondedBy = 'Admin') {
         return false;
     }
 }
-
-// Delete ticket
 function deleteTicket(ticketNumber) {
     try {
         const tickets = getAllTickets();
         const filteredTickets = tickets.filter(t => t.ticketNumber !== ticketNumber);
-        
         if (filteredTickets.length < tickets.length) {
             localStorage.setItem(TICKETS_KEY, JSON.stringify(filteredTickets));
             return true;
@@ -128,12 +101,9 @@ function deleteTicket(ticketNumber) {
         return false;
     }
 }
-
-// Search tickets
 function searchTickets(query) {
     const tickets = getAllTickets();
     const lowerQuery = query.toLowerCase();
-    
     return tickets.filter(t =>
         t.ticketNumber.toLowerCase().includes(lowerQuery) ||
         t.name.toLowerCase().includes(lowerQuery) ||
@@ -142,11 +112,8 @@ function searchTickets(query) {
         t.category.toLowerCase().includes(lowerQuery)
     );
 }
-
-// Get ticket statistics
 function getTicketStats() {
     const tickets = getAllTickets();
-    
     return {
         total: tickets.length,
         open: tickets.filter(t => t.status === 'Open').length,
@@ -158,8 +125,6 @@ function getTicketStats() {
         low: tickets.filter(t => t.priority === 'Low').length
     };
 }
-
-// Format date for display
 function formatTicketDate(isoDate) {
     const date = new Date(isoDate);
     return date.toLocaleDateString('en-US', {
@@ -170,8 +135,6 @@ function formatTicketDate(isoDate) {
         minute: '2-digit'
     });
 }
-
-// Get status badge class
 function getTicketStatusBadge(status) {
     const badges = {
         'Open': 'bg-primary',
@@ -181,8 +144,6 @@ function getTicketStatusBadge(status) {
     };
     return badges[status] || 'bg-secondary';
 }
-
-// Get priority badge class
 function getTicketPriorityBadge(priority) {
     const badges = {
         'High': 'bg-danger',
@@ -191,4 +152,3 @@ function getTicketPriorityBadge(priority) {
     };
     return badges[priority] || 'bg-secondary';
 }
-

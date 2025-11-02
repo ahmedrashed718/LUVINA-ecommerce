@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seller Products</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,11 +14,9 @@
     />
     <link rel="stylesheet" href="seller.css" />
   </head>
-
   <body>
     <div class="container-fluid">
       <div class="row">
-        <!-- Sidebar -->
         <div class="col-md-2 sidebar d-flex flex-column">
           <div class="logo text-center my-3">
             <a href="../Home.html" style="text-decoration: none">
@@ -32,7 +29,6 @@
             </a>
             <p class="text-secondary mb-0">Seller panel</p>
           </div>
-
           <a href="./sellerDashboard.html"
             ><i class="bi bi-speedometer2"></i> Dashboard</a
           >
@@ -40,21 +36,16 @@
           <a href="./sellerProducts.html" class="active"
             ><i class="bi bi-box-seam"></i> Products</a
           >
-
           <button class="logout-btn mt-auto" onclick="logoutSeller()">
             <i class="bi bi-box-arrow-right"></i> Logout
           </button>
         </div>
-
-        <!-- Main Content -->
         <div class="col-md-10">
-          <!-- Header Section -->
           <div class="dashboard-header">
             <div
               class="d-flex justify-content-between align-items-center flex-wrap gap-2"
             >
               <h2 class="head">Products</h2>
-
               <div class="d-flex gap-2">
                 <button
                   class="btn btn-outline-danger"
@@ -69,8 +60,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Products Table Section -->
           <table class="table mx-3 my-4" id="ProductTable">
             <thead>
               <tr>
@@ -78,15 +67,13 @@
                 <th>Product Name</th>
                 <th>Category</th>
                 <th>Price</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody id="ProductsBody">
-              <!-- Dynamic Content -->
             </tbody>
           </table>
-
-          <!-- Product Form Section (Hidden by default) -->
           <div id="productForm" class="d-none content-section">
             <form novalidate>
               <div class="section-header">
@@ -100,9 +87,7 @@
                   </button>
                 </div>
               </div>
-
               <div class="row g-4">
-                <!-- Left Side -->
                 <div class="col-lg-8">
                   <div class="card mb-4">
                     <h6 class="card-title">Product Details</h6>
@@ -121,7 +106,6 @@
                           Please enter product name.
                         </div>
                       </div>
-
                       <div class="col-md-6">
                         <label class="form-label">Product ID</label>
                         <div class="input-group">
@@ -147,7 +131,6 @@
                           Please enter a valid Product ID.
                         </div>
                       </div>
-
                       <div class="col-md-6">
                         <label class="form-label">Price</label>
                         <input
@@ -163,7 +146,6 @@
                           Please enter a valid positive price.
                         </div>
                       </div>
-
                       <div class="col-md-6">
                         <label class="form-label">Stock Quantity</label>
                         <input
@@ -179,14 +161,14 @@
                           Please enter a valid positive stock quantity.
                         </div>
                       </div>
-
-                      <!-- Colors -->
                       <div class="col-md-6">
-                        <label class="form-label d-block">Colors</label>
+                        <label class="form-label d-block">Colors <span class="text-danger">*</span></label>
                         <div id="colorSet">
                           <span
                             class="color-option"
                             style="background-color: #000"
+                            data-color-name="Black"
+                            title="Black"
                           ></span>
                           <span
                             class="color-option"
@@ -194,42 +176,53 @@
                               background-color: #fff;
                               border: 1px solid #ccc;
                             "
+                            data-color-name="White"
+                            title="White"
                           ></span>
                           <span
                             class="color-option"
                             style="background-color: #bf0303"
+                            data-color-name="Red"
+                            title="Red"
                           ></span>
                           <span
                             class="color-option"
                             style="background-color: #76440f"
+                            data-color-name="Brown"
+                            title="Brown"
                           ></span>
                           <span
                             class="color-option"
                             style="background-color: #f5deb3"
+                            data-color-name="Beige"
+                            title="Beige"
                           ></span>
                           <span
                             class="color-option"
                             style="background-color: #b57b0f"
+                            data-color-name="Gold"
+                            title="Gold"
                           ></span>
                           <span
                             class="color-option"
                             style="background-color: #075c09"
+                            data-color-name="Green"
+                            title="Green"
                           ></span>
                         </div>
+                        <small class="text-muted">Click to select colors (border will appear when selected)</small>
                       </div>
-
-                      <!-- Sizes -->
                       <div class="col-md-6">
-                        <label class="form-label d-block">Sizes</label>
+                        <label class="form-label d-block">Sizes <span class="text-muted">(for shoes)</span></label>
                         <div id="sizeSet">
-                          <span class="size-option">36</span>
-                          <span class="size-option">37</span>
-                          <span class="size-option">38</span>
-                          <span class="size-option">39</span>
-                          <span class="size-option">40</span>
+                          <span class="size-option" title="Size 36">36</span>
+                          <span class="size-option" title="Size 37">37</span>
+                          <span class="size-option" title="Size 38">38</span>
+                          <span class="size-option" title="Size 39">39</span>
+                          <span class="size-option" title="Size 40">40</span>
                         </div>
+                        <small class="text-muted">Click to select sizes (background will change when selected)</small>
                       </div>
-
                       <div class="col-md-6">
                         <label class="form-label">Rating</label>
                         <input
@@ -243,7 +236,6 @@
                           readonly
                         />
                       </div>
-
                       <div class="col-12">
                         <label class="form-label">Product Description</label>
                         <textarea
@@ -259,8 +251,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- Discount Section -->
                   <div class="card">
                     <h6 class="card-title">
                       Discount <span class="text-muted">(Optional)</span>
@@ -289,19 +279,12 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- Right Side -->
                 <div class="col-lg-4">
                   <div class="card mb-4">
                     <h6 class="card-title">Product Image</h6>
                     <hr />
-
-                    <!-- Image Preview Section (shown when editing) -->
                     <div id="imagePreview" class="d-none mb-3">
-                      <!-- Will be populated dynamically when editing -->
                     </div>
-
-                    <!-- Upload Box (shown when adding new product) -->
                     <div id="uploadBox">
                       <div
                         class="upload-box"
@@ -339,8 +322,6 @@
                         <i class="bi bi-info-circle me-1"></i>
                         You can upload up to 5 images (Max 5MB each)
                       </small>
-
-                      <!-- Image Preview Container for uploaded images -->
                       <div
                         id="imagePreviewContainer"
                         class="mt-3"
@@ -348,8 +329,6 @@
                       ></div>
                     </div>
                   </div>
-
-                  <!-- Category Section -->
                   <div class="card">
                     <h6 class="card-title">Product Category</h6>
                     <hr />
@@ -375,9 +354,7 @@
         </div>
       </div>
     </div>
-
     <style>
-      /* Upload Box Styling */
       .upload-box {
         border: 2px dashed #ddd;
         border-radius: 8px;
@@ -386,55 +363,44 @@
         background-color: transparent;
         transition: all 0.3s ease;
       }
-
       .upload-box:hover {
         border-color: #635bff !important;
         background-color: #f8f9ff !important;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(99, 91, 255, 0.1);
       }
-
       .upload-box:active {
         transform: translateY(0);
       }
-
       .upload-box i {
         color: #635bff;
         transition: all 0.3s ease;
       }
-
       .upload-box:hover i {
         transform: scale(1.1);
       }
-
       .upload-box strong {
         color: #635bff;
         font-size: 16px;
       }
-
-      /* Image Preview Styling */
       #imagePreviewContainer {
         padding: 15px;
         background-color: #f8f9fa;
         border-radius: 8px;
         border: 1px solid #e0e0e0;
       }
-
       #imagePreviewContainer h6 {
         color: #333;
         font-weight: 600;
       }
     </style>
-
-    <!-- ✅ LocalStorage Auto-Initialization -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/user-manager.js"></script>
     <script src="../js/localStorage-products.js"></script>
-    <script src="./products.js"></script>
+    <script src="../js/seller-product-manager.js"></script>
+    <script src="./seller-products-dynamic.js"></script>
     <script src="./mainSeller.js"></script>
-
     <script>
-      // Check if business account is logged in
       const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
       if (
         !loggedInUser ||
@@ -444,7 +410,6 @@
         alert("Access Denied: Business account only");
         window.location.href = "../pages/Login-Customer.html";
       }
-
       function logoutSeller() {
         if (confirm("Are you sure you want to logout?")) {
           localStorage.removeItem("loggedInUser");
@@ -453,10 +418,7 @@
         }
       }
     </script>
-
     <script>
-      // Note: The toggle functionality is already handled in products.js
-      // The addProductBtn and cancelBtn event listeners are in products.js
     </script>
   </body>
 </html>

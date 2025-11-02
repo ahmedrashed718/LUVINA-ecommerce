@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Home</title>
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +13,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-
     <style>
       body {
         background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
@@ -25,24 +23,19 @@
         height: 40px;
         flex: 1;
       }
-
       .search-bar input::placeholder {
         color: #888;
         font-size: 0.95rem;
       }
-
       .search-bar:focus-within {
         outline: 2px solid #ddd;
       }
-
-      /* Hero Section => Slider */
       .carousel-item img {
         height: 90vh;
         width: 100%;
         object-fit: cover;
         filter: brightness(70%);
       }
-
       .hero-content {
         position: absolute;
         top: 50%;
@@ -54,7 +47,6 @@
         width: 100%;
         pointer-events: none;
       }
-
       .hero-content h1 {
         font-weight: 900;
         font-size: 3rem;
@@ -62,11 +54,9 @@
         margin-bottom: 20px;
         line-height: 1.2;
       }
-
       .hero-content h1 span {
         display: block;
       }
-
       .hero-content .btn {
         background-color: #7b2cbf;
         color: #fff;
@@ -80,24 +70,20 @@
         cursor: pointer;
         pointer-events: all;
       }
-
       .hero-content .btn:hover {
         background-color: #5a189a;
         color: #fff;
       }
-
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
         width: 3rem;
         height: 3rem;
         filter: invert(100%);
       }
-
       .carousel-control-prev,
       .carousel-control-next {
         cursor: pointer;
       }
-
       .carousel-indicators [data-bs-target] {
         background-color: #fff;
         width: 12px;
@@ -105,19 +91,14 @@
         border-radius: 50%;
         cursor: pointer;
       }
-
       .carousel-inner {
         transition: transform 10s ease-in-out !important;
       }
-
       .hero-content h1,
       .hero-content span,
       .hero-content .btn {
         color: #fff !important;
       }
-
-      /* ------------------------ */
-      /* hassan S */
       .featured-products {
         position: relative;
         overflow: hidden;
@@ -212,8 +193,6 @@
           top: 45%;
         }
       }
-
-      /*hassan E*/
       .overlay-img {
         max-width: 300px;
         width: 100%;
@@ -221,49 +200,39 @@
       .new-arrivals h2 {
         font-weight: bold;
       }
-
       .card .hover-img {
         opacity: 0;
         transition: opacity 0.7s ease;
       }
-
       .card:hover .hover-img {
         opacity: 1;
       }
-
       .card:hover .main-img {
         opacity: 0;
       }
-
       .card img {
         object-fit: cover;
       }
-
       .shoes-section h2 {
         font-weight: bold;
       }
-
       .bags-section h2 {
         font-weight: bold;
       }
-
       .bg-black {
         background-color: #000;
       }
-
       .product-card {
         border-radius: 10px;
         overflow: hidden;
         height: 370px;
       }
-
       .product-img-container {
         position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
       }
-
       .main-img,
       .hover-img {
         width: 100%;
@@ -272,14 +241,12 @@
         transition: opacity 0.5s ease;
         border-bottom: 1px solid #eee;
       }
-
       .hover-img {
         opacity: 0;
         position: absolute;
         top: 0;
         left: 0;
       }
-
       .product-overlay {
         position: absolute;
         bottom: -100%;
@@ -292,20 +259,16 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
-
       .product-img-container:hover .main-img {
         opacity: 0;
       }
-
       .product-img-container:hover .hover-img {
         opacity: 1;
       }
-
       .product-img-container:hover .product-overlay {
         bottom: 0;
         opacity: 1;
       }
-
       .btn-cart {
         background-color: #8a2be2;
         color: aliceblue;
@@ -315,11 +278,9 @@
       }
       .btn-cart:hover {
         transform: translateY(-2px);
-
         border: 2px solid #8a2be2;
         color: #8a2be2;
       }
-      /* *******shoes section------- */
       .shoe-card {
         position: relative;
         overflow: hidden;
@@ -329,18 +290,15 @@
         transition: transform 0.3s ease;
         cursor: pointer;
       }
-
       .shoe-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
-
       .shoe-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
       .shoe-label {
         position: absolute;
         bottom: 10px;
@@ -352,7 +310,6 @@
         padding: 4px 10px;
         border-radius: 4px;
       }
-      /* ************bag section********** */
       .bag-card {
         position: relative;
         overflow: hidden;
@@ -362,18 +319,15 @@
         transition: transform 0.3s ease;
         cursor: pointer;
       }
-
       .bag-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
-
       .bag-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-
       .bag-label {
         position: absolute;
         bottom: 10px;
@@ -404,7 +358,6 @@
           id="navLogo"
         />
       </a>
-
       <button
         class="navbar-toggler border-0"
         type="button"
@@ -413,7 +366,6 @@
       >
         <i class="bi bi-list fs-2 text-primary"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-lg-4">
           <li class="nav-item">
@@ -444,13 +396,6 @@
               >Bags</a
             >
           </li>
-          <!-- <li class="nav-item">
-            <a
-              class="nav-link fw-medium text-dark"
-              href="./pages/SubmitTicket.html"
-              >Support</a
-            >
-          </li> -->
           <li class="nav-item">
             <a
               class="nav-link fw-medium text-dark"
@@ -459,35 +404,19 @@
             >
           </li>
         </ul>
-
         <form class="d-flex align-items-center gap-3">
-          <!-- <div
-            class="search-bar d-flex align-items-center px-3 border rounded-pill"
-          >
-            <i class="bi bi-search me-2 text-muted"></i>
-            <input
-              type="search"
-              class="form-control border-0 bg-transparent shadow-none"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </div> -->
-
           <a href="./pages/ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
           </a>
-
           <a href="./pages/Wishlist.html" class="icon-btn position-relative">
             <i class="bi bi-heart fs-4"></i>
           </a>
-
           <a href="./pages/Cart.html" class="icon-btn position-relative">
             <i class="bi bi-cart3 fs-4"></i>
           </a>
         </form>
       </div>
     </nav>
-    <!-- Hero section => Slider -->
     <section id="hero" style="position: relative; overflow: hidden">
       <div
         id="heroCarousel"
@@ -518,7 +447,6 @@
             data-bs-slide-to="3"
           ></button>
         </div>
-
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="assets/images/hero-one.jpg" alt="Slide 1" />
@@ -533,7 +461,6 @@
             <img src="assets/images/hero-four.jpg" alt="Slide 4" />
           </div>
         </div>
-
         <button
           class="carousel-control-prev"
           type="button"
@@ -551,7 +478,6 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-
       <div class="hero-content">
         <h1>
           <span>Own the look</span>
@@ -562,41 +488,30 @@
         </a>
       </div>
     </section>
-
-    <!-- --------- -->
-    <!--Hassan Start Featured Products Carousel-->
     <section class="featured-products py-5">
       <div class="container">
         <h2 class="text-center mb-4 fw-bold">Featured Products Promotion</h2>
-
         <div
           id="featuredCarousel"
           class="carousel slide"
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
               <div
                 class="row g-4 justify-content-center"
                 id="Featured_Products_Slide1"
               >
-                <!-- المنتجات الأولى (من JSON) هتضاف هنا -->
               </div>
             </div>
-
-            <!-- Slide 2 -->
             <div class="carousel-item">
               <div
                 class="row g-4 justify-content-center"
                 id="Featured_Products_Slide2"
               >
-                <!-- المنتجات التالية (من JSON) هتضاف هنا -->
               </div>
             </div>
           </div>
-
-          <!-- Controls -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -616,31 +531,22 @@
         </div>
       </div>
     </section>
-
-    <!--Hassan End Featured Products Carousel-->
-
     <section class="new-arrivals py-5">
       <div class="container">
         <h2 class="mb-4 fw-bold">New Arrivals</h2>
-
         <div class="row g-4" id="new-arrivals-con">
-          <!-- الكروت هتضاف هنا من JS -->
         </div>
       </div>
-
       <div class="text-center mt-5">
         <a href="./pages/new-arrival.html" class="see-more-pro-btn">
           <span>See More</span>
         </a>
       </div>
     </section>
-
-    <!-- ===shoes section== --------------------------------------------------------------->
     <section class="shoes-section py-5">
       <div class="container">
         <h2 class="mb-4 text-center fw-bold">Shoes</h2>
         <div class="row g-4 justify-content-center">
-          <!-- Card 1 -->
           <div class="col-md-12 col-lg-6">
             <div class="shoe-card">
               <img
@@ -651,8 +557,6 @@
               <span class="shoe-label">Sneakers</span>
             </div>
           </div>
-
-          <!-- Card 2 -->
           <div class="col-md-12 col-lg-6">
             <div class="shoe-card">
               <img
@@ -663,8 +567,6 @@
               <span class="shoe-label">Heels</span>
             </div>
           </div>
-
-          <!-- Card 3 -->
           <div class="col-md-12 col-lg-6">
             <div class="shoe-card">
               <img
@@ -675,8 +577,6 @@
               <span class="shoe-label">Flats</span>
             </div>
           </div>
-
-          <!-- Card 4 -->
           <div class="col-md-12 col-lg-6">
             <div class="shoe-card">
               <img
@@ -690,13 +590,10 @@
         </div>
       </div>
     </section>
-
-    <!-- -------------- bags section--------- -->
     <section class="bags-section py-5">
       <div class="container">
         <h2 class="mb-4 text-center fw-bold">Bags</h2>
         <div class="row g-4 justify-content-center">
-          <!-- Card 1 -->
           <div class="col-12 col-md-6 col-lg-3">
             <div class="bag-card">
               <img
@@ -707,8 +604,6 @@
               <span class="bag-label">Beach Bag</span>
             </div>
           </div>
-
-          <!-- Card 2 -->
           <div class="col-12 col-md-6 col-lg-3">
             <div class="bag-card">
               <img
@@ -719,8 +614,6 @@
               <span class="bag-label">Shoulder Bag</span>
             </div>
           </div>
-
-          <!-- Card 3 -->
           <div class="col-12 col-md-6 col-lg-3">
             <div class="bag-card">
               <img
@@ -731,8 +624,6 @@
               <span class="bag-label">Hand Bag</span>
             </div>
           </div>
-
-          <!-- Card 4 -->
           <div class="col-12 col-md-6 col-lg-3">
             <div class="bag-card">
               <img
@@ -746,12 +637,9 @@
         </div>
       </div>
     </section>
-
-    <!-- ---- -->
     <footer class="bg-black text-white pt-5 pb-4">
       <div class="container">
         <div class="row">
-          <!-- Column 1: Logo & tagline -->
           <div class="col-md-3 mb-4">
             <img
               src="./assets/images/luvina-logo-footer.svg"
@@ -764,8 +652,6 @@
               &nbsp;&nbsp;|&nbsp;&nbsp; Conditions
             </p>
           </div>
-
-          <!-- Column 2: Shoes -->
           <div class="col-md-2 mb-4">
             <h5>Shoes</h5>
             <ul class="list-unstyled mt-3">
@@ -775,8 +661,6 @@
               <li>Sandals</li>
             </ul>
           </div>
-
-          <!-- Column 3: Bags -->
           <div class="col-md-2 mb-4">
             <h5>Bags</h5>
             <ul class="list-unstyled mt-3">
@@ -786,8 +670,6 @@
               <li>Back bags</li>
             </ul>
           </div>
-
-          <!-- Column 4: Support -->
           <div class="col-md-2 mb-4">
             <h5>Support</h5>
             <ul class="list-unstyled mt-3">
@@ -810,8 +692,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- Column 5: Newsletter -->
           <div class="col-md-3 mb-4">
             <h5>Sign up & Save</h5>
             <p class="mt-3">
@@ -824,22 +704,16 @@
                 class="form-control rounded-pill"
                 placeholder="Enter your name"
               />
-
               <button class="btn go-btn">Go</button>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Shoe cards functionality
         const shoeCards = document.querySelectorAll(".shoe-card");
-
         shoeCards.forEach((card) => {
           card.addEventListener("click", () => {
             const label = card.querySelector(".shoe-label").textContent.trim();
@@ -847,10 +721,7 @@
             window.location.href = "./pages/shoesProduct.html";
           });
         });
-
-        // Bag cards functionality
         const bagCards = document.querySelectorAll(".bag-card");
-
         bagCards.forEach((card) => {
           card.addEventListener("click", () => {
             const label = card.querySelector(".bag-label").textContent.trim();
@@ -860,8 +731,6 @@
         });
       });
     </script>
-
-    <!-- ✅ LocalStorage Auto-Initialization -->
     <script src="./js/user-manager.js"></script>
     <script src="./js/localStorage-products.js"></script>
     <script src="./js/cart-counter.js"></script>

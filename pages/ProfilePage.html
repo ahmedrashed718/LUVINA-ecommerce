@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,11 +19,9 @@
         font-family: "Poppins", sans-serif;
         background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
       }
-
       .profile-section {
         padding: 100px 0;
       }
-
       .profile-card {
         background-color: #fff;
         border-radius: 15px;
@@ -37,7 +34,6 @@
         justify-content: center;
         align-items: center;
       }
-
       .profile-card img {
         width: 160px;
         height: 160px;
@@ -47,29 +43,24 @@
         margin-bottom: 20px;
         cursor: pointer;
       }
-
       .edit-btn {
         margin-top: 15px;
         border-radius: 8px;
       }
-
       .info-card {
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         padding: 25px;
       }
-
       .info-card h5 {
         color: #007bff;
         margin-bottom: 15px;
       }
-
       #editAddressInput {
         display: none;
         margin-top: 10px;
       }
-
       .error-message {
         color: red;
         font-size: 14px;
@@ -78,9 +69,7 @@
       }
     </style>
   </head>
-
   <body>
-    <!-- Navbar -->
     <nav
       id="mainNavbar"
       class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
@@ -94,7 +83,6 @@
           id="navLogo"
         />
       </a>
-
       <button
         class="navbar-toggler border-0"
         type="button"
@@ -103,7 +91,6 @@
       >
         <i class="bi bi-list fs-2 text-primary"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-lg-4">
           <li class="nav-item">
@@ -134,36 +121,19 @@
             >
           </li>
         </ul>
-
         <form class="d-flex align-items-center gap-3">
-          <!-- <div
-            class="search-bar d-flex align-items-center px-3 border rounded-pill"
-          >
-            <i class="bi bi-search me-2 text-muted"></i>
-            <input
-              type="search"
-              class="form-control border-0 bg-transparent shadow-none"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </div> -->
-
           <a href="./ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
           </a>
-          
           <a href="./Wishlist.html" class="icon-btn position-relative">
             <i class="bi bi-heart fs-4"></i>
           </a>
-
           <a href="./Cart.html" class="icon-btn position-relative">
             <i class="bi bi-cart3 fs-4"></i>
           </a>
         </form>
       </div>
     </nav>
-
-    <!-- Profile Section -->
     <section class="profile-section mt-5 pt-5">
       <div class="container">
         <div class="row justify-content-center align-items-stretch">
@@ -188,7 +158,6 @@
               </button>
             </div>
           </div>
-
           <div class="col-lg-6 d-flex flex-column justify-content-between">
             <div class="info-card mb-4">
               <h5>Shipping Address</h5>
@@ -206,7 +175,6 @@
                 Edit Address
               </button>
             </div>
-
             <div class="info-card">
               <h5 class="mb-3">Account Settings</h5>
               <div class="list-group">
@@ -217,7 +185,6 @@
                   <i class="bi bi-lock-fill text-primary fs-5 me-3"></i>
                   <span>Change Password</span>
                 </a>
-
                 <a
                   href="./privacyprofile.html"
                   class="list-group-item list-group-item-action d-flex align-items-center"
@@ -237,8 +204,6 @@
             </div>
           </div>
         </div>
-        
-        <!-- ==================== ORDER HISTORY SECTION ==================== -->
         <div class="row mt-5">
           <div class="col-12">
             <div class="info-card">
@@ -246,29 +211,21 @@
                 <h5 class="mb-0"><i class="bi bi-clock-history me-2"></i>Order History</h5>
                 <span class="badge bg-primary" id="totalOrdersBadge">0 Orders</span>
               </div>
-              
-              <!-- Empty State -->
               <div id="emptyOrders" class="text-center py-5" style="display: none;">
                 <i class="bi bi-inbox" style="font-size: 60px; color: #ccc;"></i>
                 <p class="text-muted mt-3">No orders yet</p>
                 <a href="./new-arrival.html" class="btn btn-primary mt-2">Start Shopping</a>
               </div>
-              
-              <!-- Orders List -->
               <div id="ordersContainer">
-                <!-- Orders will be added here dynamically -->
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
     <footer class="bg-black text-white pt-5 pb-4">
       <div class="container">
         <div class="row">
-          <!-- Column 1: Logo & tagline -->
           <div class="col-md-3 mb-4">
             <img
               src="../assets/images/luvina-logo-footer.svg"
@@ -281,8 +238,6 @@
               &nbsp;&nbsp;|&nbsp;&nbsp; Conditions
             </p>
           </div>
-
-          <!-- Column 2: Shoes -->
           <div class="col-md-2 mb-4">
             <h5>Shoes</h5>
             <ul class="list-unstyled mt-3">
@@ -292,8 +247,6 @@
               <li>Sandals</li>
             </ul>
           </div>
-
-          <!-- Column 3: Bags -->
           <div class="col-md-2 mb-4">
             <h5>Bags</h5>
             <ul class="list-unstyled mt-3">
@@ -303,8 +256,6 @@
               <li>Back bags</li>
             </ul>
           </div>
-
-          <!-- Column 4: Newsletter -->
           <div class="col-md-5 mb-4">
             <h5>Sign up & Save</h5>
             <p class="mt-3">
@@ -317,26 +268,18 @@
                 class="form-control rounded-pill"
                 placeholder="Enter your name"
               />
-
               <button class="btn go-btn">Go</button>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      // ==========================================
-      // ✅ Redirect if user is not logged in
-      // ==========================================
       document.addEventListener("DOMContentLoaded", function () {
-        // تحقق من حالة تسجيل الدخول باستخدام النظام الموحد
         const isLoggedIn = localStorage.getItem("isLoggedIn");
         const loggedInUser = localStorage.getItem("loggedInUser");
-
         if (isLoggedIn !== "true" || !loggedInUser) {
-          // إعادة التوجيه إلى صفحة تسجيل الدخول
           Swal.fire({
             icon: "warning",
             title: "Access Denied",
@@ -345,45 +288,26 @@
             timer: 2000,
             showConfirmButton: false,
           });
-
           setTimeout(() => {
             window.location.href = "Login-Customer.html";
           }, 2000);
           return;
         }
-
-        // إذا كان المستخدم مسجلاً، متابعة تحميل البيانات
         let userData = JSON.parse(loggedInUser);
-
-        // ==========================================
-        // ✅ Helper function: update user in users array
-        // ==========================================
         function updateUserInLocalStorage(updatedUser) {
-          // Get all users from localStorage
           const users = JSON.parse(localStorage.getItem("users")) || [];
-
-          // Find the current user by email
           const userIndex = users.findIndex(
             (u) => u.email === updatedUser.email
           );
-
           if (userIndex !== -1) {
             users[userIndex] = { ...users[userIndex], ...updatedUser };
           } else {
             users.push(updatedUser);
           }
-
-          // Save updates
           localStorage.setItem("users", JSON.stringify(users));
           localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
-
-          // Update runtime variable too
           userData = updatedUser;
         }
-
-        // ==========================================
-        // ✅ Elements
-        // ==========================================
         const editAddressBtn = document.getElementById("editAddressBtn");
         const editAddressInput = document.getElementById("editAddressInput");
         const userAddressEl = document.getElementById("userAddress");
@@ -392,10 +316,6 @@
         const profileImage = document.getElementById("profileImage");
         const imageUpload = document.getElementById("imageUpload");
         const changeImageBtn = document.getElementById("changeImageBtn");
-
-        // ==========================================
-        // ✅ Display user data
-        // ==========================================
         if (userData) {
           document.getElementById("userName").textContent =
             userData.fullname || userData.name || "Guest User";
@@ -403,45 +323,30 @@
             userData.email || "No email provided";
           document.getElementById("userNumber").textContent =
             userData.phone || userData.mobile || "";
-
           if (userData.address) {
             userAddressEl.textContent = userData.address;
           } else {
             userAddressEl.textContent = "No address added yet";
           }
-
-          // ✅ Load saved profile image if available
           if (userData.profileImage) {
             profileImage.src = userData.profileImage;
           }
         }
-
-        // ==========================================
-        // ✅ Change Profile Image + Save to localStorage
-        // ==========================================
         changeImageBtn.addEventListener("click", () => {
           imageUpload.click();
         });
-
         profileImage.addEventListener("click", () => {
           imageUpload.click();
         });
-
         imageUpload.addEventListener("change", (event) => {
           const file = event.target.files[0];
           if (file) {
             const reader = new FileReader();
-
             reader.onload = function (e) {
               const imageBase64 = e.target.result;
-
-              // ✅ Update UI
               profileImage.src = imageBase64;
-
-              // ✅ Save to both loggedInUser and users array
               const updatedUser = { ...userData, profileImage: imageBase64 };
               updateUserInLocalStorage(updatedUser);
-
               Swal.fire({
                 icon: "success",
                 title: "Profile Updated",
@@ -451,20 +356,14 @@
                 showConfirmButton: false,
               });
             };
-
             reader.readAsDataURL(file);
           }
         });
-
-        // ==========================================
-        // ✅ Handle Address Edit & Validation
-        // ==========================================
         editAddressBtn.addEventListener("click", () => {
           if (
             editAddressInput.style.display === "none" ||
             editAddressInput.style.display === ""
           ) {
-            // Show input field
             editAddressInput.style.display = "block";
             editAddressInput.value = userAddressEl.textContent.includes(
               "No address"
@@ -474,34 +373,24 @@
             editAddressBtn.textContent = "Save Address";
           } else {
             const newAddress = editAddressInput.value.trim();
-
-            // ✅ Address validation
             if (newAddress.length < 5) {
               addressError.style.display = "block";
               editAddressInput.classList.add("is-invalid");
-
               Swal.fire({
                 icon: "error",
                 title: "Invalid Address",
                 text: "Please enter at least 5 characters.",
                 confirmButtonColor: "#007bff",
               });
-
               return;
             }
-
-            // ✅ Save valid address
             addressError.style.display = "none";
             editAddressInput.classList.remove("is-invalid");
-
             userAddressEl.textContent = newAddress;
             const updatedUser = { ...userData, address: newAddress };
             updateUserInLocalStorage(updatedUser);
-
-            // Hide input field
             editAddressInput.style.display = "none";
             editAddressBtn.textContent = "Edit Address";
-
             Swal.fire({
               icon: "success",
               title: "Address Updated",
@@ -512,23 +401,14 @@
             });
           }
         });
-
-        // ==========================================
-        // ✅ Hide validation error while typing
-        // ==========================================
         editAddressInput.addEventListener("input", () => {
           if (editAddressInput.value.trim().length >= 5) {
             addressError.style.display = "none";
             editAddressInput.classList.remove("is-invalid");
           }
         });
-
-        // ==========================================
-        // ✅ Logout confirmation
-        // ==========================================
         logoutBtn.addEventListener("click", (e) => {
           e.preventDefault();
-
           Swal.fire({
             title: "Are you sure you want to log out?",
             icon: "warning",
@@ -538,10 +418,8 @@
             confirmButtonText: "Yes, log out",
           }).then((result) => {
             if (result.isConfirmed) {
-              // إزالة بيانات تسجيل الدخول من localStorage
               localStorage.removeItem("loggedInUser");
               localStorage.removeItem("isLoggedIn");
-
               Swal.fire({
                 icon: "success",
                 title: "Logged out",
@@ -550,46 +428,33 @@
                 timer: 1500,
                 showConfirmButton: false,
               });
-
               setTimeout(() => {
                 window.location.href = "Login-Customer.html";
               }, 1600);
             }
           });
         });
-        
-        // ==================== ORDER HISTORY DISPLAY ====================
-        
         function displayOrderHistory() {
           const orders = getUserOrders();
           const ordersContainer = document.getElementById('ordersContainer');
           const emptyOrders = document.getElementById('emptyOrders');
           const totalOrdersBadge = document.getElementById('totalOrdersBadge');
-          
-          // Update badge
           totalOrdersBadge.textContent = orders.length + (orders.length === 1 ? ' Order' : ' Orders');
-          
           if (orders.length === 0) {
             emptyOrders.style.display = 'block';
             ordersContainer.style.display = 'none';
             return;
           }
-          
           emptyOrders.style.display = 'none';
           ordersContainer.style.display = 'block';
           ordersContainer.innerHTML = '';
-          
-          // Sort by date (newest first)
           orders.sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate));
-          
           orders.forEach(order => {
             const orderCard = document.createElement('div');
             orderCard.className = 'border rounded p-3 mb-3';
             orderCard.style.background = '#f8f9fa';
-            
             const itemsCount = order.items ? order.items.length : 0;
             const totalItems = order.items ? order.items.reduce((sum, item) => sum + (item.quantity || 1), 0) : 0;
-            
             orderCard.innerHTML = `
               <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
@@ -600,7 +465,6 @@
                 </div>
                 <span class="badge ${getStatusBadgeClass(order.status)}">${order.status}</span>
               </div>
-              
               <div class="row mb-3">
                 <div class="col-6 col-md-3">
                   <small class="text-muted d-block">Items</small>
@@ -619,7 +483,6 @@
                   <strong>${order.paymentMethod || 'COD'}</strong>
                 </div>
               </div>
-              
               <div class="d-flex gap-2">
                 <button class="btn btn-sm btn-outline-primary view-order-btn" data-order="${order.orderNumber}">
                   <i class="bi bi-eye me-1"></i>View Details
@@ -630,7 +493,6 @@
                   </button>
                 ` : ''}
               </div>
-              
               <div class="order-details-${order.orderNumber}" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #dee2e6;">
                 <h6 class="mb-3">Order Items:</h6>
                 ${order.items.map(item => `
@@ -643,7 +505,6 @@
                     <div class="fw-bold">${(item.price * (item.quantity || 1))} EGP</div>
                   </div>
                 `).join('')}
-                
                 <div class="mt-3 pt-3 border-top">
                   <div class="d-flex justify-content-between mb-2">
                     <span>Subtotal:</span>
@@ -660,16 +521,12 @@
                 </div>
               </div>
             `;
-            
             ordersContainer.appendChild(orderCard);
           });
-          
-          // Handle View Details buttons
           document.querySelectorAll('.view-order-btn').forEach(btn => {
             btn.addEventListener('click', () => {
               const orderNumber = btn.dataset.order;
               const detailsDiv = document.querySelector(`.order-details-${orderNumber}`);
-              
               if (detailsDiv.style.display === 'none') {
                 detailsDiv.style.display = 'block';
                 btn.innerHTML = '<i class="bi bi-eye-slash me-1"></i>Hide Details';
@@ -679,12 +536,9 @@
               }
             });
           });
-          
-          // Handle Cancel buttons
           document.querySelectorAll('.cancel-order-btn').forEach(btn => {
             btn.addEventListener('click', () => {
               const orderNumber = btn.dataset.order;
-              
               if (confirm('Are you sure you want to cancel this order?')) {
                 if (updateOrderStatus(orderNumber, 'Cancelled')) {
                   Swal.fire({
@@ -694,25 +548,19 @@
                     confirmButtonColor: '#007bff',
                     timer: 2000
                   });
-                  displayOrderHistory(); // Refresh
+                  displayOrderHistory(); 
                 }
               }
             });
           });
         }
-        
-        // Load order history
         displayOrderHistory();
       });
     </script>
-    <!-- User Manager -->
     <script src="../js/user-manager.js"></script>
-    <!-- Order Manager -->
     <script src="../js/order-manager.js"></script>
-    <!-- Cart & Wishlist Counters -->
     <script src="../js/cart-counter.js"></script>
     <script src="../js/wishlist-manager.js"></script>
-    <!-- Navbar Profile Dropdown -->
     <script src="../js/navbar-profile.js"></script>
   </body>
 </html>

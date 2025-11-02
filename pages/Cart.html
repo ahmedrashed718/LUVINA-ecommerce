@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Shopping Cart</title>
-
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-
     <style>
       .shopping-cart h2 {
         color: #000;
@@ -84,8 +81,6 @@
       .order-summary .btn-outline-dark {
         border-radius: 50px;
       }
-
-      /* Login Required Styles */
       .login-required {
         display: none;
         text-align: center;
@@ -110,9 +105,7 @@
       }
     </style>
   </head>
-
   <body>
-    <!-- Navbar -->
     <nav
       id="mainNavbar"
       class="navbar navbar-expand-lg bg-white shadow-sm px-4 sticky-top elegant-navbar"
@@ -129,7 +122,6 @@
           id="navLogo"
         />
       </a>
-
       <button
         class="navbar-toggler border-0"
         type="button"
@@ -138,7 +130,6 @@
       >
         <i class="bi bi-list fs-2 text-primary"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto gap-lg-4">
           <li class="nav-item">
@@ -167,7 +158,6 @@
             >
           </li>
         </ul>
-
         <form class="d-flex align-items-center gap-3">
           <div
             class="search-bar d-flex align-items-center px-3 border rounded-pill"
@@ -180,28 +170,21 @@
               aria-label="Search"
             />
           </div>
-
           <a href="./ProfilePage.html" class="icon-btn position-relative">
             <i class="bi bi-person fs-4"></i>
           </a>
-
           <a href="./Wishlist.html" class="icon-btn position-relative">
             <i class="bi bi-heart fs-4"></i>
           </a>
-
           <a href="./Cart.html" class="icon-btn position-relative">
             <i class="bi bi-cart3 fs-4"></i>
           </a>
         </form>
       </div>
     </nav>
-
-    <!------Shopping Cart---------->
     <section class="shopping-cart container my-5">
       <div class="row g-4">
         <h2 class="mb-4 fw-semibold">Shopping Cart</h2>
-
-        <!-- 🟣 Login Required Message -->
         <div id="login-required" class="login-required">
           <img src="../assets/images/login-required.svg" alt="Login Required" />
           <h3>Login Required</h3>
@@ -218,12 +201,8 @@
             <a href="./signup.html" class="text-primary">Sign up</a>
           </p>
         </div>
-
-        <!-- 🟣 Products container -->
         <div class="col-lg-8" id="cart-content">
           <div id="cart-items"></div>
-
-          <!-- 🟣 Empty cart message -->
           <div
             id="empty-cart"
             class="text-center p-5 border rounded-4"
@@ -244,8 +223,6 @@
             >
           </div>
         </div>
-
-        <!-- 🟣 Order Summary -->
         <div class="col-lg-4" id="order-summary">
           <div class="order-summary">
             <h5>Order Summary</h5>
@@ -279,12 +256,9 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
     <footer class="bg-black text-white pt-5 pb-4">
       <div class="container">
         <div class="row">
-          <!-- Column 1: Logo & tagline -->
           <div class="col-md-3 mb-4">
             <img
               src="../../assets/images/luvina-logo-footer.svg"
@@ -297,8 +271,6 @@
               &nbsp;&nbsp;|&nbsp;&nbsp; Conditions
             </p>
           </div>
-
-          <!-- Column 2: Shoes -->
           <div class="col-md-2 mb-4">
             <h5>Shoes</h5>
             <ul class="list-unstyled mt-3">
@@ -308,8 +280,6 @@
               <li>Sandals</li>
             </ul>
           </div>
-
-          <!-- Column 3: Bags -->
           <div class="col-md-2 mb-4">
             <h5>Bags</h5>
             <ul class="list-unstyled mt-3">
@@ -319,8 +289,6 @@
               <li>Back bags</li>
             </ul>
           </div>
-
-          <!-- Column 4: Newsletter -->
           <div class="col-md-5 mb-4">
             <h5>Sign up & Save</h5>
             <p class="mt-3">
@@ -333,25 +301,17 @@
                 class="form-control rounded-pill"
                 placeholder="Enter your name"
               />
-
               <button class="btn go-btn">Go</button>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- User Manager -->
     <script src="../js/user-manager.js"></script>
-    <!-- Cart Counter Badge -->
     <script src="../js/cart-counter.js"></script>
-    <!-- Wishlist Manager -->
     <script src="../js/wishlist-manager.js"></script>
-    <!-- Navbar Profile Dropdown -->
     <script src="../js/navbar-profile.js"></script>
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const cartContainer = document.getElementById("cart-items");
@@ -361,31 +321,20 @@
         const loginRequiredEl = document.getElementById("login-required");
         const cartContentEl = document.getElementById("cart-content");
         const orderSummaryEl = document.getElementById("order-summary");
-
-        // التحقق من حالة تسجيل الدخول
         const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-
         if (!isLoggedIn) {
-          // إخفاء محتوى العربة وعرض رسالة تسجيل الدخول
           cartContentEl.style.display = "none";
           orderSummaryEl.style.display = "none";
           loginRequiredEl.style.display = "block";
-
-          // إضافة تأخير ثم إعادة التوجيه إلى صفحة تسجيل الدخول
           setTimeout(() => {
             window.location.href = "./Login-Customer.html";
           }, 3000);
           return;
         }
-
-        // إذا كان المستخدم مسجلاً، متابعة عرض محتوى العربة
         loginRequiredEl.style.display = "none";
         cartContentEl.style.display = "block";
         orderSummaryEl.style.display = "block";
-
         let cart = getUserCart() || [];
-
-        // لو الكارت فاضي
         if (cart.length === 0) {
           cartContainer.innerHTML = "";
           emptyCartEl.style.display = "block";
@@ -393,26 +342,20 @@
           grandTotalEl.textContent = "0 EGP";
           return;
         }
-
         emptyCartEl.style.display = "none";
         cartContainer.innerHTML = "";
-
         let subtotal = 0;
-
-        // 🟣 عرض المنتجات
         cart.forEach((item, index) => {
           const image =
             item.image ||
             (item.images && item.images.length > 0
               ? item.images[0]
               : "../assets/images/default-product.png");
-          const color = item.color || item.selectedColor || "N/A";
+          const color = item.selectedColorName || item.color || item.selectedColor || "N/A";
           const size = item.size || item.selectedSize || "N/A";
           const price = item.price || 0;
           const qty = item.quantity || 1;
-
           subtotal += price * qty;
-
           cartContainer.innerHTML += `
         <div class="card mb-3 p-3 border cart-item position-relative">
           <button
@@ -421,7 +364,6 @@
           >
             <i class="bi bi-x-lg"></i>
           </button>
-
           <div class="row align-items-center gx-4">
             <div class="col-md-3">
               <img
@@ -431,14 +373,12 @@
                 width="120"
               />
             </div>
-
             <div class="col-md-7">
               <h5 class="fw-semibold mb-2">${item.name}</h5>
               <p class="text-muted small mb-2">Color: <strong>${color}</strong></p>
               <p class="text-muted small mb-2">Size: <strong>${size}</strong></p>
               <p class="item-price fw-semibold text-dark mb-0">${price} EGP</p>
             </div>
-
             <div class="col-md-2 text-end">
               <div class="d-flex align-items-center justify-content-end">
                 <button class="btn btn-sm counter-btn-min rounded-circle me-2">−</button>
@@ -450,23 +390,18 @@
         </div>
       `;
         });
-
         subtotalEl.textContent = `${subtotal.toFixed(2)} EGP`;
         grandTotalEl.textContent = `${subtotal.toFixed(2)} EGP`;
-
-        // 🟣 التحكم في الكمية والحذف
         document.querySelectorAll(".cart-item").forEach((itemEl, index) => {
           const plusBtn = itemEl.querySelector(".counter-btn-plus");
           const minusBtn = itemEl.querySelector(".counter-btn-min");
           const qtyEl = itemEl.querySelector(".item-quantity");
           const removeBtn = itemEl.querySelector(".remove-btn");
-
           plusBtn.addEventListener("click", () => {
             cart[index].quantity++;
             saveUserCart(cart);
             location.reload();
           });
-
           minusBtn.addEventListener("click", () => {
             if (cart[index].quantity > 1) {
               cart[index].quantity--;
@@ -474,7 +409,6 @@
               location.reload();
             }
           });
-
           removeBtn.addEventListener("click", () => {
             cart.splice(index, 1);
             saveUserCart(cart);

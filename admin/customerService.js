@@ -1,6 +1,3 @@
-// customerService.js
-
-// Sample initial data
 let tickets = [
     {
         id: "#1234867",
@@ -39,8 +36,6 @@ let tickets = [
         category: "Billing Issue"
     }
 ];
-
-// DOM Elements
 const createBtn = document.querySelector('.create-ticket');
 const tableSection = document.getElementById('ticketsTable');
 const formSection = document.getElementById('createTicketForm');
@@ -48,28 +43,18 @@ const cancelBtn = document.getElementById('cancelForm');
 const ticketForm = document.getElementById('ticketForm');
 const ticketsBody = document.getElementById('ticketsBody');
 const searchInput = document.querySelector('.search input');
-
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     renderTickets();
-    
-    // Event Listeners
     createBtn.addEventListener('click', showCreateForm);
     cancelBtn.addEventListener('click', hideCreateForm);
     ticketForm.addEventListener('submit', submitTicket);
     searchInput.addEventListener('input', filterTickets);
 });
-
-// Render tickets in the table
 function renderTickets(filteredTickets = null) {
     const ticketsToRender = filteredTickets || tickets;
-    
     ticketsBody.innerHTML = '';
-    
     ticketsToRender.forEach((ticket, index) => {
         const row = document.createElement('tr');
-        
-        // Determine badge class based on status
         let badgeClass = '';
         let statusText = '';
         switch(ticket.status) {
@@ -86,7 +71,6 @@ function renderTickets(filteredTickets = null) {
                 statusText = 'Closed';
                 break;
         }
-        
         row.innerHTML = `
             <td>${ticket.id}</td>
             <td>${ticket.customerName}</td>
@@ -96,11 +80,8 @@ function renderTickets(filteredTickets = null) {
             <td>${ticket.subject}</td>
             <td><a href="#" class="text-primary text-decoration-none view" data-index="${index}">View</a></td>
         `;
-        
         ticketsBody.appendChild(row);
     });
-    
-    // Add event listeners to view buttons
     document.querySelectorAll('.view').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -109,29 +90,19 @@ function renderTickets(filteredTickets = null) {
         });
     });
 }
-
-// Show create ticket form
 function showCreateForm() {
     tableSection.style.display = 'none';
     formSection.style.display = 'block';
 }
-
-// Hide create ticket form
 function hideCreateForm() {
     formSection.style.display = 'none';
     tableSection.style.display = 'block';
     ticketForm.reset();
 }
-
-// Show ticket popup
 function showTicketPopup(ticketIndex) {
     const ticket = tickets[ticketIndex];
-    
-    // Create overlay
     const overlay = document.createElement('div');
     overlay.className = 'popup-overlay';
-    
-    // Create popup content
     overlay.innerHTML = `
         <div class="popup-content">
             <button class="popup-close">&times;</button>
@@ -150,67 +121,36 @@ function showTicketPopup(ticketIndex) {
             </div>
         </div>
     `;
-    
-    // Add to page
     document.body.appendChild(overlay);
-    
-    // Get buttons
     const takeActionBtn = overlay.querySelector('#takeActionBtn');
     const closeTicketBtn = overlay.querySelector('#closeTicketBtn');
     const closeBtn = overlay.querySelector('.popup-close');
-    
-    // Update button states based on current status
     updateButtonStates(ticket.status, takeActionBtn, closeTicketBtn);
-    
-    // Take Action logic - فقط يغير من open إلى inprogress
     takeActionBtn.addEventListener('click', () => {
-        // Update ticket status فقط إذا كانت open
         if (ticket.status === 'open') {
             ticket.status = 'inprogress';
-            
-            // Re-render tickets
             renderTickets();
-            
-            // Close popup
             document.body.removeChild(overlay);
-            
-            // Show success message
             alert('Ticket status changed to In Progress!');
         } else {
-            // إذا كانت الحالة ليست open، نظهر رسالة
             alert('Ticket is already in progress. Only Open tickets can be moved to In Progress.');
         }
     });
-    
-    // Close Ticket logic - يغير الحالة إلى closed بغض النظر عن الحالة الحالية
     closeTicketBtn.addEventListener('click', () => {
-        // Update ticket status to closed
         ticket.status = 'closed';
-        
-        // Re-render tickets
         renderTickets();
-        
-        // Close popup
         document.body.removeChild(overlay);
-        
-        // Show success message
         alert('Ticket has been closed!');
     });
-    
-    // Close button logic
     closeBtn.addEventListener('click', () => {
         document.body.removeChild(overlay);
     });
-    
-    // Close on overlay click
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             document.body.removeChild(overlay);
         }
     });
 }
-
-// Function to update button states based on ticket status
 function updateButtonStates(status, takeActionBtn, closeTicketBtn) {
     switch(status) {
         case 'open':
@@ -234,21 +174,14 @@ function updateButtonStates(status, takeActionBtn, closeTicketBtn) {
             break;
     }
 }
-
-// Submit new ticket
 function submitTicket(e) {
     e.preventDefault();
-    
     const customerName = document.getElementById('customerName').value;
     const customerEmail = document.getElementById('customerEmail').value;
     const issueCategory = document.getElementById('issueCategory').value;
     const ticketSubject = document.getElementById('ticketSubject').value;
     const ticketDescription = document.getElementById('ticketDescription').value;
-    
-    // Generate a new ticket ID
     const newTicketId = `#${Math.floor(1000000 + Math.random() * 9000000)}`;
-    
-    // Create new ticket object
     const newTicket = {
         id: newTicketId,
         customerName: customerName,
@@ -258,34 +191,21 @@ function submitTicket(e) {
         email: customerEmail,
         category: issueCategory
     };
-    
-    // Add to tickets array
     tickets.push(newTicket);
-    
-    // Reset form and show table
     hideCreateForm();
-    
-    // Re-render tickets
     renderTickets();
-    
-    // Show success message
     alert('Ticket created successfully!');
 }
-
-// Filter tickets based on search input
 function filterTickets() {
     const searchTerm = searchInput.value.toLowerCase();
-    
     if (searchTerm === '') {
         renderTickets();
         return;
     }
-    
     const filteredTickets = tickets.filter(ticket => 
         ticket.customerName.toLowerCase().includes(searchTerm) ||
         ticket.subject.toLowerCase().includes(searchTerm) ||
         ticket.id.toLowerCase().includes(searchTerm)
     );
-    
     renderTickets(filteredTickets);
 }

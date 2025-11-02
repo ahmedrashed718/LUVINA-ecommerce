@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seller orders</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,21 +12,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-<!-- <link rel="stylesheet" href="../../css/style.css"> -->
 <link rel="stylesheet" href="seller.css">
-   
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-
   <body>
-   
-    <!-- ********************************************************* -->
-
-
-
   <div class="container-fluid">
     <div class="row">
-      <!-- Sidebar -->
       <div class="col-md-2 sidebar d-flex flex-column">
         <div class="logo text-center my-3">
           <a href="../Home.html" style="text-decoration: none;">
@@ -35,28 +25,19 @@
           </a>
           <p class="text-secondary mb-0">Seller panel</p>
         </div>
-
         <a href="./sellerDashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
         <a href="./sellerOrders.html" class="active"><i class="bi bi-bag"></i> Orders</a>
         <a href="./sellerProducts.html"><i class="bi bi-box-seam"></i> Products</a>
-
-
         <button class="logout-btn mt-auto" onclick="logoutSeller()">
           <i class="bi bi-box-arrow-right"></i> Logout
         </button>
       </div>
-
-      <!-- Main Content -->
   <div class="col-md-10">
     <div class="dashboard-header">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
               <h2 class="head">Orders</h2>
             </div>
           </div>
-
-
-<!-- ********************order section******* -->
-    
         <div id="orders" class="content-section mt-0">
       <div class="d-flex justify-content-between mb-4">
           <div class="col-md-8">
@@ -70,29 +51,29 @@
                 <tr>
                   <th>Order ID</th>
                   <th>Customer Name</th>
+                  <th>Your Items</th>
+                  <th>Your Revenue</th>
                   <th>Date</th>
-                  <th>Total Price</th>
                   <th>Status</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
-              <tbody id="ordersTableBody">
+              <tbody id="OrdersBody">
                 <tr>
-                  <td colspan="8" class="text-center py-4">
+                  <td colspan="7" class="text-center py-4">
                     <div class="spinner-border text-primary" role="status">
                       <span class="visually-hidden">Loading...</span>
                     </div>
-                    <p class="mt-2 text-muted">Loading orders...</p>
+                    <p class="mt-2 text-muted">Loading your orders...</p>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          
           <div id="emptyOrders" class="text-center py-5" style="display: none;">
             <i class="bi bi-cart-x" style="font-size: 3rem; color: #ccc;"></i>
             <p class="text-muted mt-3">No orders found</p>
           </div>
-
           <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
@@ -102,55 +83,54 @@
               <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
             </ul>
           </nav>
-
         </div>
-
-
-
   </div>
-
  </div>
     </div>
-
-
-
+<div class="modal fade" id="orderDetailsModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Order Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="orderDetailsModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../js/user-manager.js"></script>
-<script src="../js/admin-data-manager.js"></script>
-<script src="../js/order-manager.js"></script>
+<script src="../js/localStorage-products.js"></script>
+<script src="../js/seller-product-manager.js"></script>
+<script src="../js/seller-data-manager.js"></script>
+<script src="./seller-orders-dynamic.js"></script>
 <script src="./mainSeller.js"></script>
-
 <script>
-  // Check if business account is logged in
   const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
   if (!loggedInUser || (loggedInUser.accountType !== 'business' && loggedInUser.accountType !== 'admin')) {
     alert('Access Denied: Business account only');
     window.location.href = '../pages/Login-Customer.html';
   }
-
-  // Load orders on page load
   document.addEventListener('DOMContentLoaded', function() {
     loadAllOrders();
   });
-
 function loadAllOrders() {
   const orders = adminDataManager.getAllOrdersForAdmin();
   const tbody = document.getElementById('ordersTableBody');
   const emptyState = document.getElementById('emptyOrders');
-  
   if (orders.length === 0) {
     tbody.parentElement.style.display = 'none';
     emptyState.style.display = 'block';
     return;
   }
-  
   tbody.innerHTML = '';
   emptyState.style.display = 'none';
-  
-  // Sort orders by date (newest first)
   orders.sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate));
-  
   orders.forEach(order => {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -170,7 +150,6 @@ function loadAllOrders() {
     tbody.appendChild(row);
   });
 }
-
 function getStatusBadge(status) {
   const badges = {
     'Pending': 'bg-warning text-dark',
@@ -181,15 +160,12 @@ function getStatusBadge(status) {
   };
   return badges[status] || 'bg-secondary';
 }
-
 function viewOrderDetails(orderNumber) {
   const order = adminDataManager.getOrderDetails(orderNumber);
-  
   if (!order) {
     Swal.fire('Error', 'Order not found', 'error');
     return;
   }
-  
   const itemsList = order.items.map(item => `
     <div class="d-flex justify-content-between border-bottom py-2">
       <div>
@@ -199,7 +175,6 @@ function viewOrderDetails(orderNumber) {
       <div><strong>${item.quantity * item.price} EGP</strong></div>
     </div>
   `).join('');
-  
   Swal.fire({
     title: `Order ${order.orderNumber}`,
     html: `
@@ -232,7 +207,6 @@ function viewOrderDetails(orderNumber) {
     confirmButtonColor: '#635BFF'
   });
 }
-
 function logoutSeller() {
   if (confirm('Are you sure you want to logout?')) {
     localStorage.removeItem('loggedInUser');
